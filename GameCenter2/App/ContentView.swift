@@ -27,33 +27,33 @@ struct ContentView: View {
         //Use this if NavigationBarTitle is with displayMode = .inline
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor:UIColor(red: 241/255.0, green: 79/255.0, blue: 114/255.0, alpha: 1.0)]
     }
-
+    
     var body: some View {
         TabView{
             HomeView()
-              .tabItem {
-                 Image(systemName: "house.fill")
-                 Text("Home")
-            }
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("Home")
+                }
             
             SearchView()
-              .tabItem {
-                 Image(systemName: "magnifyingglass")
-                 Text("Search")
-            }
+                .tabItem {
+                    Image(systemName: "magnifyingglass")
+                    Text("Search")
+                }
             
-//            FavoriteView()
-//                .tabItem {
-//                 Image(systemName: "heart.fill")
-//                 Text("Favorite")
-//            }
+            //            FavoriteView()
+            //                .tabItem {
+            //                 Image(systemName: "heart.fill")
+            //                 Text("Favorite")
+            //            }
         }.accentColor(Color(red: 241 / 255, green: 79 / 255, blue: 114 / 255))
     }
-
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        }
     }
-}
 }
