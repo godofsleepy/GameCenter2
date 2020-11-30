@@ -6,7 +6,7 @@ target 'GameCenter2' do
   use_frameworks!
 	pod 'SDWebImageSwiftUI', '~> 1.5.0'
 	pod 'SwiftLint', '~> 0.40.0'
-	pod 'Cleanse'
+	pod 'RealmSwift'
 	pod 'Alamofire', '~> 5.2'
 
   # Pods for GameCenter2

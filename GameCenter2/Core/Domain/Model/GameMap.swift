@@ -1,6 +1,6 @@
 //
 //  GameMap.swift
-//  GameCenterw
+//  GameCenter2
 //
 //  Created by rifat khadafy on 17/11/20.
 //  Copyright © 2020 rifat khadafy. All rights reserved.

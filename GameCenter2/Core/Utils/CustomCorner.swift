@@ -1,6 +1,6 @@
 //
 //  CustomCorner.swift
-//  GameCenter
+//  GameCenter2
 //
 //  Created by rifat khadafy on 24/08/20.
 //  Copyright © 2020 rifat khadafy. All rights reserved.
