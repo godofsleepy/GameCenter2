@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B173BB15463180F284807B96 /* Pods_GameCenter2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DB574230BAF4FEFC18379EF /* Pods_GameCenter2.framework */; };
+		FB11A0E22574D5C700972C3F /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11A0E12574D5C700972C3F /* GameRepository.swift */; };
+		FB11A0F02575CF7A00972C3F /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11A0EF2575CF7A00972C3F /* HomeInteractor.swift */; };
+		FB11A0F32575CF8F00972C3F /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11A0F22575CF8F00972C3F /* DetailInteractor.swift */; };
+		FB11A0F62575CFA000972C3F /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11A0F52575CFA000972C3F /* ProfileInteractor.swift */; };
+		FB11A0F92575CFAD00972C3F /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11A0F82575CFAD00972C3F /* SearchInteractor.swift */; };
+		FB11A0FD2575D30F00972C3F /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB11A0FC2575D30F00972C3F /* APICall.swift */; };
 		FB44E25B2562DD6A00758893 /* GameCenter2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44E25A2562DD6A00758893 /* GameCenter2App.swift */; };
 		FB44E25D2562DD6A00758893 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44E25C2562DD6A00758893 /* ContentView.swift */; };
 		FB44E25F2562DD6C00758893 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB44E25E2562DD6C00758893 /* Assets.xcassets */; };
@@ -35,7 +41,7 @@
 		FBB8EFC32573E546006FD93B /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB349252573523500274808 /* Feedback.swift */; };
 		FBB8EFC52573E54C006FD93B /* CustomCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB349222573523500274808 /* CustomCorner.swift */; };
 		FBB8EFC62573E54C006FD93B /* ViewErase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB349232573523500274808 /* ViewErase.swift */; };
-		FBB8EFC72573E54C006FD93B /* Systen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB349212573523500274808 /* Systen.swift */; };
+		FBB8EFC72573E54C006FD93B /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB349212573523500274808 /* System.swift */; };
 		FBB8EFC82573E54C006FD93B /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB349242573523500274808 /* HostingController.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +49,12 @@
 		1DB574230BAF4FEFC18379EF /* Pods_GameCenter2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameCenter2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29AB0831A1FC98D39588172D /* Pods-GameCenter2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCenter2.release.xcconfig"; path = "Target Support Files/Pods-GameCenter2/Pods-GameCenter2.release.xcconfig"; sourceTree = "<group>"; };
 		D47234B47299E8FE0919775E /* Pods-GameCenter2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCenter2.debug.xcconfig"; path = "Target Support Files/Pods-GameCenter2/Pods-GameCenter2.debug.xcconfig"; sourceTree = "<group>"; };
+		FB11A0E12574D5C700972C3F /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
+		FB11A0EF2575CF7A00972C3F /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		FB11A0F22575CF8F00972C3F /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		FB11A0F52575CFA000972C3F /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		FB11A0F82575CFAD00972C3F /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		FB11A0FC2575D30F00972C3F /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
 		FB1B08DF2573F7A600D116D7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB44E2572562DD6A00758893 /* GameCenter2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameCenter2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB44E25A2562DD6A00758893 /* GameCenter2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenter2App.swift; sourceTree = "<group>"; };
@@ -67,7 +79,7 @@
 		FB44E2DB256363C700758893 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		FB44E2DC256363C700758893 /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		FB44E2DE256363C700758893 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		FBB349212573523500274808 /* Systen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Systen.swift; sourceTree = "<group>"; };
+		FBB349212573523500274808 /* System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
 		FBB349222573523500274808 /* CustomCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorner.swift; sourceTree = "<group>"; };
 		FBB349232573523500274808 /* ViewErase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewErase.swift; sourceTree = "<group>"; };
 		FBB349242573523500274808 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
@@ -103,6 +115,17 @@
 				1DB574230BAF4FEFC18379EF /* Pods_GameCenter2.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB11A0E02574D0C200972C3F /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				FB11A0EF2575CF7A00972C3F /* HomeInteractor.swift */,
+				FB11A0F22575CF8F00972C3F /* DetailInteractor.swift */,
+				FB11A0F52575CFA000972C3F /* ProfileInteractor.swift */,
+				FB11A0F82575CFAD00972C3F /* SearchInteractor.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 		FB44E24E2562DD6A00758893 = {
@@ -235,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				FBB349262573526200274808 /* Remote */,
+				FB11A0E12574D5C700972C3F /* GameRepository.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -242,6 +266,7 @@
 		FBB3491F2573522A00274808 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				FB11A0E02574D0C200972C3F /* UseCase */,
 				FB44E288256360E400758893 /* Model */,
 			);
 			path = Domain;
@@ -252,9 +277,10 @@
 			children = (
 				FBB349232573523500274808 /* ViewErase.swift */,
 				FBB349222573523500274808 /* CustomCorner.swift */,
-				FBB349212573523500274808 /* Systen.swift */,
+				FBB349212573523500274808 /* System.swift */,
 				FBB349242573523500274808 /* HostingController.swift */,
 				FBB349252573523500274808 /* Feedback.swift */,
+				FB11A0FC2575D30F00972C3F /* APICall.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -395,16 +421,21 @@
 			files = (
 				FB44E2832563607100758893 /* SearchBar.swift in Sources */,
 				FB44E2852563607100758893 /* Spinner.swift in Sources */,
+				FB11A0F92575CFAD00972C3F /* SearchInteractor.swift in Sources */,
 				FB44E2842563607100758893 /* GameItemView.swift in Sources */,
 				FB44E2932563610600758893 /* Games.swift in Sources */,
 				FB44E2E2256363C800758893 /* DetailView.swift in Sources */,
+				FB11A0E22574D5C700972C3F /* GameRepository.swift in Sources */,
 				FBB8EFC12573BB92006FD93B /* Call.swift in Sources */,
 				FB44E2E3256363C800758893 /* DetailViewModel.swift in Sources */,
 				FB44E2942563610600758893 /* GameMap.swift in Sources */,
 				FB44E2E6256363C800758893 /* ProfileView.swift in Sources */,
+				FB11A0F02575CF7A00972C3F /* HomeInteractor.swift in Sources */,
 				FBB8EFC52573E54C006FD93B /* CustomCorner.swift in Sources */,
 				FBB8EFC02573BB92006FD93B /* GamesAPI.swift in Sources */,
-				FBB8EFC72573E54C006FD93B /* Systen.swift in Sources */,
+				FB11A0FD2575D30F00972C3F /* APICall.swift in Sources */,
+				FB11A0F62575CFA000972C3F /* ProfileInteractor.swift in Sources */,
+				FBB8EFC72573E54C006FD93B /* System.swift in Sources */,
 				FB44E2812563607100758893 /* FavGameItemView.swift in Sources */,
 				FB44E28F2563610600758893 /* Detail.swift in Sources */,
 				FBB8EFC62573E54C006FD93B /* ViewErase.swift in Sources */,
@@ -412,6 +443,7 @@
 				FB44E25D2562DD6A00758893 /* ContentView.swift in Sources */,
 				FB44E2E4256363C800758893 /* SearchView.swift in Sources */,
 				FB44E2902563610600758893 /* Profile.swift in Sources */,
+				FB11A0F32575CF8F00972C3F /* DetailInteractor.swift in Sources */,
 				FB44E2822563607100758893 /* CarouselView.swift in Sources */,
 				FB44E2E5256363C800758893 /* SearchViewModel.swift in Sources */,
 				FB44E29A2563621D00758893 /* GameListViewModel.swift in Sources */,
