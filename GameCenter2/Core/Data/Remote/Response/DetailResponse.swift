@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct Detail : Codable {
-    let id : Int
-    let name : String
+struct DetailResponse : Codable {
+    let id : Int?
+    let name : String?
     let released : String?
-    let rating : Double
+    let rating : Double?
     let description  : String?
     let background_image : String?
     let parent_platforms : [platforms]
@@ -39,7 +39,7 @@ struct platforms : Codable {
 }
 
 struct platform :Codable {
-    let slug : String
+    let slug : String?
     
     enum CodingKeys: String, CodingKey {
         case slug = "slug"
@@ -47,7 +47,7 @@ struct platform :Codable {
 }
 
 struct genre : Codable {
-    let name : String
+    let name : String?
     
     enum CodingKeys: String, CodingKey {
         case name = "name"

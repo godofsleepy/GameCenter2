@@ -8,18 +8,18 @@
 
 import Foundation
 
-struct ListGame: Identifiable {
+struct GameModel: Equatable, Identifiable {
     let id : Int
     let name : String
     let rating : Double
     let released : String?
     let background_image : String?
     
-    init(game: Game) {
-        id = game.id
-        name = game.name
-        rating = game.rating
-        released = game.released
-        background_image = game.background_image
-    }
+//    init(game: GameResponse) {
+//        id = game.id
+//        name = game.name
+//        rating = game.rating
+//        released = game.released
+//        background_image = game.background_image
+//    }
 }

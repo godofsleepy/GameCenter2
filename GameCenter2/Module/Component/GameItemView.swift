@@ -13,7 +13,7 @@ import SDWebImageSwiftUI
 
 
 struct GameItemView : View{
-    var game : ListGame
+    var game : GameModel
     var body : some View {
         HStack {
             WebImage(url: URL(string: game.background_image ?? ""))
@@ -27,11 +27,6 @@ struct GameItemView : View{
                 Text(game.name)
                     .font(.system(size: 18))
                     .fontWeight(.medium)
-                    .foregroundColor(Color.white)
-                
-                Text(game.released ?? "uknown")
-                    .font(.system(size: 14))
-                    .fontWeight(.light)
                     .foregroundColor(Color.white)
                 
                 HStack(alignment: .lastTextBaseline){

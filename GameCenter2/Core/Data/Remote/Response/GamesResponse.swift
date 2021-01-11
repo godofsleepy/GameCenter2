@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct Games<T: Codable>: Codable {
-    let results: [T]
-    let count : Int
+struct GamesResponse: Codable {
+    let results: [GameResponse]
+    let count : Int?
     
     enum CodingKeys: String, CodingKey {
            case results = "results"
@@ -18,10 +18,10 @@ struct Games<T: Codable>: Codable {
        }
 }
 
-struct Game : Codable {
-    let id : Int
-    let name : String
-    let rating : Double
+struct GameResponse : Codable {
+    let id : Int?
+    let name : String?
+    let rating : Double?
     let released : String?
     let background_image : String?
     

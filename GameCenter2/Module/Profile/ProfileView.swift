@@ -31,7 +31,7 @@ struct ProfileView: View {
                         Image(data.image)
                             .resizable()
                             .frame(width: 80,height: 80).clipShape(Circle())
-                            .aspectRatio(contentMode: .fit)
+                            .scaledToFit()
                             .overlay(
                                 Circle().stroke(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255), lineWidth: 4))
                         

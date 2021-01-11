@@ -11,10 +11,9 @@ import SDWebImage
 import SDWebImageSwiftUI
 
 struct HomeView: View {
-    @ObservedObject var model = GamesListViewModel()
+    @ObservedObject var presenter : HomePresenter
     @State var index = 0
     @State var selection: Int? = nil
-    
     
     var body: some View {
         
@@ -34,7 +33,7 @@ struct HomeView: View {
                                 if self.index < 0{
                                     self.index = 3
                                 }
-                                self.model.send(event: .onSelectPlatform(dataPlatforms[self.index].id))
+                                self.presenter.getGames(platformId: dataPlatforms[self.index].id)
                             }) {
                                 Image("chevron.left")
                                     .foregroundColor(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
@@ -54,8 +53,8 @@ struct HomeView: View {
                                 if self.index == 4{
                                     self.index = 0
                                 }
-                                
-                                self.model.send(event: .onSelectPlatform(dataPlatforms[self.index].id))
+                                self.presenter.getGames(platformId: dataPlatforms[self.index].id)
+                            
                             }) {
                                 Image("chevron.right")
                                     .foregroundColor(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
@@ -82,7 +81,15 @@ struct HomeView: View {
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     
                     VStack{
-                        content
+                        if presenter.loadingState {
+                            Spinner(isAnimating: true, style: .large).eraseToAnyView()
+                        } else {
+                            ForEach(self.presenter.games, id: \.id){ game in
+                                self.presenter.linkBuilder(for: String(game.id)) {
+                                    GameItemView(game: game)
+                                }
+                            }
+                        }
                     }
                     
                 }
@@ -98,33 +105,8 @@ struct HomeView: View {
                         Image(systemName: "info.circle").foregroundColor(Color(red: 241 / 255, green: 79 / 255, blue: 114 / 255)).font(.system(size: 26))
                     }
                 })
-        }.onAppear {self.model.send(event: .onSelectPlatform(dataPlatforms[self.index].id))}
-    }
-    
-    private var content: some View {
-        switch model.state {
-        case .idle:
-            return Color.clear.eraseToAnyView()
-        case .loading:
-            return Spinner(isAnimating: true, style: .large).eraseToAnyView()
-        case .error(let error):
-            return Text(error.localizedDescription).eraseToAnyView()
-        case .loaded(let games):
-            return list(of: games).eraseToAnyView()
+        }.onAppear {
+            self.presenter.getGames(platformId: "18")
         }
-    }
-    
-    private func list(of games: [ListGame]) -> some View {
-        return ForEach(games){ game in
-            NavigationLink(destination: DetailView(model: DetailViewModel(gameId: String(game.id)))){
-                GameItemView(game: game)
-            }
-        }.listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0,trailing: 0))
-    }
-}
-
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
     }
 }
