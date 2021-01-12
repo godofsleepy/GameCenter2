@@ -10,6 +10,7 @@ import CoreData
 
 struct ContentView: View {
     @EnvironmentObject var homePresenter: HomePresenter
+    @EnvironmentObject var searchPresenter : SearchPresenter
     
     init() {
         UITableView.appearance().tableFooterView = UIView()
@@ -38,11 +39,11 @@ struct ContentView: View {
                     Text("Home")
                 }
             
-//            SearchView()
-//                .tabItem {
-//                    Image(systemName: "magnifyingglass")
-//                    Text("Search")
-//                }
+            SearchView(presenter: searchPresenter)
+                .tabItem {
+                    Image(systemName: "magnifyingglass")
+                    Text("Search")
+                }
             
             //            FavoriteView()
             //                .tabItem {
