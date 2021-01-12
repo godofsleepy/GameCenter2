@@ -45,13 +45,13 @@ struct ContentView: View {
                     Text("Search")
                 }
             
-            //            FavoriteView()
-            //                .tabItem {
-            //                 Image(systemName: "heart.fill")
-            //                 Text("Favorite")
-            //            }
+            FavoriteView()
+                .tabItem {
+                    Image(systemName: "heart.fill")
+                    Text("Favorite")
+                }
         }.accentColor(Color(red: 241 / 255, green: 79 / 255, blue: 114 / 255))
     }
     
     
-    }
+}

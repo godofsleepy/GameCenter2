@@ -28,7 +28,7 @@ struct DetailView : View {
                                 WebImage(url: URL(string: presenter.detail[0].background_image ?? ""))
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
-                                    .frame(width: geometry.size.width, height: geometry.size.height + geometry.frame(in: .global).minY)
+                                    .frame(width: geometry.size.width, height: geometry.size.height + (geometry.frame(in: .global).minY))
                                     .clipped()
                                     .offset(y: -geometry.frame(in: .global).minY)
                             } else {

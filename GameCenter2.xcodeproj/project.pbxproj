@@ -33,7 +33,7 @@
 		FB4D3A6A257CA9FB0089FF86 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4D3A69257CA9FB0089FF86 /* Injection.swift */; };
 		FB4D3A6E257CB1D20089FF86 /* GamesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4D3A6D257CB1D20089FF86 /* GamesAPI.swift */; };
 		FB4D3A71257CB69C0089FF86 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4D3A70257CB69C0089FF86 /* CustomError.swift */; };
-		FB4D3A7D257D13920089FF86 /* FavoriteVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4D3A7C257D13920089FF86 /* FavoriteVIew.swift */; };
+		FB4D3A7D257D13920089FF86 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4D3A7C257D13920089FF86 /* FavoriteView.swift */; };
 		FB4D3A80257D140E0089FF86 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4D3A7F257D140E0089FF86 /* HomePresenter.swift */; };
 		FB4D3A83257D15AE0089FF86 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4D3A82257D15AE0089FF86 /* HomeRouter.swift */; };
 		FB4D3A86257D212F0089FF86 /* GameMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4D3A85257D212F0089FF86 /* GameMapper.swift */; };
@@ -78,7 +78,7 @@
 		FB4D3A69257CA9FB0089FF86 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		FB4D3A6D257CB1D20089FF86 /* GamesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesAPI.swift; sourceTree = "<group>"; };
 		FB4D3A70257CB69C0089FF86 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
-		FB4D3A7C257D13920089FF86 /* FavoriteVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVIew.swift; sourceTree = "<group>"; };
+		FB4D3A7C257D13920089FF86 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		FB4D3A7F257D140E0089FF86 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		FB4D3A82257D15AE0089FF86 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		FB4D3A85257D212F0089FF86 /* GameMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMapper.swift; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				FB1B08DF2573F7A600D116D7 /* Info.plist */,
-				FBB349332573530200274808 /* Module */,
+				FBB349332573530200274808 /* UI */,
 				FBB348FC25734C5700274808 /* Supporting Files */,
 				FBB348F925734C2B00274808 /* Core */,
 				FBB348F625734BA200274808 /* App */,
@@ -250,7 +250,7 @@
 		FB4D3A76257D13490089FF86 /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
-				FB4D3A7C257D13920089FF86 /* FavoriteVIew.swift */,
+				FB4D3A7C257D13920089FF86 /* FavoriteView.swift */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -323,7 +323,7 @@
 			path = Remote;
 			sourceTree = "<group>";
 		};
-		FBB349332573530200274808 /* Module */ = {
+		FBB349332573530200274808 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				FB4D3A76257D13490089FF86 /* Favorite */,
@@ -333,7 +333,7 @@
 				FB44E2DD256363C700758893 /* Profile */,
 				FB44E2D7256363C700758893 /* Detail */,
 			);
-			path = Module;
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,7 +476,7 @@
 				FB4D3A83257D15AE0089FF86 /* HomeRouter.swift in Sources */,
 				FB44E2E4256363C800758893 /* SearchView.swift in Sources */,
 				FB44E2902563610600758893 /* Profile.swift in Sources */,
-				FB4D3A7D257D13920089FF86 /* FavoriteVIew.swift in Sources */,
+				FB4D3A7D257D13920089FF86 /* FavoriteView.swift in Sources */,
 				FB44E2822563607100758893 /* CarouselView.swift in Sources */,
 				FB44E2992563621D00758893 /* HomeView.swift in Sources */,
 				FB44E25B2562DD6A00758893 /* GameCenter2App.swift in Sources */,
