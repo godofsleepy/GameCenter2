@@ -46,7 +46,9 @@ struct SearchView: View {
                                 Spinner(isAnimating: true, style: .large).eraseToAnyView()
                             } else {
                                 ForEach(self.presenter.games, id: \.id){ game in
+                                    self.presenter.linkBuilder(for: String(game.id)) {
                                         GameItemView(game: game)
+                                    }
                                 }
                             }
 

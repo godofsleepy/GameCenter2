@@ -12,6 +12,7 @@ import Combine
 class SearchPresenter: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
     private let searchUseCase : SearchUseCase
+    private let router = SearchRouter()
     
     @Published var games: [GameModel] = []
     @Published var errorMessage: String = ""
@@ -37,4 +38,13 @@ class SearchPresenter: ObservableObject {
             })
             .store(in: &cancellables)
     }
+    
+    func linkBuilder<Content: View>(
+      for gameId: String,
+      @ViewBuilder content: () -> Content
+    ) -> some View {
+      NavigationLink(
+        destination: router.makeDetailView(for: gameId)) {content()}
+    }
+
 }
