@@ -15,7 +15,7 @@ struct DetailView : View {
     @State var index = 0
     @State var selection: Int? = nil
     
-    var body: some View{
+    var body: some View {
         ScrollView {
             if presenter.loadingState {
                 Spinner(isAnimating: true, style: .large).eraseToAnyView()

@@ -9,8 +9,6 @@ import SwiftUI
 
 @main
 struct GameCenter2App: App {
-    
-    
 
     var body: some Scene {
         let homeUseCase = Injection.init().provideHome()
@@ -18,7 +16,10 @@ struct GameCenter2App: App {
         let homePresenter = HomePresenter(homeUseCase: homeUseCase)
         let searchPresenter = SearchPresenter(searchUseCase: searchUseCase)
         WindowGroup {
-            ContentView().environmentObject(homePresenter).environmentObject(searchPresenter)
+            ContentView()
+                .environmentObject(homePresenter)
+                .environmentObject(searchPresenter)
+                
         }
     }
 }

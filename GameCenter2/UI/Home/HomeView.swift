@@ -54,7 +54,7 @@ struct HomeView: View {
                                     self.index = 0
                                 }
                                 self.presenter.getGames(platformId: dataPlatforms[self.index].id)
-                            
+                                
                             }) {
                                 Image("chevron.right")
                                     .foregroundColor(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
@@ -97,15 +97,16 @@ struct HomeView: View {
                 
                 
             } // ZStack
-                .navigationBarTitle("Home")
-                .navigationBarItems(trailing: NavigationLink(destination: ProfileView(),tag: 1,selection: $selection){
-                    Button(action: {
-                        self.selection = 1
-                    }) {
-                        Image(systemName: "info.circle").foregroundColor(Color(red: 241 / 255, green: 79 / 255, blue: 114 / 255)).font(.system(size: 26))
-                    }
-                })
-        }.onAppear {
+            .navigationBarTitle("Home")
+            .navigationBarItems(trailing: NavigationLink(destination: ProfileView(),tag: 1,selection: $selection){
+                Button(action: {
+                    self.selection = 1
+                }) {
+                    Image(systemName: "info.circle").foregroundColor(Color(red: 241 / 255, green: 79 / 255, blue: 114 / 255)).font(.system(size: 26))
+                }
+            })
+        }
+        .onAppear {
             self.presenter.getGames(platformId: "18")
         }
     }
