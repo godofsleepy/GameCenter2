@@ -19,6 +19,8 @@ struct GameItemView : View{
             WebImage(url: URL(string: game.background_image ?? ""))
                 .renderingMode(.original)
                 .resizable()
+                .indicator(.activity) // Activity Indicator
+                .transition(.fade(duration: 0.5))
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 120, alignment: .trailing)
                 .cornerRadius(5)

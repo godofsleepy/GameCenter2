@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "WhatsApp Image 2020-09-11 at 13.52.12.jpeg",
+      "filename" : "me.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "me@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "me@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

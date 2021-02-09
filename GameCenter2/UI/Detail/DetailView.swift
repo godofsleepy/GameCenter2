@@ -9,11 +9,13 @@
 import SwiftUI
 import SDWebImage
 import SDWebImageSwiftUI
+import AVKit
 
 struct DetailView : View {
     @ObservedObject var presenter : DetailPresenter
     @State var index = 0
     @State var selection: Int? = nil
+    var player = AVPlayer(url:  URL(string: "https://media.rawg.io/media/stories-640/c10/c10ef05b12482e4d2c647c4e26138d5b.mp4")!)
     
     var body: some View {
         ScrollView {
@@ -28,7 +30,7 @@ struct DetailView : View {
                                 WebImage(url: URL(string: presenter.detail[0].background_image ?? ""))
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
-                                    .frame(width: geometry.size.width, height: geometry.size.height + (geometry.frame(in: .global).minY))
+                                    .frame(width: geometry.size.width, height: abs(geometry.size.height + (geometry.frame(in: .global).minY)))
                                     .clipped()
                                     .offset(y: -geometry.frame(in: .global).minY)
                             } else {
@@ -65,7 +67,7 @@ struct DetailView : View {
                     
                     
                     VStack(alignment: .leading){
-                        VStack(alignment: .leading) {
+                        VStack(alignment: .leading, spacing :10) {
                             Text(presenter.detail[0].name)
                                 .fontWeight(.semibold)
                                 .font(.system(size: 24))
@@ -107,35 +109,14 @@ struct DetailView : View {
                             
                         }
                         
+                        ScrollView(.horizontal){
+                            VideoPlayer(player: player)
+                                .onAppear{
+                                    player.play()
+                                }
+                                .frame(width: 280, height: 150, alignment: .leading)
+                        }.padding(.bottom)
                         
-                        HStack(alignment: .center){
-                            if (true == true) {
-                                Button(action: {
-                                    //                                self.deleteGame(id: data.id)
-                                    //                                try? self.moc.save()
-                                }) {
-                                    HStack {
-                                        Image(systemName: "plus").foregroundColor(.white)
-                                        Text("Add to favorite").foregroundColor(.white)
-                                    }.padding(7)
-                                    .background(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
-                                    .cornerRadius(30)
-                                }
-                            }else {
-                                Button(action: {
-                                    //                                self.AddGame(data: data)
-                                    //                                try? self.moc.save()
-                                }) {
-                                    HStack {
-                                        Image(systemName: "plus").foregroundColor(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
-                                        Text("Add to favorite").foregroundColor(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
-                                    }.padding(7)
-                                    .overlay( RoundedRectangle(cornerRadius: 20).stroke(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255), lineWidth: 2)
-                                    )
-                                }
-                                
-                            }
-                        }.frame(minWidth: 0, maxWidth: .infinity)
                         
                         Text("Platform")
                             .foregroundColor(Color(red: 241 / 255, green: 79 / 255, blue: 114 / 255))
@@ -148,12 +129,15 @@ struct DetailView : View {
                                     if (presenter.detail[0].parent_platforms[i].platform.slug == "pc" || presenter.detail[0].parent_platforms[i].platform.slug == "xbox" || presenter.detail[0].parent_platforms[i].platform.slug == "playstation" || presenter.detail[0].parent_platforms[i].platform.slug == "nintendo"){
                                         
                                         Image("logo\(presenter.detail[0].parent_platforms[i].platform.slug)")
+                                            .resizable()
+                                            .frame(width: 50, height: 50)
                                             .background(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
                                             .cornerRadius(100)
                                         
                                     }
                                 }                        }
                         }
+                        
                         
                         
                     }
@@ -163,8 +147,16 @@ struct DetailView : View {
                     
                 }
             }
-               
+            
         }.background(Color(red: 37 / 255, green: 19 / 255, blue: 51 / 255)).edgesIgnoringSafeArea(.all)
         
+        .navigationBarItems(trailing:
+                                Button(action: {
+                                }) {
+                                    HStack {
+                                        Image(systemName: "heart.fill").foregroundColor(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
+                                        Text("Fav").foregroundColor(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
+                                    }                                }
+        )
     }
 }
