@@ -45,11 +45,17 @@ struct SearchView: View {
                             if presenter.loadingState {
                                 Spinner(isAnimating: true, style: .large).eraseToAnyView()
                             } else {
-                                ForEach(self.presenter.games, id: \.id){ game in
-                                    self.presenter.linkBuilder(for: String(game.id)) {
-                                        GameItemView(game: game)
+                                if !self.presenter.games.isEmpty {
+                                    ForEach(self.presenter.games, id: \.id){ game in
+                                        self.presenter.linkBuilder(for: String(game.id)) {
+                                            GameItemView(game: game)
+                                        }
                                     }
+
+                                } else {
+                                    Image("noFind").frame(alignment: .center).padding(.top, 50)
                                 }
+                                
                             }
 
                             
@@ -61,27 +67,6 @@ struct SearchView: View {
         }
         
     }
-
-//    private var content: some View {
-//        switch model.state {
-//        case .idle:
-//            return Color.clear.eraseToAnyView()
-//        case .loading:
-//            return Spinner(isAnimating: true, style: .large).eraseToAnyView()
-//        case .error(let error):
-//            return Text(error.localizedDescription).foregroundColor(Color.white).eraseToAnyView()
-//        case .loaded(let games):
-//            return list(of: games).eraseToAnyView()
-//        }
-//    }
-//
-//    private func list(of games: [ListGame]) -> some View {
-//        return ForEach(games){ game in
-//            NavigationLink(destination: DetailView(model: DetailViewModel(gameId: String(game.id)))){
-//                GameItemView(game: game)
-//            }
-//        }.listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0,trailing: 0))
-//    }
 }
 
 //struct SearchView_Previews: PreviewProvider {
