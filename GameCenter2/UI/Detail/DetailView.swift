@@ -114,18 +114,22 @@ struct DetailView : View {
                         
                         ScrollView(.horizontal){
                             HStack{
-                                AVPlayerView(videoURL: URL(string: presenter.detail[0].clip ?? ""))
-                                    .frame(width: 280, height: 150, alignment: .leading).scaledToFit().cornerRadius(10).padding(.trailing)
-                                    .transition(.move(edge: .bottom)).edgesIgnoringSafeArea(.all)
-                                
-                                WebImage(url: URL(string: presenter.detail[0].background_image_additional ?? ""))
-                                    .renderingMode(.original)
-                                    .resizable()
-                                    .indicator(.activity)
-                                    .transition(.fade(duration: 0.5))
-                                    .frame(width: 280, height: 150, alignment: .leading).scaledToFit()
-                                    .cornerRadius(10)
+                                if presenter.detail[0].clip != nil {
+                                    AVPlayerView(videoURL: URL(string: presenter.detail[0].clip ?? ""))
+                                        .frame(width: 280, height: 150, alignment: .leading).scaledToFit().cornerRadius(10).padding(.trailing)
+                                        .transition(.move(edge: .bottom)).edgesIgnoringSafeArea(.all)
 
+                                }
+                                if presenter.detail[0].background_image_additional != nil
+                                {
+                                    WebImage(url: URL(string: presenter.detail[0].background_image_additional ?? ""))
+                                        .renderingMode(.original)
+                                        .resizable()
+                                        .indicator(.activity)
+                                        .transition(.fade(duration: 0.5))
+                                        .frame(width: 280, height: 150, alignment: .leading).scaledToFit()
+                                        .cornerRadius(10)
+                                }
                             }
                         }.padding(.bottom)
                         
