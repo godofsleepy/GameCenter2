@@ -15,12 +15,15 @@ struct DetailView : View {
     @ObservedObject var presenter : DetailPresenter
     @State var index = 0
     @State var selection: Int? = nil
-    var player = AVPlayer(url:  URL(string: "https://media.rawg.io/media/stories-640/c10/c10ef05b12482e4d2c647c4e26138d5b.mp4")!)
     
     var body: some View {
         ScrollView {
             if presenter.loadingState {
-                Spinner(isAnimating: true, style: .large).eraseToAnyView()
+                HStack{
+                    Spacer()
+                    Spinner(isAnimating: true, style: .large).eraseToAnyView()
+                    Spacer()
+                }.padding(.top, 100)
             }
             else {
                 ZStack(alignment: .top){
@@ -96,7 +99,7 @@ struct DetailView : View {
                                 }
                             }
                             
-                        }.frame(minWidth: 0, maxWidth: .infinity).padding(.bottom)
+                        }.frame(minWidth: 0, maxWidth: .infinity)
                         
                         if (presenter.detail[0].description != nil ){
                             Text(presenter.detail[0].description!.replacingOccurrences(of: "<[^>]+>", with: "" ,options: .regularExpression, range: nil) )
@@ -110,12 +113,22 @@ struct DetailView : View {
                         }
                         
                         ScrollView(.horizontal){
-                            VideoPlayer(player: player)
-                                .onAppear{
-                                    player.play()
-                                }
-                                .frame(width: 280, height: 150, alignment: .leading)
+                            HStack{
+                                AVPlayerView(videoURL: URL(string: presenter.detail[0].clip ?? ""))
+                                    .frame(width: 280, height: 150, alignment: .leading).scaledToFit().cornerRadius(10).padding(.trailing)
+                                    .transition(.move(edge: .bottom)).edgesIgnoringSafeArea(.all)
+                                
+                                WebImage(url: URL(string: presenter.detail[0].background_image_additional ?? ""))
+                                    .renderingMode(.original)
+                                    .resizable()
+                                    .indicator(.activity)
+                                    .transition(.fade(duration: 0.5))
+                                    .frame(width: 280, height: 150, alignment: .leading).scaledToFit()
+                                    .cornerRadius(10)
+
+                            }
                         }.padding(.bottom)
+                        
                         
                         
                         Text("Platform")
@@ -148,7 +161,8 @@ struct DetailView : View {
                 }
             }
             
-        }.background(Color(red: 37 / 255, green: 19 / 255, blue: 51 / 255)).edgesIgnoringSafeArea(.all)
+        }
+        .background(Color(red: 37 / 255, green: 19 / 255, blue: 51 / 255)).edgesIgnoringSafeArea(.all)
         
         .navigationBarItems(trailing:
                                 Button(action: {
@@ -158,5 +172,26 @@ struct DetailView : View {
                                         Text("Fav").foregroundColor(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
                                     }                                }
         )
+    }
+}
+
+struct AVPlayerView: UIViewControllerRepresentable {
+    
+    var videoURL: URL?
+    
+    private var player: some View {
+        return VideoPlayer(player : AVPlayer(url: videoURL!)).scaledToFit()
+        
+    }
+    
+    func updateUIViewController(_ playerController: AVPlayerViewController, context: Context) {
+        playerController.modalPresentationStyle = .overCurrentContext
+        playerController.player?.play()
+    }
+    
+    func makeUIViewController(context: Context) -> AVPlayerViewController {
+        let playerController = AVPlayerViewController()
+        playerController.player = AVPlayer(url: videoURL!)
+        return playerController
     }
 }

@@ -59,6 +59,7 @@ final class GameMapper {
             rating: detailResponses.rating ?? 0.0,
             description: detailResponses.description ?? "",
             background_image: detailResponses.background_image ?? "",
+            background_image_additional: detailResponses.background_image_additional ?? "",
             parent_platforms: detailResponses.parent_platforms.map { result in
                 return PlatformsModel(
                     platform: PlatformModel(slug: result.platform.slug ?? "")
@@ -68,7 +69,8 @@ final class GameMapper {
                 return GenreModel (
                     name: result.name ?? ""
                 )
-            }
+            },
+            clip: detailResponses.clip.clip ?? ""
         )
     }
     

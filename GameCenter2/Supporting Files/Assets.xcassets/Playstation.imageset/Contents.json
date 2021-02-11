@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "PS4.png",
+      "filename" : "Playstation.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "PS4@2x.png",
+      "filename" : "Playstation@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "PS4@3x.png",
+      "filename" : "Playstation@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

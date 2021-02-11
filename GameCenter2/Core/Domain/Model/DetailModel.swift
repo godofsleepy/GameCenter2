@@ -16,8 +16,10 @@ struct DetailModel : Equatable, Identifiable {
     let rating : Double
     let description  : String?
     let background_image : String?
+    let background_image_additional : String?
     let parent_platforms : [PlatformsModel]
     let genres : [GenreModel]
+    let clip : String?
     
 //    init(game: DetailModel) {
 //        id = game.id
@@ -58,8 +60,6 @@ struct PlatformModel : Equatable {
 
 struct GenreModel : Equatable {
     let name : String
-            
 }
-
 
 
