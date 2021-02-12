@@ -17,10 +17,15 @@ struct FavoriteView: View {
 
                 ScrollView{
                     VStack { 
-                        ForEach(self.presenter.games, id:\.self){ game in
-                            self.presenter.linkBuilder(for: game) {
-                                FavGameItemView(game: game)
+                        if !self.presenter.games.isEmpty {
+                            ForEach(self.presenter.games, id:\.self){ game in
+                                self.presenter.linkBuilder(for: game) {
+                                    FavGameItemView(game: game)
+                                }
                             }
+                        }else {
+                            Image("empty").frame(alignment: .center).padding(.top, 50)
+
                         }
                     }.padding(24)
 

@@ -49,14 +49,7 @@ struct ProfileView: View {
                 
             }
             .frame(minWidth: 0, maxWidth: .infinity, alignment: .topLeading).padding(24)
-            
-        }.navigationBarTitle("About")
-        
+        }        
     }
 }
 
-struct ProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileView()
-    }
-}

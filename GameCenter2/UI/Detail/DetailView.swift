@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import AVKit
 import SDWebImageSwiftUI
 
 struct DetailView : View {
@@ -111,9 +112,16 @@ struct DetailView : View {
                         ScrollView(.horizontal){
                             HStack{
                                 if presenter.detail[0].clip != nil {
-                                    AVPlayerView(videoURL: URL(string: presenter.detail[0].clip ?? ""))
-                                        .frame(width: 280, height: 150, alignment: .leading).scaledToFit().cornerRadius(10).padding(.trailing)
+                                   
+                                    VideoPlayer(player : AVPlayer(url: URL(string : presenter.detail[0].clip ?? "")!))
+                                        .cornerRadius(10)
+                                        .frame(width: 280, height: 150, alignment: .leading)
+                                        .scaledToFit()
+                                        .padding(.trailing)
                                         .transition(.move(edge: .bottom)).edgesIgnoringSafeArea(.all)
+                                        .onAppear{
+                                            
+                                        }
                                     
                                 }
                                 if presenter.detail[0].background_image_additional != nil
@@ -167,7 +175,10 @@ struct DetailView : View {
         .navigationBarItems(trailing:
                                 Button(action: {
                                     print("tap")
-                                    self.presenter.isFav ? self.presenter.deleteFavorite(): self.presenter.addToFavorite()
+                                    if !self.presenter.loadingState {
+                                        self.presenter.isFav ? self.presenter.deleteFavorite(): self.presenter.addToFavorite()
+                                    }
+                                    
                                 }) {
                                     HStack {
                                         Image(systemName: self.presenter.isFav ? "heart.fill" : "heart").foregroundColor(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))

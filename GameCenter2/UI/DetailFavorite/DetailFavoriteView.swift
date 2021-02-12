@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+import AVKit
 
 
 struct DetailFavoriteView: View {
@@ -103,10 +104,15 @@ struct DetailFavoriteView: View {
                     ScrollView(.horizontal){
                         HStack{
                             if presenter.game.clip != nil {
-                                AVPlayerView(videoURL: URL(string: presenter.game.clip ?? ""))
-                                    .frame(width: 280, height: 150, alignment: .leading).scaledToFit().cornerRadius(10).padding(.trailing)
+                                VideoPlayer(player : AVPlayer(url: URL(string : presenter.game.clip ?? "")!))
+                                    .cornerRadius(10)
+                                    .frame(width: 280, height: 150, alignment: .leading)
+                                    .scaledToFit()
+                                    .padding(.trailing)
                                     .transition(.move(edge: .bottom)).edgesIgnoringSafeArea(.all)
-                                
+                                    .onAppear{
+                                        
+                                    }
                             }
                             if presenter.game.background_image_additional != nil
                             {

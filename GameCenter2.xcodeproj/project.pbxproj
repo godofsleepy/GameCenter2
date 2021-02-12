@@ -48,7 +48,6 @@
 		FBB8EFC62573E54C006FD93B /* ViewErase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB349232573523500274808 /* ViewErase.swift */; };
 		FBB8EFC82573E54C006FD93B /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB349242573523500274808 /* HostingController.swift */; };
 		FBBFF0F525D683FD00D61A3A /* GameCenter2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44E25A2562DD6A00758893 /* GameCenter2App.swift */; };
-		FBBFF0F825D686B000D61A3A /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBFF0F725D686B000D61A3A /* VideoPlayerView.swift */; };
 		FBBFF10025D6876C00D61A3A /* DetailFavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBFF0FF25D6876C00D61A3A /* DetailFavoriteView.swift */; };
 		FBBFF10325D687AF00D61A3A /* DetailFavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBFF10225D687AF00D61A3A /* DetailFavoritePresenter.swift */; };
 		FBBFF10625D68AF900D61A3A /* FavoriteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBFF10525D68AF900D61A3A /* FavoriteRouter.swift */; };
@@ -103,7 +102,6 @@
 		FBB349222573523500274808 /* CustomCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorner.swift; sourceTree = "<group>"; };
 		FBB349232573523500274808 /* ViewErase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewErase.swift; sourceTree = "<group>"; };
 		FBB349242573523500274808 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
-		FBBFF0F725D686B000D61A3A /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		FBBFF0FF25D6876C00D61A3A /* DetailFavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFavoriteView.swift; sourceTree = "<group>"; };
 		FBBFF10225D687AF00D61A3A /* DetailFavoritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFavoritePresenter.swift; sourceTree = "<group>"; };
 		FBBFF10525D68AF900D61A3A /* FavoriteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRouter.swift; sourceTree = "<group>"; };
@@ -218,7 +216,6 @@
 				FB44E27F2563607100758893 /* GameItemView.swift */,
 				FB44E27E2563607100758893 /* SearchBar.swift */,
 				FB44E2802563607100758893 /* Spinner.swift */,
-				FBBFF0F725D686B000D61A3A /* VideoPlayerView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -546,7 +543,6 @@
 				FBB8EFC82573E54C006FD93B /* HostingController.swift in Sources */,
 				FB44E2922563610600758893 /* Platforms.swift in Sources */,
 				FB4D3A89257D27A70089FF86 /* DetailPresenter.swift in Sources */,
-				FBBFF0F825D686B000D61A3A /* VideoPlayerView.swift in Sources */,
 				FBBFF10325D687AF00D61A3A /* DetailFavoritePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
