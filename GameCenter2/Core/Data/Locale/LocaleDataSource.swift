@@ -13,7 +13,8 @@ protocol LocaleDataSourceProtocol: class {
     
     func getList() -> AnyPublisher<[GameEntity], Error>
     func addGame(from game: GameEntity) -> AnyPublisher<Bool, Error>
-    //    func deleteGame(from id : String) -> AnyPublisher<Bool, Error>
+    func deleteGame(from id : Int) -> AnyPublisher<Bool, Error>
+    func checkIsFav(from id :Int) -> AnyPublisher<Bool, Error>
     
 }
 
@@ -32,6 +33,42 @@ final class LocaleDataSource: NSObject {
 }
 
 extension LocaleDataSource : LocaleDataSourceProtocol {
+    func checkIsFav(from id: Int) -> AnyPublisher<Bool, Error> {
+        return Future<Bool, Error> { completion in
+            if let realm = self.realm {
+                do {
+                    let isExist =  realm.object(ofType: GameEntity.self, forPrimaryKey: id)
+                    completion(.success((isExist != nil)))
+                    //                    try realm.write {
+                    //                        realm.delete(!)
+                    //                        print("yess")
+                    //                        completion(.success(true))
+                    //                    }
+                }            } else {
+                    completion(.failure(DatabaseError.invalidInstance))
+                }
+        }.eraseToAnyPublisher()
+        
+    }
+    
+    func deleteGame(from id: Int) -> AnyPublisher<Bool, Error> {
+        return Future<Bool, Error> { completion in
+            if let realm = self.realm {
+                do {
+                    try realm.write {
+                        realm.delete(realm.object(ofType: GameEntity.self, forPrimaryKey: id)!)
+                        print("yess")
+                        completion(.success(true))
+                    }
+                } catch {
+                    completion(.failure(DatabaseError.requestFailed))
+                }
+            } else {
+                completion(.failure(DatabaseError.invalidInstance))
+            }
+        }.eraseToAnyPublisher()
+    }
+    
     func getList() -> AnyPublisher<[GameEntity], Error> {
         return Future<[GameEntity], Error> { completion in
             if let realm = self.realm {
@@ -64,11 +101,6 @@ extension LocaleDataSource : LocaleDataSourceProtocol {
             }
         }.eraseToAnyPublisher()
     }
-    
-    //    func deleteGame(from id: String) -> AnyPublisher<Bool, Error> {
-    //
-    //    }
-    
     
 }
 

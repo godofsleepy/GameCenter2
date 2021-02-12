@@ -102,12 +102,12 @@ struct DetailFavoriteView: View {
                     
                     ScrollView(.horizontal){
                         HStack{
-                            //                                if presenter.game.clip != nil {
-                            //                                    AVPlayerView(videoURL: URL(string: presenter.game.clip ?? ""))
-                            //                                        .frame(width: 280, height: 150, alignment: .leading).scaledToFit().cornerRadius(10).padding(.trailing)
-                            //                                        .transition(.move(edge: .bottom)).edgesIgnoringSafeArea(.all)
-                            //
-                            //                                }
+                            if presenter.game.clip != nil {
+                                AVPlayerView(videoURL: URL(string: presenter.game.clip ?? ""))
+                                    .frame(width: 280, height: 150, alignment: .leading).scaledToFit().cornerRadius(10).padding(.trailing)
+                                    .transition(.move(edge: .bottom)).edgesIgnoringSafeArea(.all)
+                                
+                            }
                             if presenter.game.background_image_additional != nil
                             {
                                 WebImage(url: URL(string: presenter.game.background_image_additional ?? ""))
@@ -157,7 +157,7 @@ struct DetailFavoriteView: View {
         .navigationBarItems(trailing:
                                 Button(action: {
                                     print("tap")
-                                    //                                    self.presenter.addToFavorite()
+                                    self.presenter.isFav ? self.presenter.deleteFavorite(): self.presenter.addToFavorite()
                                 }) {
                                     HStack {
                                         Image(systemName: self.presenter.isFav ? "heart.fill" : "heart").foregroundColor(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
@@ -166,5 +166,10 @@ struct DetailFavoriteView: View {
                                     
                                 }
         )
+        .onAppear{
+            
+                self.presenter.checkIsFavorite()
+            
+        }
     }
 }

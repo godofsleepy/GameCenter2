@@ -14,7 +14,8 @@ protocol GameRepositoryProtocol {
     func getSearch(query : String) -> AnyPublisher<[GameModel], Error>
     func getListFav() -> AnyPublisher<[DetailModel], Error>
     func addFav(game : DetailModel) -> AnyPublisher<Bool, Error>
-//    func deleteFav(game : DetailModel) -> AnyPublisher<Bool, Error>
+    func deleteFav(game : DetailModel) -> AnyPublisher<Bool, Error>
+    func checkIsFav(game : DetailModel) -> AnyPublisher<Bool, Error>
 }
 
 final class GameRepository: NSObject {
@@ -36,6 +37,12 @@ final class GameRepository: NSObject {
 }
 
 extension GameRepository: GameRepositoryProtocol {
+    func checkIsFav(game: DetailModel) -> AnyPublisher<Bool, Error> {
+        return self.locale
+            .checkIsFav(from: game.id)
+            .eraseToAnyPublisher()
+    }
+    
     func getListFav() -> AnyPublisher<[DetailModel], Error> {
         return self.locale.getList()
             .map { GameMapper.mapGameEntitiesToDomains(input: $0) }
@@ -48,9 +55,11 @@ extension GameRepository: GameRepositoryProtocol {
             .eraseToAnyPublisher()
     }
     
-//    func deleteFav(game: DetailModel) -> AnyPublisher<Bool, Error> {
-//        
-//    }
+    func deleteFav(game: DetailModel) -> AnyPublisher<Bool, Error> {
+        return self.locale
+            .deleteGame(from: game.id)
+            .eraseToAnyPublisher()
+    }
     
     func getSearch(query: String) -> AnyPublisher<[GameModel], Error> {
         return self.remote.getSearch(query: query)

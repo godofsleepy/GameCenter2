@@ -1,15 +1,15 @@
 //
-//  DetailInteractor.swift
+//  DetailFavoriteInteractor.swift
 //  GameCenter2
 //
-//  Created by rifat khadafy on 12/12/20.
+//  Created by rifat khadafy on 12/02/21.
 //
 
 import Foundation
 import Combine
 
 
-protocol DetailUseCase {
+protocol DetailFavoriteUseCase {
     func getDetail(gameId: String) -> AnyPublisher<DetailModel, Error>
     func addToFavorite(game: DetailModel) -> AnyPublisher<Bool, Error>
     func deleteFavorite(game: DetailModel) -> AnyPublisher<Bool, Error>
@@ -17,7 +17,7 @@ protocol DetailUseCase {
 }
 
 
-class DetailInteractor : DetailUseCase  {
+class DetailFavoriteInteractor : DetailFavoriteUseCase  {
     private let repository : GameRepositoryProtocol
     
     

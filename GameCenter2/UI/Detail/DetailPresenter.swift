@@ -44,7 +44,7 @@ class DetailPresenter: ObservableObject {
     }
     
     func addToFavorite() {
-        detailUseCase.AddToFavorite(game: self.detail[0])
+        detailUseCase.addToFavorite(game: self.detail[0])
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { (error) in
                 
@@ -55,4 +55,26 @@ class DetailPresenter: ObservableObject {
             }).store(in: &cancellables)
         
     }
+    
+    func deleteFavorite() {
+        detailUseCase.deleteFavorite(game: self.detail[0])
+            .receive(on: RunLoop.main)
+            .sink(receiveCompletion: { (error) in
+                self.errorMessage = String(describing: error)
+            }, receiveValue: { value in
+                self.isFav = false
+            }).store(in: &cancellables)
+        
+    }
+    
+    func checkIsFavorite(game : DetailModel){
+        detailUseCase.checkIsFav(game: game)
+            .receive(on: RunLoop.main)
+            .sink(receiveCompletion: { (error) in
+                self.errorMessage = String(describing: error)
+            }, receiveValue: { value in
+                self.isFav = value
+            }).store(in: &cancellables)
+    }
+
 }
