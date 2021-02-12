@@ -12,30 +12,48 @@ protocol GameRepositoryProtocol {
     func getGames(platformId : String) -> AnyPublisher<[GameModel], Error>
     func getDetail(gameId : String) -> AnyPublisher<DetailModel, Error>
     func getSearch(query : String) -> AnyPublisher<[GameModel], Error>
-    
+    func getListFav() -> AnyPublisher<[DetailModel], Error>
+    func addFav(game : DetailModel) -> AnyPublisher<Bool, Error>
+//    func deleteFav(game : DetailModel) -> AnyPublisher<Bool, Error>
 }
 
 final class GameRepository: NSObject {
     
-    typealias GameInstance = (RemoteDataSource) -> GameRepository
+    typealias GameInstance = (RemoteDataSource, LocaleDataSource) -> GameRepository
     
     fileprivate let remote: RemoteDataSource
-    //  fileprivate let locale: LocaleDataSource
+    fileprivate let locale: LocaleDataSource
     
-    private init(remote: RemoteDataSource) {
-        //    self.locale = locale
+    private init(remote: RemoteDataSource, locale: LocaleDataSource) {
+        self.locale = locale
         self.remote = remote
     }
     
-    static let sharedInstance: GameInstance = { remoteRepo in
-        return GameRepository(remote: remoteRepo)
+    static let sharedInstance: GameInstance = {  remoteRepo, localeRepo in
+        return GameRepository(remote: remoteRepo, locale: localeRepo)
     }
     
 }
 
 extension GameRepository: GameRepositoryProtocol {
+    func getListFav() -> AnyPublisher<[DetailModel], Error> {
+        return self.locale.getList()
+            .map { GameMapper.mapGameEntitiesToDomains(input: $0) }
+            .eraseToAnyPublisher()
+    }
+    
+    func addFav(game: DetailModel) -> AnyPublisher<Bool, Error> {
+        return self.locale
+            .addGame(from : GameMapper.mapDetailDomainToEntitiy(input: game))
+            .eraseToAnyPublisher()
+    }
+    
+//    func deleteFav(game: DetailModel) -> AnyPublisher<Bool, Error> {
+//        
+//    }
+    
     func getSearch(query: String) -> AnyPublisher<[GameModel], Error> {
-        self.remote.getSearch(query: query)
+        return self.remote.getSearch(query: query)
             .map { GameMapper.mapGamesResponsesToDomains(input: $0) }
             .eraseToAnyPublisher()
     }
@@ -43,16 +61,17 @@ extension GameRepository: GameRepositoryProtocol {
     
     
     func getDetail(gameId: String) -> AnyPublisher<DetailModel, Error> {
-        self.remote.getDetail(gameId: gameId)
+        return  self.remote.getDetail(gameId: gameId)
             .map { GameMapper.mapDetailResponsesToDomains(input: $0) }
             .eraseToAnyPublisher()
     }
     
     
     func getGames(platformId : String) -> AnyPublisher<[GameModel], Error> {
-        self.remote.getGames(platformId: platformId)
+        return self.remote.getGames(platformId: platformId)
             .map { GameMapper.mapGamesResponsesToDomains(input: $0) }
             .eraseToAnyPublisher()
     }
 }
+
 

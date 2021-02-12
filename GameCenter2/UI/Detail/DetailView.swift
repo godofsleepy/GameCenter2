@@ -7,14 +7,10 @@
 //
 
 import SwiftUI
-import SDWebImage
 import SDWebImageSwiftUI
-import AVKit
 
 struct DetailView : View {
     @ObservedObject var presenter : DetailPresenter
-    @State var index = 0
-    @State var selection: Int? = nil
     
     var body: some View {
         ScrollView {
@@ -114,12 +110,12 @@ struct DetailView : View {
                         
                         ScrollView(.horizontal){
                             HStack{
-                                if presenter.detail[0].clip != nil {
-                                    AVPlayerView(videoURL: URL(string: presenter.detail[0].clip ?? ""))
-                                        .frame(width: 280, height: 150, alignment: .leading).scaledToFit().cornerRadius(10).padding(.trailing)
-                                        .transition(.move(edge: .bottom)).edgesIgnoringSafeArea(.all)
-
-                                }
+                                //                                if presenter.detail[0].clip != nil {
+                                //                                    AVPlayerView(videoURL: URL(string: presenter.detail[0].clip ?? ""))
+                                //                                        .frame(width: 280, height: 150, alignment: .leading).scaledToFit().cornerRadius(10).padding(.trailing)
+                                //                                        .transition(.move(edge: .bottom)).edgesIgnoringSafeArea(.all)
+                                //
+                                //                                }
                                 if presenter.detail[0].background_image_additional != nil
                                 {
                                     WebImage(url: URL(string: presenter.detail[0].background_image_additional ?? ""))
@@ -170,32 +166,15 @@ struct DetailView : View {
         
         .navigationBarItems(trailing:
                                 Button(action: {
+                                    print("tap")
+                                    self.presenter.addToFavorite()
                                 }) {
                                     HStack {
-                                        Image(systemName: "heart.fill").foregroundColor(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
+                                        Image(systemName: self.presenter.isFav ? "heart.fill" : "heart").foregroundColor(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
                                         Text("Fav").foregroundColor(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
-                                    }                                }
+                                    }
+                                    
+                                }
         )
-    }
-}
-
-struct AVPlayerView: UIViewControllerRepresentable {
-    
-    var videoURL: URL?
-    
-    private var player: some View {
-        return VideoPlayer(player : AVPlayer(url: videoURL!)).scaledToFit()
-        
-    }
-    
-    func updateUIViewController(_ playerController: AVPlayerViewController, context: Context) {
-        playerController.modalPresentationStyle = .overCurrentContext
-        playerController.player?.play()
-    }
-    
-    func makeUIViewController(context: Context) -> AVPlayerViewController {
-        let playerController = AVPlayerViewController()
-        playerController.player = AVPlayer(url: videoURL!)
-        return playerController
     }
 }

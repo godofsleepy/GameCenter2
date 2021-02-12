@@ -7,32 +7,6 @@
 
 final class GameMapper {
     
-    //  static func mapCategoryResponsesToEntities(
-    //    input categoryResponses: [GamesResponse]
-    //  ) -> [CategoryEntity] {
-    //    return categoryResponses.map { result in
-    //      let newCategory = CategoryEntity()
-    //      newCategory.id = result.id ?? ""
-    //      newCategory.title = result.title ?? "Unknow"
-    //      newCategory.image = result.image ?? "Unknow"
-    //      newCategory.desc = result.description ?? "Unknow"
-    //      return newCategory
-    //    }
-    //  }
-    
-    //  static func mapCategoryEntitiesToDomains(
-    //    input categoryEntities: [CategoryEntity]
-    //  ) -> [CategoryModel] {
-    //    return categoryEntities.map { result in
-    //      return CategoryModel(
-    //        id: result.id,
-    //        title: result.title,
-    //        image: result.image,
-    //        description: result.desc
-    //      )
-    //    }
-    //  }
-    //
     static func mapGamesResponsesToDomains(
         input gameResponses: [GameResponse]
     ) -> [GameModel] {
@@ -49,11 +23,50 @@ final class GameMapper {
         }
     }
     
+    static func mapDetailDomainToEntitiy (input detailGame : DetailModel) -> GameEntity {
+        let gameEntity = GameEntity()
+        gameEntity.id = detailGame.id
+        gameEntity.name = detailGame.name
+        gameEntity.rating = detailGame.rating
+        gameEntity.desc = detailGame.description ?? "No Description"
+        gameEntity.image = detailGame.background_image ?? ""
+        gameEntity.additionalImage = detailGame.background_image_additional ?? ""
+        gameEntity.clip = detailGame.clip ?? ""
+        for platform in detailGame.parent_platforms {
+            gameEntity.platforms.append(platform.platform.slug)
+        }
+        for genre in detailGame.genres {
+            gameEntity.genre.append(genre.name)
+        }
+        return gameEntity
+    }
+    
+    static func mapGameEntitiesToDomains (input favGames : [GameEntity]) -> [DetailModel] {
+        return favGames.map { result in
+            return DetailModel(
+                id: result.id,
+                name: result.name,
+                released: result.released,
+                rating: result.rating,
+                description: result.desc,
+                background_image: result.image,
+                background_image_additional: result.additionalImage,
+                parent_platforms: result.platforms.map { result in
+                    return PlatformsModel(platform: PlatformModel(slug: result))
+                },
+                genres: result.genre.map { result in
+                    return GenreModel(name: result)
+                },
+                clip: result.clip
+            )
+        }
+    }
+    
     static func mapDetailResponsesToDomains(
         input detailResponses : DetailResponse
     ) -> DetailModel {
         return DetailModel(
-            id: detailResponses.id ?? 1,
+            id: detailResponses.id ?? 0,
             name: detailResponses.name ?? "",
             released: detailResponses.released ?? "",
             rating: detailResponses.rating ?? 0.0,

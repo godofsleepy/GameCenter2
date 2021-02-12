@@ -8,21 +8,28 @@
 import SwiftUI
 
 struct FavoriteView: View {
+    @ObservedObject var presenter : FavoritePresenter
+    
     var body: some View {
         NavigationView{
-            VStack {
-                List {
-//                    ForEach(games, id:\.self){ game in
-//                        NavigationLink(destination: FavoriteDetailView(data: game)){
-//                            FavGameItemView(game: game)
-//                        }
-//                    }.onDelete(perform: removeGames)
+            ZStack{
+                Color(red: 37 / 255, green: 19 / 255, blue: 51 / 255).edgesIgnoringSafeArea(.all)
+
+                ScrollView{
+                    VStack { 
+                        ForEach(self.presenter.games, id:\.self){ game in
+                            self.presenter.linkBuilder(for: game) {
+                                FavGameItemView(game: game)
+                            }
+                        }
+                    }.padding(24)
+
                 }
-                
             }
-                
             .navigationBarTitle("Favorite")
-            .navigationBarItems(trailing: EditButton())
+        }
+        .onAppear{
+            self.presenter.getGames()
         }
     }
 }

@@ -11,6 +11,7 @@ import CoreData
 struct ContentView: View {
     @EnvironmentObject var homePresenter: HomePresenter
     @EnvironmentObject var searchPresenter : SearchPresenter
+    @EnvironmentObject var favoritePresenter : FavoritePresenter
     
     init() {
         UITableView.appearance().tableFooterView = UIView()
@@ -30,7 +31,7 @@ struct ContentView: View {
         //Use this if NavigationBarTitle is with displayMode = .inline
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor:UIColor(red: 241/255.0, green: 79/255.0, blue: 114/255.0, alpha: 1.0)]
         UINavigationBar.appearance().barTintColor = UIColor(red: 37/255.0, green: 19/255.0, blue: 51/255.0, alpha: 10.0)
-
+        
     }
     
     var body: some View {
@@ -47,7 +48,7 @@ struct ContentView: View {
                     Text("Search")
                 }
             
-            FavoriteView()
+            FavoriteView(presenter: favoritePresenter)
                 .tabItem {
                     Image(systemName: "heart.fill")
                     Text("Favorite")

@@ -6,16 +6,17 @@
 //
 
 import Foundation
+import RealmSwift
 
 final class Injection: NSObject {
     
     private func provideRepository() -> GameRepositoryProtocol {
-        //    let realm = try? Realm()
+        let realm = try? Realm()
         
-        //    let locale: LocaleDataSource = LocaleDataSource.sharedInstance(realm)
+        let locale: LocaleDataSource = LocaleDataSource.sharedInstance(realm)
         let remote: RemoteDataSource = RemoteDataSource.sharedInstance
         
-        return GameRepository.sharedInstance(remote)
+        return GameRepository.sharedInstance(remote, locale)
     }
     
     func provideHome() -> HomeUseCase {
@@ -31,6 +32,11 @@ final class Injection: NSObject {
     func provideSearch()  -> SearchUseCase {
         let repository = provideRepository()
         return SearchInteractor(repository: repository)
+    }
+    
+    func provideFavorite() -> FavoriteUseCase {
+        let repository = provideRepository()
+        return FavoriteInteractor(repository: repository)
     }
     
 }

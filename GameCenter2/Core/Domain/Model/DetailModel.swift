@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct DetailModel : Equatable, Identifiable {
+struct DetailModel : Equatable, Identifiable, Hashable{
     
     let id : Int
     let name : String
@@ -21,17 +21,6 @@ struct DetailModel : Equatable, Identifiable {
     let genres : [GenreModel]
     let clip : String?
     
-//    init(game: DetailModel) {
-//        id = game.id
-//        name = game.name
-//        released = game.released
-//        rating = game.rating
-//        description = game.description
-//        background_image = game.background_image
-//        parent_platforms = game.parent_platforms
-//        genres = game.genres
-//    }
-        
     public func getGenre() -> [String] {
         var genreArray : [String] = []
         for i in genres {
@@ -39,7 +28,7 @@ struct DetailModel : Equatable, Identifiable {
         }
         return genreArray
     }
-
+    
     public func getPlatform() -> [String] {
         var platformArray : [String] = []
         for i in parent_platforms {
@@ -47,18 +36,18 @@ struct DetailModel : Equatable, Identifiable {
         }
         return platformArray
     }
-
+    
 }
 
-struct PlatformsModel : Equatable {
+struct PlatformsModel : Equatable, Hashable {
     let platform : PlatformModel
 }
 
-struct PlatformModel : Equatable {
+struct PlatformModel : Equatable, Hashable {
     let slug : String
 }
 
-struct GenreModel : Equatable {
+struct GenreModel : Equatable, Hashable {
     let name : String
 }
 

@@ -14,8 +14,9 @@ class DetailPresenter: ObservableObject {
     
     @Published var detail: [DetailModel] = []
     @Published var errorMessage: String = ""
+    @Published var isFav : Bool = false
     @Published var loadingState: Bool = false
-
+    
     
     init(detailUseCase : DetailUseCase, gameId : String) {
         print("get Detail \(gameId)")
@@ -24,22 +25,34 @@ class DetailPresenter: ObservableObject {
     }
     
     func getDetail(gameId : String)   {
-        
         loadingState = true
         detailUseCase.getDetail(gameId: gameId)
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
                 switch completion {
                 case .failure:
-                  self.errorMessage = String(describing: completion)
+                    self.errorMessage = String(describing: completion)
                 case .finished:
-                  self.loadingState = false
+                    self.loadingState = false
                 }
             }, receiveValue: { value in
                 self.detail.append(value)
-                print(self.detail)
+                
             })
-              .store(in: &cancellables)
+            .store(in: &cancellables)
+        
+    }
+    
+    func addToFavorite() {
+        detailUseCase.AddToFavorite(game: self.detail[0])
+            .receive(on: RunLoop.main)
+            .sink(receiveCompletion: { (error) in
+                
+                self.errorMessage = String(describing: error)
+                
+            }, receiveValue: { value in
+                self.isFav = value
+            }).store(in: &cancellables)
         
     }
 }
