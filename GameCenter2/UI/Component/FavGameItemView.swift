@@ -35,14 +35,14 @@ struct FavGameItemView: View {
                         .fontWeight(.regular)
                         .foregroundColor(Color.white)
                     Image("star.fill")
-                        .foregroundColor(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
+                        .foregroundColor(Color("orange"))
                 }
                 
             }.padding(.leading)
             Spacer()
             
             Image("chevron.right")
-                .foregroundColor(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
+                .foregroundColor(Color("orange"))
             
         }.frame(minWidth: 0, maxWidth: .infinity, alignment: .leading).padding(.bottom)
         

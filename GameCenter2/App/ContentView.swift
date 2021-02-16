@@ -9,10 +9,7 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @EnvironmentObject var homePresenter: HomePresenter
-    @EnvironmentObject var searchPresenter : SearchPresenter
-    @EnvironmentObject var favoritePresenter : FavoritePresenter
-    
+        
     init() {
         UITableView.appearance().tableFooterView = UIView()
         //        Mengganti warna background list
@@ -36,19 +33,19 @@ struct ContentView: View {
     
     var body: some View {
         TabView{
-            HomeView(presenter: homePresenter)
+            HomeView()
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("Home")
                 }
             
-            SearchView(presenter: searchPresenter)
+            SearchView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Search")
                 }
             
-            FavoriteView(presenter: favoritePresenter)
+            FavoriteView()
                 .tabItem {
                     Image(systemName: "heart.fill")
                     Text("Favorite")

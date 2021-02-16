@@ -45,10 +45,10 @@ struct DetailFavoriteView: View {
                             .fontWeight(.regular)
                             .foregroundColor(Color.white)
                         Image("star.fill")
-                            .foregroundColor(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
+                            .foregroundColor(Color("orange"))
                     }
                     .frame(width: 75, height: 30)
-                    .background(Color(red: 241 / 255, green: 79 / 255, blue: 114 / 255))
+                    .background(Color("pink"))
                     .cornerRadius(10)
                     
                 }
@@ -72,7 +72,7 @@ struct DetailFavoriteView: View {
                                 .foregroundColor(.white)
                             
                             Image("calendar")
-                                .foregroundColor(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
+                                .foregroundColor(Color("orange"))
                         }
                         
                     }.padding(.bottom)
@@ -130,7 +130,7 @@ struct DetailFavoriteView: View {
                     
                     
                     Text("Platform")
-                        .foregroundColor(Color(red: 241 / 255, green: 79 / 255, blue: 114 / 255))
+                        .foregroundColor(Color("pink"))
                         .fontWeight(.semibold)
                         .font(.system(size: 22))
                     
@@ -142,7 +142,7 @@ struct DetailFavoriteView: View {
                                     Image("logo\(presenter.game.parent_platforms[i].platform.slug)")
                                         .resizable()
                                         .frame(width: 50, height: 50)
-                                        .background(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
+                                        .background(Color("orange"))
                                         .cornerRadius(100)
                                     
                                 }
@@ -154,11 +154,11 @@ struct DetailFavoriteView: View {
                 }
                 .padding()
                 .padding(.bottom, 100)
-                .background(RoundedCorners(color: Color(red: 37 / 255, green: 19 / 255, blue: 51 / 255), tl: 0, tr: 65, bl: 0, br: 0))
+                .background(RoundedCorners(color: Color("purple"), tl: 0, tr: 65, bl: 0, br: 0))
                 
             }
         }
-        .background(Color(red: 37 / 255, green: 19 / 255, blue: 51 / 255)).edgesIgnoringSafeArea(.all)
+        .background(Color("purple")).edgesIgnoringSafeArea(.all)
         
         .navigationBarItems(trailing:
                                 Button(action: {
@@ -166,8 +166,8 @@ struct DetailFavoriteView: View {
                                     self.presenter.isFav ? self.presenter.deleteFavorite(): self.presenter.addToFavorite()
                                 }) {
                                     HStack {
-                                        Image(systemName: self.presenter.isFav ? "heart.fill" : "heart").foregroundColor(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
-                                        Text("Fav").foregroundColor(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
+                                        Image(systemName: self.presenter.isFav ? "heart.fill" : "heart").foregroundColor(Color("orange"))
+                                        Text("Fav").foregroundColor(Color("orange"))
                                     }
                                     
                                 }

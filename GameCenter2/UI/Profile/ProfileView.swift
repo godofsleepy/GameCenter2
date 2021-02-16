@@ -16,14 +16,14 @@ struct ProfileView: View {
             ScrollView{
                 VStack(alignment: .leading) {
                     Text("About Application")
-                        .foregroundColor(Color(red: 241 / 255, green: 79 / 255, blue: 114 / 255))
+                        .foregroundColor(Color("pink"))
                         .font(.system(size: 30))
                         .fontWeight(.semibold).padding(.bottom)
                     
                     Text(data.description_app).foregroundColor(Color.white).padding(.bottom)
                     
                     Text("About Developer")
-                        .foregroundColor(Color(red: 241 / 255, green: 79 / 255, blue: 114 / 255))
+                        .foregroundColor(Color("pink"))
                         .font(.system(size: 30))
                         .fontWeight(.semibold).padding(.bottom)
                     
@@ -33,7 +33,7 @@ struct ProfileView: View {
                             .frame(width: 80,height: 80).clipShape(Circle())
                             .scaledToFit()
                             .overlay(
-                                Circle().stroke(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255), lineWidth: 4))
+                                Circle().stroke(Color("orange"), lineWidth: 4))
                         
                         VStack(alignment: .leading) {
                             Text(data.name).font(.system(size: 24)).fontWeight(.semibold).foregroundColor(Color.white)
@@ -42,7 +42,7 @@ struct ProfileView: View {
                     }.padding(.bottom)
                     
                     Text("Description")
-                        .foregroundColor(Color(red: 241 / 255, green: 79 / 255, blue: 114 / 255)).padding(.bottom).font(.system(size: 18))
+                        .foregroundColor(Color("pink")).padding(.bottom).font(.system(size: 18))
                     
                     Text(data.description_me).foregroundColor(Color.white)
                 }

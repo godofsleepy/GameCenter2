@@ -10,18 +10,18 @@ import SwiftUI
 
 struct SearchView: View {
     
-    @ObservedObject var presenter : SearchPresenter
+    @EnvironmentObject var presenter : SearchPresenter
     @State var query: String = ""
 
     var body: some View {
 
         NavigationView{
             ZStack{
-                Color(red: 37 / 255, green: 19 / 255, blue: 51 / 255).edgesIgnoringSafeArea(.all)
+                Color("purple").edgesIgnoringSafeArea(.all)
                 VStack {
                     HStack {
                         HStack {
-                            Image(systemName: "magnifyingglass").foregroundColor(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
+                            Image(systemName: "magnifyingglass").foregroundColor(Color("orange"))
                             TextField("Search", text:$query, onCommit: {
                                 self.presenter.getSearch(query: query)
                             }).foregroundColor(Color.white)
@@ -31,12 +31,12 @@ struct SearchView: View {
                                 Button(action: {
                                     self.query = ""
                                 }) {
-                                    Image(systemName: "xmark.circle.fill").foregroundColor(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
+                                    Image(systemName: "xmark.circle.fill").foregroundColor(Color("orange"))
                                 }
                             }
                         }
                         .padding()
-                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255), lineWidth: 1))
+                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color("orange"), lineWidth: 1))
 
                     }.padding(.horizontal).padding(.vertical)
 

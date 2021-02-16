@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct FavoriteView: View {
-    @ObservedObject var presenter : FavoritePresenter
+    @EnvironmentObject var presenter : FavoritePresenter
     
     var body: some View {
         NavigationView{
             ZStack{
-                Color(red: 37 / 255, green: 19 / 255, blue: 51 / 255).edgesIgnoringSafeArea(.all)
+                Color("purple").edgesIgnoringSafeArea(.all)
 
                 ScrollView{
                     VStack { 

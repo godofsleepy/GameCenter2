@@ -22,19 +22,14 @@ struct DetailModel : Equatable, Identifiable, Hashable{
     let clip : String?
     
     public func getGenre() -> [String] {
-        var genreArray : [String] = []
-        for i in genres {
-            genreArray.append(i.name)
-        }
-        return genreArray
-    }
+        return genres.map {
+            $0.name
+        }   }
     
     public func getPlatform() -> [String] {
-        var platformArray : [String] = []
-        for i in parent_platforms {
-            platformArray.append(i.platform.slug)
+        return parent_platforms.map {
+            $0.platform.slug
         }
-        return platformArray
     }
     
 }

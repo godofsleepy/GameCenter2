@@ -11,7 +11,7 @@ import SDWebImage
 import SDWebImageSwiftUI
 
 struct HomeView: View {
-    @ObservedObject var presenter : HomePresenter
+    @EnvironmentObject var presenter : HomePresenter
     @State var index = 0
     @State var selection: Int? = nil
     
@@ -19,12 +19,12 @@ struct HomeView: View {
         
         NavigationView{
             ZStack {
-                Color(red: 37 / 255, green: 19 / 255, blue: 51 / 255).edgesIgnoringSafeArea(.all)
+                Color("purple").edgesIgnoringSafeArea(.all)
                 
                 ScrollView {
                     ZStack{
                         RoundedRectangle(cornerRadius: 20)
-                            .stroke(Color(red: 241 / 255, green: 79 / 255, blue: 114 / 255), lineWidth: 5)
+                            .stroke(Color("pink"), lineWidth: 5)
                         
                         HStack {
                             Button(action: {
@@ -57,7 +57,7 @@ struct HomeView: View {
                                 
                             }) {
                                 Image("chevron.right")
-                                    .foregroundColor(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
+                                    .foregroundColor(Color("orange"))
                             }
                         }
                         .padding(10)
@@ -76,7 +76,7 @@ struct HomeView: View {
                     .padding(.bottom)
                     
                     Text("Featured")
-                        .foregroundColor(Color(red: 241 / 255, green: 79 / 255, blue: 114 / 255))
+                        .foregroundColor(Color("pink"))
                         .font(.system(size: 24))
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     
@@ -102,7 +102,7 @@ struct HomeView: View {
                 Button(action: {
                     self.selection = 1
                 }) {
-                    Image(systemName: "info.circle").foregroundColor(Color(red: 241 / 255, green: 79 / 255, blue: 114 / 255)).font(.system(size: 26))
+                    Image(systemName: "info.circle").foregroundColor(Color("pink")).font(.system(size: 26))
                 }
             })
         }
