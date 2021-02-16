@@ -42,7 +42,6 @@
 		FB7D70CD25AD53E300393508 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7D70CC25AD53E300393508 /* SearchPresenter.swift */; };
 		FB7D70D525AD5BED00393508 /* SearchInterctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7D70D425AD5BED00393508 /* SearchInterctor.swift */; };
 		FB7D70D825AD676A00393508 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7D70D725AD676A00393508 /* SearchRouter.swift */; };
-		FB92C61725D6140700BA2F5B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = FB92C61625D6140700BA2F5B /* .swiftlint.yml */; };
 		FB99DE0C2577B70D0064178B /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99DE0B2577B70D0064178B /* GameRepository.swift */; };
 		FBB8EFC52573E54C006FD93B /* CustomCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB349222573523500274808 /* CustomCorner.swift */; };
 		FBB8EFC62573E54C006FD93B /* ViewErase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB349232573523500274808 /* ViewErase.swift */; };
@@ -97,7 +96,6 @@
 		FB7D70CC25AD53E300393508 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		FB7D70D425AD5BED00393508 /* SearchInterctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInterctor.swift; sourceTree = "<group>"; };
 		FB7D70D725AD676A00393508 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
-		FB92C61625D6140700BA2F5B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		FB99DE0B2577B70D0064178B /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
 		FBB349222573523500274808 /* CustomCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorner.swift; sourceTree = "<group>"; };
 		FBB349232573523500274808 /* ViewErase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewErase.swift; sourceTree = "<group>"; };
@@ -171,7 +169,6 @@
 		FB44E24E2562DD6A00758893 = {
 			isa = PBXGroup;
 			children = (
-				FB92C61625D6140700BA2F5B /* .swiftlint.yml */,
 				FB44E2592562DD6A00758893 /* GameCenter2 */,
 				FB44E2582562DD6A00758893 /* Products */,
 				3B5AD74ABDCDEB733D491DE8 /* Pods */,
@@ -447,7 +444,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB92C61725D6140700BA2F5B /* .swiftlint.yml in Resources */,
 				FB44E2622562DD6C00758893 /* Preview Assets.xcassets in Resources */,
 				FB44E25F2562DD6C00758893 /* Assets.xcassets in Resources */,
 			);
