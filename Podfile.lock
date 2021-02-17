@@ -14,7 +14,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
-  - RealmSwift (~> 10.1.4)
+  - RealmSwift
   - SDWebImageSwiftUI (~> 1.5.0)
   - SwiftLint (~> 0.40.0)
 
@@ -35,6 +35,6 @@ SPEC CHECKSUMS:
   SDWebImageSwiftUI: 43687ffe232ddd33fe0659498b7ca9884fdd6b35
   SwiftLint: 4154893c73a4c52d6240195507eb7a3e3c64087e
 
-PODFILE CHECKSUM: c11292187d700f911c1eccf2bcff43b125617432
+PODFILE CHECKSUM: e96cdfaf63746eb013185e1a68f3c3ebbdb6fefa
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1
