@@ -1,5 +1,0 @@
-language: swift
-osx_image: xcode12 
-xcode_project: GameCenter2.xcworkspace
-xcode_scheme: GameCenter2
-xcode_destination: platform=iOS Simulator,OS=14.0,name=iPhone 11 Pro
