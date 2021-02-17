@@ -1,4 +1,10 @@
 language: swift
+before_install:
+- gem install cocoapods # Since Travis is not always on latest version
+# Avoid error: Encountered an unknown error (uninitialized constant Concurrent::Promises) during validation
+# https://github.com/CocoaPods/CocoaPods/issues/8948
+- gem update concurrent-ruby
+- pod setup
 osx_image: xcode12 
 xcode_project: GameCenter2.xcodeproj
 xcode_scheme: GameCenter2
