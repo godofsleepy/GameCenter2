@@ -7,20 +7,18 @@
 
 import Foundation
 import Combine
-
-protocol HomeUseCase {
-    func getGames(platformId : String) -> AnyPublisher<[GameModel], Error>
-}
+import Core
 
 class HomeInteractor: HomeUseCase {
+    
     private let repository : GameRepositoryProtocol
     
     required init(repository : GameRepositoryProtocol) {
         self.repository = repository
     }
-    
-    func getGames(platformId: String) -> AnyPublisher<[GameModel], Error> {
+    func getGames(platformId: String) -> AnyPublisher<[GameModel], URLError> {
         return repository.getGames(platformId: platformId)
     }
-    
+
+        
 }

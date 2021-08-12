@@ -7,11 +7,9 @@
 
 import Foundation
 import Combine
+import Core
 
 protocol GameRepositoryProtocol {
-    func getGames(platformId : String) -> AnyPublisher<[GameModel], Error>
-    func getDetail(gameId : String) -> AnyPublisher<DetailModel, Error>
-    func getSearch(query : String) -> AnyPublisher<[GameModel], Error>
     func getListFav() -> AnyPublisher<[DetailModel], Error>
     func addFav(game : DetailModel) -> AnyPublisher<Bool, Error>
     func deleteFav(game : DetailModel) -> AnyPublisher<Bool, Error>
@@ -20,18 +18,17 @@ protocol GameRepositoryProtocol {
 
 final class GameRepository: NSObject {
     
-    typealias GameInstance = (RemoteDataSource, LocaleDataSource) -> GameRepository
+    typealias GameInstance = ( LocaleDataSource) -> GameRepository
     
-    fileprivate let remote: RemoteDataSource
     fileprivate let locale: LocaleDataSource
     
-    private init(remote: RemoteDataSource, locale: LocaleDataSource) {
+    private init( locale: LocaleDataSource) {
         self.locale = locale
         self.remote = remote
     }
     
-    static let sharedInstance: GameInstance = {  remoteRepo, localeRepo in
-        return GameRepository(remote: remoteRepo, locale: localeRepo)
+    static let sharedInstance: GameInstance = { localeRepo in
+        return GameRepository(locale: localeRepo)
     }
     
 }
@@ -61,26 +58,4 @@ extension GameRepository: GameRepositoryProtocol {
             .eraseToAnyPublisher()
     }
     
-    func getSearch(query: String) -> AnyPublisher<[GameModel], Error> {
-        return self.remote.getSearch(query: query)
-            .map { GameMapper.mapGamesResponsesToDomains(input: $0) }
-            .eraseToAnyPublisher()
-    }
-    
-    
-    
-    func getDetail(gameId: String) -> AnyPublisher<DetailModel, Error> {
-        return  self.remote.getDetail(gameId: gameId)
-            .map { GameMapper.mapDetailResponsesToDomains(input: $0) }
-            .eraseToAnyPublisher()
-    }
-    
-    
-    func getGames(platformId : String) -> AnyPublisher<[GameModel], Error> {
-        return self.remote.getGames(platformId: platformId)
-            .map { GameMapper.mapGamesResponsesToDomains(input: $0) }
-            .eraseToAnyPublisher()
-    }
 }
-
-

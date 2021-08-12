@@ -1,24 +1,23 @@
 //
-//  Detail.swift
-//  GameCenter2
+//  DetailResponse.swift
+//  Core
 //
-//  Created by rifat khadafy on 17/11/20.
-//  Copyright © 2020 rifat khadafy. All rights reserved.
+//  Created by rifat khadafy on 18/02/21.
 //
 
 import Foundation
 
-struct DetailResponse : Codable {
-    let id : Int?
-    let name : String?
-    let released : String?
-    let rating : Double?
-    let description  : String?
-    let background_image : String?
-    let background_image_additional : String?
-    let parent_platforms : [platforms]
-    let genres : [genre]
-    let clip : clip
+public struct DetailResponse : Codable {
+    public let id : Int?
+    public  let name : String?
+    public let released : String?
+    public  let rating : Double?
+    public let description  : String?
+    public  let background_image : String?
+    public let background_image_additional : String?
+    public let parent_platforms : [platforms]
+    public let genres : [genre]
+    public let clip : clip
     
     enum CodingKeys: String, CodingKey {
         case name = "name"
@@ -34,32 +33,32 @@ struct DetailResponse : Codable {
     }
 }
 
-struct platforms : Codable {
-    let platform : platform
+public struct platforms : Codable {
+    public let platform : platform
     
     enum CodingKeys: String, CodingKey {
         case platform = "platform"
     }
 }
 
-struct platform :Codable {
-    let slug : String?
+public struct platform :Codable {
+    public let slug : String?
     
     enum CodingKeys: String, CodingKey {
         case slug = "slug"
     }
 }
 
-struct genre : Codable {
-    let name : String?
+public struct genre : Codable {
+    public  let name : String?
     
     enum CodingKeys: String, CodingKey {
         case name = "name"
     }
 }
 
-struct clip : Codable {
-    let clip : String?
+public struct clip : Codable {
+    public  let clip : String?
     enum CodingKeys: String, CodingKey {
         case clip = "clip"
     }
