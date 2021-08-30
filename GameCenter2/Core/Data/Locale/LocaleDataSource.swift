@@ -39,11 +39,7 @@ extension LocaleDataSource : LocaleDataSourceProtocol {
                 do {
                     let isExist =  realm.object(ofType: GameEntity.self, forPrimaryKey: id)
                     completion(.success((isExist != nil)))
-                    //                    try realm.write {
-                    //                        realm.delete(!)
-                    //                        print("yess")
-                    //                        completion(.success(true))
-                    //                    }
+                    
                 }            } else {
                     completion(.failure(DatabaseError.invalidInstance))
                 }
@@ -90,7 +86,6 @@ extension LocaleDataSource : LocaleDataSourceProtocol {
                     try realm.write {
                         
                         realm.add(game, update: .all)
-                        print("yes bisa")
                         completion(.success(true))
                     }
                 } catch {

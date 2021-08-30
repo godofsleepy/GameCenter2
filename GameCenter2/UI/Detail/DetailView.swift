@@ -111,7 +111,7 @@ struct DetailView : View {
                         
                         ScrollView(.horizontal){
                             HStack{
-                               
+                                
                                 if presenter.detail!.background_image_additional != nil
                                 {
                                     WebImage(url: URL(string: presenter.detail!.background_image_additional ?? ""))

@@ -28,6 +28,7 @@ final class GameMapper {
         gameEntity.id = detailGame.id
         gameEntity.name = detailGame.name
         gameEntity.rating = detailGame.rating
+        gameEntity.released = detailGame.released ?? ""
         gameEntity.desc = detailGame.description ?? "No Description"
         gameEntity.image = detailGame.background_image ?? ""
         gameEntity.additionalImage = detailGame.background_image_additional ?? ""
