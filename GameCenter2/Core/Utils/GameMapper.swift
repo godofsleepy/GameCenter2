@@ -31,7 +31,6 @@ final class GameMapper {
         gameEntity.desc = detailGame.description ?? "No Description"
         gameEntity.image = detailGame.background_image ?? ""
         gameEntity.additionalImage = detailGame.background_image_additional ?? ""
-        gameEntity.clip = detailGame.clip ?? ""
         for platform in detailGame.parent_platforms {
             gameEntity.platforms.append(platform.platform.slug)
         }
@@ -56,8 +55,8 @@ final class GameMapper {
                 },
                 genres: result.genre.map { result in
                     return GenreModel(name: result)
-                },
-                clip: result.clip
+                }
+            
             )
         }
     }
@@ -82,8 +81,7 @@ final class GameMapper {
                 return GenreModel (
                     name: result.name ?? ""
                 )
-            },
-            clip: detailResponses.clip.clip ?? ""
+            }
         )
     }
     

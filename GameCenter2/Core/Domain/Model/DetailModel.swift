@@ -19,7 +19,6 @@ struct DetailModel : Equatable, Identifiable, Hashable{
     let background_image_additional : String?
     let parent_platforms : [PlatformsModel]
     let genres : [GenreModel]
-    let clip : String?
     
     public func getGenre() -> [String] {
         return genres.map {

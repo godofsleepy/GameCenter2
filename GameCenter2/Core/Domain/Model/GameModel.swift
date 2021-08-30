@@ -14,12 +14,4 @@ struct GameModel: Equatable, Identifiable {
     let rating : Double
     let released : String?
     let background_image : String?
-    
-//    init(game: GameResponse) {
-//        id = game.id
-//        name = game.name
-//        rating = game.rating
-//        released = game.released
-//        background_image = game.background_image
-//    }
 }

@@ -27,14 +27,14 @@ struct DetailView : View {
                     GeometryReader { geometry in
                         VStack {
                             if geometry.frame(in: .global).minY <= 0 {
-                                WebImage(url: URL(string: presenter.detail[0].background_image ?? ""))
+                                WebImage(url: URL(string: presenter.detail!.background_image ?? ""))
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
                                     .frame(width: geometry.size.width, height: abs(geometry.size.height + (geometry.frame(in: .global).minY)))
                                     .clipped()
                                     .offset(y: -geometry.frame(in: .global).minY)
                             } else {
-                                WebImage(url: URL(string: presenter.detail[0].background_image ?? ""))
+                                WebImage(url: URL(string: presenter.detail!.background_image ?? ""))
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
                                     .frame(width: geometry.size.width, height: geometry.size.height)
@@ -48,7 +48,7 @@ struct DetailView : View {
                     HStack{
                         Spacer()
                         HStack{
-                            Text(String(format: "%.2f", presenter.detail[0].rating ))
+                            Text(String(format: "%.2f", presenter.detail!.rating ))
                                 .font(.system(size: 18))
                                 .fontWeight(.regular)
                                 .foregroundColor(Color.white)
@@ -68,13 +68,13 @@ struct DetailView : View {
                     
                     VStack(alignment: .leading){
                         VStack(alignment: .leading, spacing :10) {
-                            Text(presenter.detail[0].name)
+                            Text(presenter.detail!.name)
                                 .fontWeight(.semibold)
                                 .font(.system(size: 24))
                                 .foregroundColor(.white)
                             
                             HStack{
-                                Text("Released \(presenter.detail[0].released ?? "uknown")")
+                                Text("Released \(presenter.detail!.released ?? "uknown")")
                                     .fontWeight(.light)
                                     .font(.system(size: 16))
                                     .foregroundColor(.white)
@@ -86,9 +86,9 @@ struct DetailView : View {
                         }.padding(.bottom)
                         
                         HStack(alignment: .center) {
-                            ForEach(presenter.detail[0].genres.indices){ i in
+                            ForEach(presenter.detail!.genres.indices){ i in
                                 if (i < 2) {
-                                    Text(presenter.detail[0].genres[i].name)
+                                    Text(presenter.detail!.genres[i].name)
                                         .font(.system(size: 20))
                                         .foregroundColor(.white)
                                         .fontWeight(.semibold)
@@ -98,8 +98,8 @@ struct DetailView : View {
                             
                         }.frame(minWidth: 0, maxWidth: .infinity)
                         
-                        if (presenter.detail[0].description != nil ){
-                            Text(presenter.detail[0].description!.replacingOccurrences(of: "<[^>]+>", with: "" ,options: .regularExpression, range: nil) )
+                        if (presenter.detail!.description != nil ){
+                            Text(presenter.detail!.description!.replacingOccurrences(of: "<[^>]+>", with: "" ,options: .regularExpression, range: nil) )
                                 .foregroundColor(.white)
                                 .padding(.vertical)
                         }else {
@@ -111,22 +111,10 @@ struct DetailView : View {
                         
                         ScrollView(.horizontal){
                             HStack{
-                                if presenter.detail[0].clip != nil {
-                                   
-                                    VideoPlayer(player : AVPlayer(url: URL(string : presenter.detail[0].clip ?? "")!))
-                                        .cornerRadius(10)
-                                        .frame(width: 280, height: 150, alignment: .leading)
-                                        .scaledToFit()
-                                        .padding(.trailing)
-                                        .transition(.move(edge: .bottom)).edgesIgnoringSafeArea(.all)
-                                        .onAppear{
-                                            
-                                        }
-                                    
-                                }
-                                if presenter.detail[0].background_image_additional != nil
+                               
+                                if presenter.detail!.background_image_additional != nil
                                 {
-                                    WebImage(url: URL(string: presenter.detail[0].background_image_additional ?? ""))
+                                    WebImage(url: URL(string: presenter.detail!.background_image_additional ?? ""))
                                         .renderingMode(.original)
                                         .resizable()
                                         .indicator(.activity)
@@ -146,10 +134,10 @@ struct DetailView : View {
                         
                         ScrollView(.horizontal){
                             HStack{
-                                ForEach(presenter.detail[0].parent_platforms.indices){ i in
-                                    if (presenter.detail[0].parent_platforms[i].platform.slug == "pc" || presenter.detail[0].parent_platforms[i].platform.slug == "xbox" || presenter.detail[0].parent_platforms[i].platform.slug == "playstation" || presenter.detail[0].parent_platforms[i].platform.slug == "nintendo"){
+                                ForEach(presenter.detail!.parent_platforms.indices){ i in
+                                    if (presenter.detail!.parent_platforms[i].platform.slug == "pc" || presenter.detail!.parent_platforms[i].platform.slug == "xbox" || presenter.detail!.parent_platforms[i].platform.slug == "playstation" || presenter.detail!.parent_platforms[i].platform.slug == "nintendo"){
                                         
-                                        Image("logo\(presenter.detail[0].parent_platforms[i].platform.slug)")
+                                        Image("logo\(presenter.detail!.parent_platforms[i].platform.slug)")
                                             .resizable()
                                             .frame(width: 50, height: 50)
                                             .background(Color("orange"))
@@ -189,7 +177,7 @@ struct DetailView : View {
         )
         .onAppear{
             if !self.presenter.loadingState {
-                self.presenter.checkIsFavorite(game: self.presenter.detail[0])
+                self.presenter.checkIsFavorite(game: self.presenter.detail!)
             }
         }
     }

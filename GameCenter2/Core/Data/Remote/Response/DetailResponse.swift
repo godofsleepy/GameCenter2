@@ -18,7 +18,6 @@ struct DetailResponse : Codable {
     let background_image_additional : String?
     let parent_platforms : [platforms]
     let genres : [genre]
-    let clip : clip
     
     enum CodingKeys: String, CodingKey {
         case name = "name"
@@ -30,7 +29,6 @@ struct DetailResponse : Codable {
         case background_image_additional = "background_image_additional"
         case parent_platforms = "parent_platforms"
         case genres = "genres"
-        case clip = "clip"
     }
 }
 
@@ -58,11 +56,5 @@ struct genre : Codable {
     }
 }
 
-struct clip : Codable {
-    let clip : String?
-    enum CodingKeys: String, CodingKey {
-        case clip = "clip"
-    }
-}
 
 
