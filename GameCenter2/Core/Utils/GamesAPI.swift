@@ -9,6 +9,7 @@ import Foundation
 
 struct API {
     static let baseUrl = "https://api.rawg.io/api/games"
+    static let key = "915260f2cb5041538cdedbc5c3b37a18"
 }
 
 protocol Endpoint {
@@ -34,36 +35,3 @@ enum Endpoints {
   }
   
 }
-
-//enum GamesApi {
-//    private static let call = Call()
-//
-//    static func gamePlatform(id: String = "18") -> AnyPublisher<Games<Game>, Error> {
-//        let request = URLComponents(url: URL(string: "https://api.rawg.io/api/games?platforms=\(id)")!, resolvingAgainstBaseURL: true)!
-//            .request
-//        return call.run(request!)
-//    }
-//
-//    static func detail(id: String) -> AnyPublisher<Detail, Error> {
-//        print("id : \(id)")
-//        let request = URLComponents(url: URL(string: "https://api.rawg.io/api/games/\(id)")!, resolvingAgainstBaseURL: true)!
-//            .request
-//        return call.run(request!)
-//    }
-//
-//    static func gameSearch(query: String) -> AnyPublisher<Games<Game>, Error> {
-//
-//           let request = URLComponents(url: URL(string: "https://api.rawg.io/api/games?search=\(query.replacingOccurrences(of: " ", with: "&20", options: .literal, range: nil))s")!, resolvingAgainstBaseURL: true)!
-//               .request
-//           return call.run(request!)
-//       }
-//}
-//
-//private extension URLComponents {
-//    var request: URLRequest? {
-//        url.map { URLRequest.init(url: $0) }
-//    }
-//}
-
-
-

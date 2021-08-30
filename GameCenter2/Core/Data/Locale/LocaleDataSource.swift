@@ -9,7 +9,7 @@ import Foundation
 import  RealmSwift
 import Combine
 
-protocol LocaleDataSourceProtocol: class {
+protocol LocaleDataSourceProtocol: AnyObject {
     
     func getList() -> AnyPublisher<[GameEntity], Error>
     func addGame(from game: GameEntity) -> AnyPublisher<Bool, Error>
