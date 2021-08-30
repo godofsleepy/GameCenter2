@@ -39,8 +39,6 @@ class DetailPresenter: ObservableObject {
                 }
             }, receiveValue: { value in
                 self.detail = value
-                print(value)
-                
             })
             .store(in: &cancellables)
         

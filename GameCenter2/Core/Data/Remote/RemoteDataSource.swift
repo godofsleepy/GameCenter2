@@ -70,7 +70,6 @@ extension RemoteDataSource: RemoteDataSourceProtocol {
                             case .success(let value):
                                 completion(.success(value))
                             case .failure:
-                                print(response)
                                 completion(.failure(URLError.invalidResponse))
                             }
                         }

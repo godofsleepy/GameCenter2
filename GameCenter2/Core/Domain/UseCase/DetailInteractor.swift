@@ -20,10 +20,8 @@ protocol DetailUseCase {
 class DetailInteractor : DetailUseCase  {
     private let repository : GameRepositoryProtocol
     
-    
     required init(repository : GameRepositoryProtocol) {
         self.repository = repository
-        
     }
     
     func deleteFavorite(game: DetailModel) -> AnyPublisher<Bool, Error> {
@@ -37,7 +35,6 @@ class DetailInteractor : DetailUseCase  {
     func addToFavorite(game: DetailModel) -> AnyPublisher<Bool, Error> {
         return repository.addFav(game: game)
     }
-    
     
     func getDetail(gameId: String) -> AnyPublisher<DetailModel, Error> {
         return repository.getDetail(gameId: gameId)

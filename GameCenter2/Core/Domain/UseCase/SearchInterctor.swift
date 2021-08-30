@@ -20,7 +20,6 @@ class SearchInteractor: SearchUseCase {
         self.repository = repository
         
     }
-
     
     func getSearch(query: String) -> AnyPublisher<[GameModel], Error> {
         return repository.getSearch(query: query)
