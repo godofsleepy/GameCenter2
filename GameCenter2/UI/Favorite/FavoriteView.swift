@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FavoriteView: View {
+    
     @EnvironmentObject var presenter : FavoritePresenter
     
     var body: some View {

@@ -38,7 +38,6 @@ extension RemoteDataSource: RemoteDataSourceProtocol {
                         .responseDecodable(of: GamesResponse.self) { response in
                             switch response.result {
                             case .success(let value):
-                                //                    print(value.results)
                                 completion(.success(value.results))
                             case .failure:
                                 completion(.failure(URLError.invalidResponse))
@@ -49,7 +48,7 @@ extension RemoteDataSource: RemoteDataSourceProtocol {
                 
             }
             else {
-                print("Dont Have API KEY")
+                print("Doesn't Have API KEY")
             }
             
         }.eraseToAnyPublisher()
@@ -78,7 +77,7 @@ extension RemoteDataSource: RemoteDataSourceProtocol {
                 
             }
             else {
-                print("Dont Have API KEY")
+                print("Doesn't Have API KEY")
             }
             
         }.eraseToAnyPublisher()
@@ -105,7 +104,7 @@ extension RemoteDataSource: RemoteDataSourceProtocol {
                             }
                         }
                 } else {
-                    print("Dont Have API KEY")
+                    print("Doesn't Have API KEY")
                 }
             }
         }.eraseToAnyPublisher()

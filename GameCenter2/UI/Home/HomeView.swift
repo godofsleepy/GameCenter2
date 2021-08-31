@@ -80,14 +80,17 @@ struct HomeView: View {
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         
                         VStack{
-                            if presenter.loadingState {
+                            if presenter.homeStatus == HomeStatus.loading {
                                 Spinner(isAnimating: true, style: .large).eraseToAnyView()
-                            } else {
+                            } else if presenter.homeStatus == HomeStatus.success {
                                 ForEach(self.presenter.games, id: \.id){ game in
                                     self.presenter.linkBuilder(for: String(game.id)) {
                                         GameItemView(game: game)
                                     }
                                 }
+                            } else if presenter.homeStatus == HomeStatus.error {
+                                Text(presenter.errorMessage).foregroundColor(Color.white)
+                                
                             }
                         }
                     }.padding()
