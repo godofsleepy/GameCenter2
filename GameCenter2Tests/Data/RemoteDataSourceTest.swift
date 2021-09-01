@@ -22,7 +22,7 @@ class RemoteDataSourceTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testExample() throws {
+    func testRemoteDataSource() throws {
         // Given
         let dataSource = RemoteDataSourceMock()
         var test : [GameResponse] = []
