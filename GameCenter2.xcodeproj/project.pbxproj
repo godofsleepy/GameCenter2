@@ -247,7 +247,6 @@
 			isa = PBXGroup;
 			children = (
 				FBB3491E2573521400274808 /* Data */,
-				FB4D3A68257CA9E80089FF86 /* DI */,
 				FBB3491F2573522A00274808 /* Domain */,
 				FB1B08DF2573F7A600D116D7 /* Info.plist */,
 				FBB349332573530200274808 /* UI */,
@@ -373,6 +372,7 @@
 		FBB348F925734C2B00274808 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				FB4D3A68257CA9E80089FF86 /* DI */,
 				FBB349202573523500274808 /* Utils */,
 			);
 			path = Core;
