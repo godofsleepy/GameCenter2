@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @Environment(\.openURL) var openURL
+    
     var data = Profile()
     var body: some View {
         ZStack{
@@ -40,7 +42,18 @@ struct ProfileView: View {
                 Text("Description")
                     .foregroundColor(Color("pink")).padding(.bottom).font(.system(size: 18))
                 
-                Text(data.description_me).foregroundColor(Color.white)
+                Text(data.description_me).foregroundColor(Color.white).padding(.bottom)
+                
+                HStack {
+                    Button("Linkedin") {
+                        openURL(URL(string: "https://www.linkedin.com/in/rifat-khadafy-b05378159/")!)
+                    }.foregroundColor(Color("orange"))
+                    
+                    Button("Github") {
+                        openURL(URL(string: "https://github.com/godofsleepy")!)
+                    }.foregroundColor(Color("orange"))
+
+                }
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
             .padding()
