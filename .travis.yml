@@ -1,7 +1,0 @@
-language: swift
-osx_image: xcode12 
-before_install:
-- gem install cocoapods
-xcode_workspace: GameCenter2.xcworkspace 
-xcode_scheme: GameCenter2
-xcode_destination: platform=iOS Simulator,OS=14.0,name=iPhone 11 Pro
