@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B249BA7FFC21E1B7855A044 /* Pods_GameCenter2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77D5C23339CD004C6B33DC2 /* Pods_GameCenter2.framework */; };
+		48F88BC19A36AE903595CE9A /* Pods_GameCenter2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC98A1C001BF0084D8548EE /* Pods_GameCenter2.framework */; };
 		FB08EFE72584BD6F00D64BBE /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB08EFE62584BD6F00D64BBE /* DetailInteractor.swift */; };
 		FB2629C725DD1C900050B41E /* GameCenter2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2629C625DD1C900050B41E /* GameCenter2UITests.swift */; };
 		FB2F732A25D58444004D340E /* LocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2F732925D58444004D340E /* LocaleDataSource.swift */; };
@@ -74,9 +74,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07A5743FF85070778F043D2F /* Pods-GameCenter2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCenter2.debug.xcconfig"; path = "Target Support Files/Pods-GameCenter2/Pods-GameCenter2.debug.xcconfig"; sourceTree = "<group>"; };
-		C77D5C23339CD004C6B33DC2 /* Pods_GameCenter2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameCenter2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9F538022C771E707C646129 /* Pods-GameCenter2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCenter2.release.xcconfig"; path = "Target Support Files/Pods-GameCenter2/Pods-GameCenter2.release.xcconfig"; sourceTree = "<group>"; };
+		3CC98A1C001BF0084D8548EE /* Pods_GameCenter2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameCenter2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F152EB9D79EF91D5DBE91627 /* Pods-GameCenter2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCenter2.release.xcconfig"; path = "Target Support Files/Pods-GameCenter2/Pods-GameCenter2.release.xcconfig"; sourceTree = "<group>"; };
+		F2F51ADCF7EA0302D5580057 /* Pods-GameCenter2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCenter2.debug.xcconfig"; path = "Target Support Files/Pods-GameCenter2/Pods-GameCenter2.debug.xcconfig"; sourceTree = "<group>"; };
 		FB08EFE62584BD6F00D64BBE /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		FB1B08DF2573F7A600D116D7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB2629B425DD1C840050B41E /* GameCenter2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameCenter2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,28 +150,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B249BA7FFC21E1B7855A044 /* Pods_GameCenter2.framework in Frameworks */,
+				48F88BC19A36AE903595CE9A /* Pods_GameCenter2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		12C8024521AA56E2DBE191BC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C77D5C23339CD004C6B33DC2 /* Pods_GameCenter2.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		3B5AD74ABDCDEB733D491DE8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				07A5743FF85070778F043D2F /* Pods-GameCenter2.debug.xcconfig */,
-				C9F538022C771E707C646129 /* Pods-GameCenter2.release.xcconfig */,
+				F2F51ADCF7EA0302D5580057 /* Pods-GameCenter2.debug.xcconfig */,
+				F152EB9D79EF91D5DBE91627 /* Pods-GameCenter2.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		422333B6AEF9B905089B8128 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CC98A1C001BF0084D8548EE /* Pods_GameCenter2.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FB2629B525DD1C840050B41E /* GameCenter2Tests */ = {
@@ -229,7 +229,7 @@
 				FB2629C525DD1C900050B41E /* GameCenter2UITests */,
 				FB44E2582562DD6A00758893 /* Products */,
 				3B5AD74ABDCDEB733D491DE8 /* Pods */,
-				12C8024521AA56E2DBE191BC /* Frameworks */,
+				422333B6AEF9B905089B8128 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -247,7 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				FB1B08DF2573F7A600D116D7 /* Info.plist */,
-				FBB349332573530200274808 /* UI */,
+				FBB349332573530200274808 /* Module */,
 				FBB348FC25734C5700274808 /* Supporting Files */,
 				FBB348F925734C2B00274808 /* Core */,
 				FBB348F625734BA200274808 /* App */,
@@ -427,7 +427,7 @@
 			path = Remote;
 			sourceTree = "<group>";
 		};
-		FBB349332573530200274808 /* UI */ = {
+		FBB349332573530200274808 /* Module */ = {
 			isa = PBXGroup;
 			children = (
 				FBBFF0FA25D686E600D61A3A /* DetailFavorite */,
@@ -438,7 +438,7 @@
 				FB44E2DD256363C700758893 /* Profile */,
 				FB44E2D7256363C700758893 /* Detail */,
 			);
-			path = UI;
+			path = Module;
 			sourceTree = "<group>";
 		};
 		FBBFF0FA25D686E600D61A3A /* DetailFavorite */ = {
@@ -493,12 +493,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB44E26B2562DD6C00758893 /* Build configuration list for PBXNativeTarget "GameCenter2" */;
 			buildPhases = (
-				F3657A1FEBC494D1D0406DEB /* [CP] Check Pods Manifest.lock */,
+				C5DD31AD06354915069D444F /* [CP] Check Pods Manifest.lock */,
 				FB44E2532562DD6A00758893 /* Sources */,
 				FB44E2542562DD6A00758893 /* Frameworks */,
 				FB44E2552562DD6A00758893 /* Resources */,
 				FBD8FB3725DC36F0004B93AF /* Run Script */,
-				87CD49FC0BDDB0AC47F943FC /* [CP] Embed Pods Frameworks */,
+				73ADBA78E2CAF7B776C67137 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -579,7 +579,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		87CD49FC0BDDB0AC47F943FC /* [CP] Embed Pods Frameworks */ = {
+		73ADBA78E2CAF7B776C67137 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -596,7 +596,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GameCenter2/Pods-GameCenter2-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F3657A1FEBC494D1D0406DEB /* [CP] Check Pods Manifest.lock */ = {
+		C5DD31AD06354915069D444F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -923,7 +923,7 @@
 		};
 		FB44E26C2562DD6C00758893 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07A5743FF85070778F043D2F /* Pods-GameCenter2.debug.xcconfig */;
+			baseConfigurationReference = F2F51ADCF7EA0302D5580057 /* Pods-GameCenter2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -947,7 +947,7 @@
 		};
 		FB44E26D2562DD6C00758893 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9F538022C771E707C646129 /* Pods-GameCenter2.release.xcconfig */;
+			baseConfigurationReference = F152EB9D79EF91D5DBE91627 /* Pods-GameCenter2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
