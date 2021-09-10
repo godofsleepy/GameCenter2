@@ -56,18 +56,10 @@
 		171D22E226EB3B360010421E /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				171D22EB26EB3C1C0010421E /* Mapper */,
 				171D22E326EB3B360010421E /* Common.h */,
 				171D22E426EB3B360010421E /* Info.plist */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		171D22EB26EB3C1C0010421E /* Mapper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Mapper;
 			sourceTree = "<group>";
 		};
 		385FE4F21816F9D353A39647 /* Pods */ = {

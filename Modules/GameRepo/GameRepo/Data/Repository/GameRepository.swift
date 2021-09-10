@@ -8,6 +8,7 @@
 import Foundation
 import Core
 import Combine
+import GameDomain
 
 public struct GetGameRepository<
     RemoteDataSource: DataSource,

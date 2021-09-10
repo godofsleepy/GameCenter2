@@ -11,9 +11,11 @@
 		175EA66626EA5F7800CACC99 /* GameRepo.h in Headers */ = {isa = PBXBuildFile; fileRef = 175EA66426EA5F7800CACC99 /* GameRepo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		17A5CB1D26EAFE7C0017CB6C /* GameReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A5CB1C26EAFE7C0017CB6C /* GameReponse.swift */; };
 		17A5CB1F26EAFED20017CB6C /* DetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A5CB1E26EAFED20017CB6C /* DetailResponse.swift */; };
-		17A5CB2526EAFF450017CB6C /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A5CB2426EAFF450017CB6C /* GameRepository.swift */; };
 		17A5CB4926EB07D80017CB6C /* GamesRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A5CB4826EB07D80017CB6C /* GamesRemoteDataSource.swift */; };
 		17A5CB4B26EB08F70017CB6C /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A5CB4A26EB08F70017CB6C /* Core.framework */; };
+		17C5237F26EB54E70024A485 /* GameTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5237E26EB54E70024A485 /* GameTransform.swift */; };
+		17C5238026EB57000024A485 /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A5CB2426EAFF450017CB6C /* GameRepository.swift */; };
+		17C5238426EB62F60024A485 /* DetailTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5238326EB62F60024A485 /* DetailTransform.swift */; };
 		6BEC386BF4816FCC1777472A /* Pods_GameRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5FE35BACD1D5AE873675C51 /* Pods_GameRepo.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,11 +24,13 @@
 		175EA66126EA5F7800CACC99 /* GameRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GameRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		175EA66426EA5F7800CACC99 /* GameRepo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameRepo.h; sourceTree = "<group>"; };
 		175EA66526EA5F7800CACC99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		17A5CB1C26EAFE7C0017CB6C /* GameReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameReponse.swift; sourceTree = "<group>"; };
+		17A5CB1C26EAFE7C0017CB6C /* GameReponse.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = GameReponse.swift; sourceTree = "<group>"; };
 		17A5CB1E26EAFED20017CB6C /* DetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailResponse.swift; sourceTree = "<group>"; };
-		17A5CB2426EAFF450017CB6C /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
+		17A5CB2426EAFF450017CB6C /* GameRepository.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
 		17A5CB4826EB07D80017CB6C /* GamesRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesRemoteDataSource.swift; sourceTree = "<group>"; };
 		17A5CB4A26EB08F70017CB6C /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17C5237E26EB54E70024A485 /* GameTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTransform.swift; sourceTree = "<group>"; };
+		17C5238326EB62F60024A485 /* DetailTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTransform.swift; sourceTree = "<group>"; };
 		1C46A042CF50DA5F24375B8C /* Pods-GameRepo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameRepo.debug.xcconfig"; path = "Target Support Files/Pods-GameRepo/Pods-GameRepo.debug.xcconfig"; sourceTree = "<group>"; };
 		E5FE35BACD1D5AE873675C51 /* Pods_GameRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F138A97072C02A5248D923B6 /* Pods-GameRepo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameRepo.release.xcconfig"; path = "Target Support Files/Pods-GameRepo/Pods-GameRepo.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +71,7 @@
 		175EA66326EA5F7800CACC99 /* GameRepo */ = {
 			isa = PBXGroup;
 			children = (
+				17C5237D26EB54800024A485 /* Mapper */,
 				17A5CB4E26EB14520017CB6C /* Data */,
 				175EA66426EA5F7800CACC99 /* GameRepo.h */,
 				175EA66526EA5F7800CACC99 /* Info.plist */,
@@ -115,6 +120,15 @@
 				17A5CB2026EAFEE90017CB6C /* Source */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		17C5237D26EB54800024A485 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				17C5237E26EB54E70024A485 /* GameTransform.swift */,
+				17C5238326EB62F60024A485 /* DetailTransform.swift */,
+			);
+			path = Mapper;
 			sourceTree = "<group>";
 		};
 		3308BB98DBDCB6D9E1E41C97 /* Pods */ = {
@@ -242,10 +256,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17A5CB2526EAFF450017CB6C /* GameRepository.swift in Sources */,
 				17A5CB4926EB07D80017CB6C /* GamesRemoteDataSource.swift in Sources */,
+				17C5237F26EB54E70024A485 /* GameTransform.swift in Sources */,
+				17C5238026EB57000024A485 /* GameRepository.swift in Sources */,
 				17A5CB1D26EAFE7C0017CB6C /* GameReponse.swift in Sources */,
 				17A5CB1F26EAFED20017CB6C /* DetailResponse.swift in Sources */,
+				17C5238426EB62F60024A485 /* DetailTransform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,10 +27,8 @@
 		FB44E2852563607100758893 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44E2802563607100758893 /* Spinner.swift */; };
 		FB44E28F2563610600758893 /* DetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44E2892563610600758893 /* DetailResponse.swift */; };
 		FB44E2902563610600758893 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44E28A2563610600758893 /* Profile.swift */; };
-		FB44E2912563610600758893 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44E28B2563610600758893 /* DetailModel.swift */; };
 		FB44E2922563610600758893 /* Platforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44E28C2563610600758893 /* Platforms.swift */; };
 		FB44E2932563610600758893 /* GamesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44E28D2563610600758893 /* GamesResponse.swift */; };
-		FB44E2942563610600758893 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44E28E2563610600758893 /* GameModel.swift */; };
 		FB44E2992563621D00758893 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44E2972563621D00758893 /* HomeView.swift */; };
 		FB44E2E2256363C800758893 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44E2D8256363C700758893 /* DetailView.swift */; };
 		FB44E2E4256363C800758893 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44E2DB256363C700758893 /* SearchView.swift */; };
@@ -108,10 +106,8 @@
 		FB44E2802563607100758893 /* Spinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		FB44E2892563610600758893 /* DetailResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailResponse.swift; sourceTree = "<group>"; };
 		FB44E28A2563610600758893 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		FB44E28B2563610600758893 /* DetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		FB44E28C2563610600758893 /* Platforms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Platforms.swift; sourceTree = "<group>"; };
 		FB44E28D2563610600758893 /* GamesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesResponse.swift; sourceTree = "<group>"; };
-		FB44E28E2563610600758893 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		FB44E2972563621D00758893 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FB44E2D8256363C700758893 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		FB44E2DB256363C700758893 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -298,8 +294,6 @@
 		FB44E288256360E400758893 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FB44E28B2563610600758893 /* DetailModel.swift */,
-				FB44E28E2563610600758893 /* GameModel.swift */,
 				FB44E28C2563610600758893 /* Platforms.swift */,
 				FB44E28A2563610600758893 /* Profile.swift */,
 			);
@@ -687,7 +681,6 @@
 				FB7D70D525AD5BED00393508 /* SearchInterctor.swift in Sources */,
 				FB99DE0C2577B70D0064178B /* GameRepository.swift in Sources */,
 				FB4D3A6A257CA9FB0089FF86 /* Injection.swift in Sources */,
-				FB44E2942563610600758893 /* GameModel.swift in Sources */,
 				FBE98E2B25D678D800E148E0 /* FavoritePresenter.swift in Sources */,
 				FB4D3A6E257CB1D20089FF86 /* GamesAPI.swift in Sources */,
 				FB44E2E6256363C800758893 /* ProfileView.swift in Sources */,
@@ -705,7 +698,6 @@
 				FB4D3A66257CA8B80089FF86 /* RemoteDataSource.swift in Sources */,
 				FBB8EFC62573E54C006FD93B /* ViewErase.swift in Sources */,
 				FBBFF10025D6876C00D61A3A /* DetailFavoriteView.swift in Sources */,
-				FB44E2912563610600758893 /* DetailModel.swift in Sources */,
 				FB44E25D2562DD6A00758893 /* ContentView.swift in Sources */,
 				FB4D3A83257D15AE0089FF86 /* HomeRouter.swift in Sources */,
 				FB44E2E4256363C800758893 /* SearchView.swift in Sources */,
