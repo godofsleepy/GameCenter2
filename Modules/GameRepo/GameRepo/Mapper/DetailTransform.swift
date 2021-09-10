@@ -44,5 +44,9 @@ public struct DetailTransform : Mapper {
     public func transformEntityToDomain(entity: Any) -> DetailModel {
         fatalError()
     }
+    
+    public func transformDomainToEntiry(domain: DetailModel) -> Any {
+        fatalError()
+    }
 
 }

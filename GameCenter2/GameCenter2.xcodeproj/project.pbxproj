@@ -12,11 +12,9 @@
 		17A5CB3D26EB05440017CB6C /* FavoriteRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A5CB3C26EB05440017CB6C /* FavoriteRepo.framework */; };
 		17A5CB4126EB054B0017CB6C /* GameRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A5CB4026EB054B0017CB6C /* GameRepo.framework */; };
 		17A5CB4526EB05550017CB6C /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A5CB4426EB05550017CB6C /* Home.framework */; };
-		E76D600F6A53684F662AD3CC /* Pods_GameCenter2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F7FF491F8B2292B0782FEC2 /* Pods_GameCenter2.framework */; };
+		F570E9042289C7FE12E824A7 /* Pods_GameCenter2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E31AED5142D3F528064528B /* Pods_GameCenter2.framework */; };
 		FB08EFE72584BD6F00D64BBE /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB08EFE62584BD6F00D64BBE /* DetailInteractor.swift */; };
 		FB2629C725DD1C900050B41E /* GameCenter2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2629C625DD1C900050B41E /* GameCenter2UITests.swift */; };
-		FB2F732A25D58444004D340E /* LocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2F732925D58444004D340E /* LocaleDataSource.swift */; };
-		FB2F732D25D58467004D340E /* GameEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2F732C25D58467004D340E /* GameEntity.swift */; };
 		FB36CD7D257B72C600115EB6 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB36CD7C257B72C600115EB6 /* HomeInteractor.swift */; };
 		FB44E25D2562DD6A00758893 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44E25C2562DD6A00758893 /* ContentView.swift */; };
 		FB44E25F2562DD6C00758893 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB44E25E2562DD6C00758893 /* Assets.xcassets */; };
@@ -42,7 +40,6 @@
 		FB7D70CD25AD53E300393508 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7D70CC25AD53E300393508 /* SearchPresenter.swift */; };
 		FB7D70D525AD5BED00393508 /* SearchInterctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7D70D425AD5BED00393508 /* SearchInterctor.swift */; };
 		FB7D70D825AD676A00393508 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7D70D725AD676A00393508 /* SearchRouter.swift */; };
-		FB99DE0C2577B70D0064178B /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99DE0B2577B70D0064178B /* GameRepository.swift */; };
 		FBA2609526DDEC3000A1E931 /* RemoteDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA2609426DDEC3000A1E931 /* RemoteDataSourceTest.swift */; };
 		FBB8EFC52573E54C006FD93B /* CustomCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB349222573523500274808 /* CustomCorner.swift */; };
 		FBB8EFC62573E54C006FD93B /* ViewErase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB349232573523500274808 /* ViewErase.swift */; };
@@ -74,14 +71,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E31AED5142D3F528064528B /* Pods_GameCenter2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameCenter2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A5CB3526EB05350017CB6C /* Detail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Detail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A5CB3926EB05390017CB6C /* Favorite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Favorite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A5CB3C26EB05440017CB6C /* FavoriteRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FavoriteRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A5CB4026EB054B0017CB6C /* GameRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GameRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A5CB4426EB05550017CB6C /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F7FF491F8B2292B0782FEC2 /* Pods_GameCenter2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameCenter2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		47166181B3B70ACDAADA085F /* Pods-GameCenter2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCenter2.debug.xcconfig"; path = "Target Support Files/Pods-GameCenter2/Pods-GameCenter2.debug.xcconfig"; sourceTree = "<group>"; };
-		D7EE1185AEB83248E1127AE9 /* Pods-GameCenter2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCenter2.release.xcconfig"; path = "Target Support Files/Pods-GameCenter2/Pods-GameCenter2.release.xcconfig"; sourceTree = "<group>"; };
+		8D6EB5F4FD9D46576963F34C /* Pods-GameCenter2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCenter2.debug.xcconfig"; path = "Target Support Files/Pods-GameCenter2/Pods-GameCenter2.debug.xcconfig"; sourceTree = "<group>"; };
+		A1AA864D7F235C85AAAAAA0A /* Pods-GameCenter2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCenter2.release.xcconfig"; path = "Target Support Files/Pods-GameCenter2/Pods-GameCenter2.release.xcconfig"; sourceTree = "<group>"; };
 		FB08EFE62584BD6F00D64BBE /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		FB1B08DF2573F7A600D116D7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB2629B425DD1C840050B41E /* GameCenter2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameCenter2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,8 +86,6 @@
 		FB2629C425DD1C900050B41E /* GameCenter2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameCenter2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2629C625DD1C900050B41E /* GameCenter2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenter2UITests.swift; sourceTree = "<group>"; };
 		FB2629C825DD1C900050B41E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB2F732925D58444004D340E /* LocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleDataSource.swift; sourceTree = "<group>"; };
-		FB2F732C25D58467004D340E /* GameEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEntity.swift; sourceTree = "<group>"; };
 		FB36CD7C257B72C600115EB6 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		FB44E2572562DD6A00758893 /* GameCenter2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameCenter2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB44E25A2562DD6A00758893 /* GameCenter2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenter2App.swift; sourceTree = "<group>"; };
@@ -118,7 +113,6 @@
 		FB7D70CC25AD53E300393508 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		FB7D70D425AD5BED00393508 /* SearchInterctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInterctor.swift; sourceTree = "<group>"; };
 		FB7D70D725AD676A00393508 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
-		FB99DE0B2577B70D0064178B /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
 		FBA2609426DDEC3000A1E931 /* RemoteDataSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSourceTest.swift; sourceTree = "<group>"; };
 		FBB349222573523500274808 /* CustomCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorner.swift; sourceTree = "<group>"; };
 		FBB349232573523500274808 /* ViewErase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewErase.swift; sourceTree = "<group>"; };
@@ -155,7 +149,7 @@
 				17A5CB3A26EB05390017CB6C /* Favorite.framework in Frameworks */,
 				17A5CB3626EB05350017CB6C /* Detail.framework in Frameworks */,
 				17A5CB4526EB05550017CB6C /* Home.framework in Frameworks */,
-				E76D600F6A53684F662AD3CC /* Pods_GameCenter2.framework in Frameworks */,
+				F570E9042289C7FE12E824A7 /* Pods_GameCenter2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,8 +159,8 @@
 		3B5AD74ABDCDEB733D491DE8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				47166181B3B70ACDAADA085F /* Pods-GameCenter2.debug.xcconfig */,
-				D7EE1185AEB83248E1127AE9 /* Pods-GameCenter2.release.xcconfig */,
+				8D6EB5F4FD9D46576963F34C /* Pods-GameCenter2.debug.xcconfig */,
+				A1AA864D7F235C85AAAAAA0A /* Pods-GameCenter2.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -179,7 +173,7 @@
 				17A5CB3C26EB05440017CB6C /* FavoriteRepo.framework */,
 				17A5CB3926EB05390017CB6C /* Favorite.framework */,
 				17A5CB3526EB05350017CB6C /* Detail.framework */,
-				2F7FF491F8B2292B0782FEC2 /* Pods_GameCenter2.framework */,
+				0E31AED5142D3F528064528B /* Pods_GameCenter2.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -200,23 +194,6 @@
 				FB2629C825DD1C900050B41E /* Info.plist */,
 			);
 			path = GameCenter2UITests;
-			sourceTree = "<group>";
-		};
-		FB2F732725D5841B004D340E /* Locale */ = {
-			isa = PBXGroup;
-			children = (
-				FB2F732825D5842A004D340E /* Entity */,
-				FB2F732925D58444004D340E /* LocaleDataSource.swift */,
-			);
-			path = Locale;
-			sourceTree = "<group>";
-		};
-		FB2F732825D5842A004D340E /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				FB2F732C25D58467004D340E /* GameEntity.swift */,
-			);
-			path = Entity;
 			sourceTree = "<group>";
 		};
 		FB36CD7B257B72AF00115EB6 /* UseCase */ = {
@@ -369,7 +346,6 @@
 		FBB348F925734C2B00274808 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				FBB3491E2573521400274808 /* Data */,
 				FBB3491F2573522A00274808 /* Domain */,
 				FB4D3A68257CA9E80089FF86 /* DI */,
 				FBB349202573523500274808 /* Utils */,
@@ -383,15 +359,6 @@
 				FB44E25E2562DD6C00758893 /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		FBB3491E2573521400274808 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				FB2F732725D5841B004D340E /* Locale */,
-				FB99DE0B2577B70D0064178B /* GameRepository.swift */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		FBB3491F2573522A00274808 /* Domain */ = {
@@ -482,12 +449,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB44E26B2562DD6C00758893 /* Build configuration list for PBXNativeTarget "GameCenter2" */;
 			buildPhases = (
-				E0E08D6A1FB5C080D71284F9 /* [CP] Check Pods Manifest.lock */,
+				33EF4E2EF3824260CC94A6B5 /* [CP] Check Pods Manifest.lock */,
 				FB44E2532562DD6A00758893 /* Sources */,
 				FB44E2542562DD6A00758893 /* Frameworks */,
 				FB44E2552562DD6A00758893 /* Resources */,
 				FBD8FB3725DC36F0004B93AF /* Run Script */,
-				93C41BC58978ED50714E4AC4 /* [CP] Embed Pods Frameworks */,
+				E610ABAC945A8864FD2F728E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -568,24 +535,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		93C41BC58978ED50714E4AC4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GameCenter2/Pods-GameCenter2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GameCenter2/Pods-GameCenter2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GameCenter2/Pods-GameCenter2-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E0E08D6A1FB5C080D71284F9 /* [CP] Check Pods Manifest.lock */ = {
+		33EF4E2EF3824260CC94A6B5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -605,6 +555,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E610ABAC945A8864FD2F728E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GameCenter2/Pods-GameCenter2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GameCenter2/Pods-GameCenter2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GameCenter2/Pods-GameCenter2-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FBD8FB3725DC36F0004B93AF /* Run Script */ = {
@@ -653,12 +620,10 @@
 				FB4D3A80257D140E0089FF86 /* HomePresenter.swift in Sources */,
 				FB44E2E2256363C800758893 /* DetailView.swift in Sources */,
 				FB7D70D525AD5BED00393508 /* SearchInterctor.swift in Sources */,
-				FB99DE0C2577B70D0064178B /* GameRepository.swift in Sources */,
 				FB4D3A6A257CA9FB0089FF86 /* Injection.swift in Sources */,
 				FBE98E2B25D678D800E148E0 /* FavoritePresenter.swift in Sources */,
 				FB4D3A6E257CB1D20089FF86 /* GamesAPI.swift in Sources */,
 				FB44E2E6256363C800758893 /* ProfileView.swift in Sources */,
-				FB2F732A25D58444004D340E /* LocaleDataSource.swift in Sources */,
 				FB7D70CD25AD53E300393508 /* SearchPresenter.swift in Sources */,
 				FB4D3A86257D212F0089FF86 /* GameMapper.swift in Sources */,
 				FB08EFE72584BD6F00D64BBE /* DetailInteractor.swift in Sources */,
@@ -676,7 +641,6 @@
 				FB44E2902563610600758893 /* Profile.swift in Sources */,
 				FBE98E2725D6757100E148E0 /* FavoriteInteractor.swift in Sources */,
 				FB4D3A7D257D13920089FF86 /* FavoriteView.swift in Sources */,
-				FB2F732D25D58467004D340E /* GameEntity.swift in Sources */,
 				FB44E2822563607100758893 /* CarouselView.swift in Sources */,
 				FBBFF10625D68AF900D61A3A /* FavoriteRouter.swift in Sources */,
 				FB44E2992563621D00758893 /* HomeView.swift in Sources */,
@@ -907,7 +871,7 @@
 		};
 		FB44E26C2562DD6C00758893 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47166181B3B70ACDAADA085F /* Pods-GameCenter2.debug.xcconfig */;
+			baseConfigurationReference = 8D6EB5F4FD9D46576963F34C /* Pods-GameCenter2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -931,7 +895,7 @@
 		};
 		FB44E26D2562DD6C00758893 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D7EE1185AEB83248E1127AE9 /* Pods-GameCenter2.release.xcconfig */;
+			baseConfigurationReference = A1AA864D7F235C85AAAAAA0A /* Pods-GameCenter2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

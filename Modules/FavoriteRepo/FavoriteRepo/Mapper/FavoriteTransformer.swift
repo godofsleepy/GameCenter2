@@ -10,6 +10,7 @@ import Core
 import GameDomain
 
 public struct FavoriteTransformer: Mapper {
+    
     public typealias Response = Any
     public typealias Entity = GameEntity
     public typealias Domain = DetailModel
@@ -20,6 +21,24 @@ public struct FavoriteTransformer: Mapper {
     
     public func transformResponseToDomain(response: Any) -> Domain {
         fatalError()
+    }
+    
+    public func transformDomainToEntiry(domain: DetailModel) -> GameEntity {
+        let gameEntity = GameEntity()
+        gameEntity.id = domain.id
+        gameEntity.name = domain.name
+        gameEntity.rating = domain.rating
+        gameEntity.released = domain.released ?? ""
+        gameEntity.desc = domain.description ?? "No Description"
+        gameEntity.image = domain.background_image ?? ""
+        gameEntity.additionalImage = domain.background_image_additional ?? ""
+        for platform in domain.parent_platforms {
+            gameEntity.platforms.append(platform.platform.slug)
+        }
+        for genre in domain.genres {
+            gameEntity.genre.append(genre.name)
+        }
+        return gameEntity
     }
     
     public func transformEntityToDomain(entity: Entity) -> Domain {

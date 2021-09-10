@@ -36,5 +36,8 @@ public struct GameTransform : Mapper {
         fatalError()
     }
     
-
+    public func transformDomainToEntiry(domain: [GameModel]) -> Any {
+        fatalError()
+    }
+    
 }

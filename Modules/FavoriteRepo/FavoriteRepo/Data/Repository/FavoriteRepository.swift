@@ -64,7 +64,7 @@ where
     }
     
     public func execute(request: Request?) -> AnyPublisher<Response, Error> {
-        return _localeDataSource.get(id: request!)
+        return _localeDataSource.get(id: request ?? 0)
             .map { _mapper.transformEntityToDomain(entity: $0) }
             .eraseToAnyPublisher()
     }
@@ -96,6 +96,27 @@ where
     public func execute(request: Request?) -> AnyPublisher<Response, Error> {
         return _localeDataSource.get(id: request!)
             .map { _mapper.transformEntityToDomain(entity: $0) }
+            .eraseToAnyPublisher()
+    }
+}
+
+public struct DeleteFavRepository<
+    LocalDataSource: LocaleDataSource>: Repository
+where
+    LocalDataSource.Request == Any,
+    LocalDataSource.Response == Bool {
+    
+    public typealias Request = Int
+    public typealias Response = Bool
+    
+    private let _localeDataSource: LocalDataSource
+    
+    public init(localeDataSource: LocalDataSource) {
+        _localeDataSource = localeDataSource
+    }
+    
+    public func execute(request: Request?) -> AnyPublisher<Response, Error> {
+        return _localeDataSource.delete(id: request!)
             .eraseToAnyPublisher()
     }
 }

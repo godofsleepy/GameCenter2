@@ -22,6 +22,10 @@ public struct FavoritesTransformer: Mapper {
         fatalError()
     }
     
+    public func transformDomainToEntiry(domain: [DetailModel]) -> [GameEntity] {
+        fatalError()
+    }
+
     public func transformEntityToDomain(entity: [GameEntity]) -> [DetailModel] {
         return entity.map { result in
             return DetailModel(
