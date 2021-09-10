@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import AVKit
 import SDWebImageSwiftUI
 
 struct DetailView : View {

@@ -4,15 +4,51 @@ source 'https://github.com/CocoaPods/Specs.git'
 # Uncomment the next line to define a global platform for your project
 platform :ios, '13.0'
 
+use_frameworks!
+
+workspace 'ProjectSource'
+
 target 'GameCenter2' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-	pod 'SDWebImageSwiftUI', '~> 1.5.0'
-	pod 'Alamofire', '~> 5.2'
-	pod 'RealmSwift'
         	pod 'Core', :git => 'https://github.com/godofsleepy/Gamecenter2Core.git'
   # Pods for GameCenter2
 
+end
+
+target 'Home' do
+  project '../Modules/Home/Home'
+	pod 'SDWebImageSwiftUI', '~> 1.5.0'
+	pod 'Core', :git => 'https://github.com/godofsleepy/Gamecenter2Core.git'
+end
+
+target 'Detail' do
+  project '../Modules/Detail/Detail'
+	pod 'SDWebImageSwiftUI', '~> 1.5.0'
+	pod 'Core', :git => 'https://github.com/godofsleepy/Gamecenter2Core.git'
+end
+
+target 'Search' do
+  project '../Modules/Search/Search'
+	pod 'SDWebImageSwiftUI', '~> 1.5.0'
+	pod 'Core', :git => 'https://github.com/godofsleepy/Gamecenter2Core.git'
+end
+
+target 'Favorite' do
+  project '../Modules/Favorite/Favorite'
+	pod 'SDWebImageSwiftUI', '~> 1.5.0'
+	pod 'Core', :git => 'https://github.com/godofsleepy/Gamecenter2Core.git'
+end
+
+target 'GameRepo' do
+  project '../Modules/GameRepo/GameRepo'
+	pod 'Alamofire', '~> 5.2'
+	pod 'Core', :git => 'https://github.com/godofsleepy/Gamecenter2Core.git'
+end
+
+target 'FavoriteRepo' do
+  project '../Modules/FavoriteRepo/FavoriteRepo'
+	pod 'RealmSwift'
+	pod 'Core', :git => 'https://github.com/godofsleepy/Gamecenter2Core.git'
 end
 
 post_install do |pi|
