@@ -5,6 +5,9 @@
       location = "group:GameCenter2.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:../Modules/Common/Common.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:../Modules/Detail/Detail.xcodeproj">
    </FileRef>
    <FileRef
@@ -12,6 +15,9 @@
    </FileRef>
    <FileRef
       location = "group:../Modules/FavoriteRepo/FavoriteRepo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../Modules/GameDomain/GameDomain.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:../Modules/GameRepo/GameRepo.xcodeproj">

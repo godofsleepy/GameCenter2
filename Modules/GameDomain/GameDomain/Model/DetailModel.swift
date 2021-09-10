@@ -1,6 +1,6 @@
 //
 //  DetailModel.swift
-//  GameRepo
+//  GameDomain
 //
 //  Created by Rumah Coding on 10/09/21.
 //

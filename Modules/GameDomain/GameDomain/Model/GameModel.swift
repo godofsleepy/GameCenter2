@@ -1,6 +1,6 @@
 //
 //  GameModel.swift
-//  GameRepo
+//  GameDomain
 //
 //  Created by Rumah Coding on 10/09/21.
 //
@@ -14,4 +14,3 @@ public struct GameModel: Equatable, Identifiable {
     public let released : String?
     public let background_image : String?
 }
-

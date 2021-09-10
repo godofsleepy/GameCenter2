@@ -12,7 +12,7 @@
 		17A5CB3D26EB05440017CB6C /* FavoriteRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A5CB3C26EB05440017CB6C /* FavoriteRepo.framework */; };
 		17A5CB4126EB054B0017CB6C /* GameRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A5CB4026EB054B0017CB6C /* GameRepo.framework */; };
 		17A5CB4526EB05550017CB6C /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A5CB4426EB05550017CB6C /* Home.framework */; };
-		1D49A0280DC02EFDEE92A5B0 /* Pods_GameCenter2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12E1D35D18BFBC32E7F80E6E /* Pods_GameCenter2.framework */; };
+		B70DF77C47B2B4EE715B6700 /* Pods_GameCenter2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE960F71803C462E8BE32C4 /* Pods_GameCenter2.framework */; };
 		FB08EFE72584BD6F00D64BBE /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB08EFE62584BD6F00D64BBE /* DetailInteractor.swift */; };
 		FB2629C725DD1C900050B41E /* GameCenter2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2629C625DD1C900050B41E /* GameCenter2UITests.swift */; };
 		FB2F732A25D58444004D340E /* LocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2F732925D58444004D340E /* LocaleDataSource.swift */; };
@@ -79,14 +79,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		12E1D35D18BFBC32E7F80E6E /* Pods_GameCenter2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameCenter2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A5CB3526EB05350017CB6C /* Detail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Detail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A5CB3926EB05390017CB6C /* Favorite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Favorite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A5CB3C26EB05440017CB6C /* FavoriteRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FavoriteRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A5CB4026EB054B0017CB6C /* GameRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GameRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A5CB4426EB05550017CB6C /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D26B67057E91393599679E2 /* Pods-GameCenter2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCenter2.debug.xcconfig"; path = "Target Support Files/Pods-GameCenter2/Pods-GameCenter2.debug.xcconfig"; sourceTree = "<group>"; };
-		C9554F790EBCA08DA83D829B /* Pods-GameCenter2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCenter2.release.xcconfig"; path = "Target Support Files/Pods-GameCenter2/Pods-GameCenter2.release.xcconfig"; sourceTree = "<group>"; };
+		2FFFFA76923E73FE216C815A /* Pods-GameCenter2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCenter2.debug.xcconfig"; path = "Target Support Files/Pods-GameCenter2/Pods-GameCenter2.debug.xcconfig"; sourceTree = "<group>"; };
+		8DE960F71803C462E8BE32C4 /* Pods_GameCenter2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameCenter2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA90DD60A895531A83B9222D /* Pods-GameCenter2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCenter2.release.xcconfig"; path = "Target Support Files/Pods-GameCenter2/Pods-GameCenter2.release.xcconfig"; sourceTree = "<group>"; };
 		FB08EFE62584BD6F00D64BBE /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		FB1B08DF2573F7A600D116D7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB2629B425DD1C840050B41E /* GameCenter2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameCenter2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,7 +165,7 @@
 				17A5CB3A26EB05390017CB6C /* Favorite.framework in Frameworks */,
 				17A5CB3626EB05350017CB6C /* Detail.framework in Frameworks */,
 				17A5CB4526EB05550017CB6C /* Home.framework in Frameworks */,
-				1D49A0280DC02EFDEE92A5B0 /* Pods_GameCenter2.framework in Frameworks */,
+				B70DF77C47B2B4EE715B6700 /* Pods_GameCenter2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,8 +175,8 @@
 		3B5AD74ABDCDEB733D491DE8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4D26B67057E91393599679E2 /* Pods-GameCenter2.debug.xcconfig */,
-				C9554F790EBCA08DA83D829B /* Pods-GameCenter2.release.xcconfig */,
+				2FFFFA76923E73FE216C815A /* Pods-GameCenter2.debug.xcconfig */,
+				CA90DD60A895531A83B9222D /* Pods-GameCenter2.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -189,7 +189,7 @@
 				17A5CB3C26EB05440017CB6C /* FavoriteRepo.framework */,
 				17A5CB3926EB05390017CB6C /* Favorite.framework */,
 				17A5CB3526EB05350017CB6C /* Detail.framework */,
-				12E1D35D18BFBC32E7F80E6E /* Pods_GameCenter2.framework */,
+				8DE960F71803C462E8BE32C4 /* Pods_GameCenter2.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -513,12 +513,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB44E26B2562DD6C00758893 /* Build configuration list for PBXNativeTarget "GameCenter2" */;
 			buildPhases = (
-				BEA6B2192B5118E6A75A917F /* [CP] Check Pods Manifest.lock */,
+				0C06F650894B474207193DFE /* [CP] Check Pods Manifest.lock */,
 				FB44E2532562DD6A00758893 /* Sources */,
 				FB44E2542562DD6A00758893 /* Frameworks */,
 				FB44E2552562DD6A00758893 /* Resources */,
 				FBD8FB3725DC36F0004B93AF /* Run Script */,
-				4B6E4F032C9F98BB15B78CC9 /* [CP] Embed Pods Frameworks */,
+				A7FAA1CAAC3647E09171F060 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -599,24 +599,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4B6E4F032C9F98BB15B78CC9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GameCenter2/Pods-GameCenter2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GameCenter2/Pods-GameCenter2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GameCenter2/Pods-GameCenter2-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BEA6B2192B5118E6A75A917F /* [CP] Check Pods Manifest.lock */ = {
+		0C06F650894B474207193DFE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -636,6 +619,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7FAA1CAAC3647E09171F060 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GameCenter2/Pods-GameCenter2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GameCenter2/Pods-GameCenter2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GameCenter2/Pods-GameCenter2-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FBD8FB3725DC36F0004B93AF /* Run Script */ = {
@@ -943,7 +943,7 @@
 		};
 		FB44E26C2562DD6C00758893 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D26B67057E91393599679E2 /* Pods-GameCenter2.debug.xcconfig */;
+			baseConfigurationReference = 2FFFFA76923E73FE216C815A /* Pods-GameCenter2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -952,7 +952,7 @@
 				DEVELOPMENT_TEAM = CU9ZP67S25;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GameCenter2/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -967,7 +967,7 @@
 		};
 		FB44E26D2562DD6C00758893 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9554F790EBCA08DA83D829B /* Pods-GameCenter2.release.xcconfig */;
+			baseConfigurationReference = CA90DD60A895531A83B9222D /* Pods-GameCenter2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -976,7 +976,7 @@
 				DEVELOPMENT_TEAM = CU9ZP67S25;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GameCenter2/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
