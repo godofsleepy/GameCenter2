@@ -12,10 +12,10 @@ import GameDomain
 public struct DetailTransform : Mapper {
     
     public typealias Response = DetailResponse
-    public typealias Entity = String
+    public typealias Entity = Any
     public typealias Domain = DetailModel
     
-    public func transformResponseToEntity(response: DetailResponse) -> String {
+    public func transformResponseToEntity(response: DetailResponse) -> Any {
         fatalError()
     }
     
@@ -41,7 +41,7 @@ public struct DetailTransform : Mapper {
         )
     }
     
-    public func transformEntityToDomain(entity: String) -> DetailModel {
+    public func transformEntityToDomain(entity: Any) -> DetailModel {
         fatalError()
     }
 

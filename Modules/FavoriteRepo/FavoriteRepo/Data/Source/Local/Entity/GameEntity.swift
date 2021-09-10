@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import RealmSwift
 
-class GameEntity: Object {
+public class GameEntity: Object {
     @objc dynamic var id = 0
     @objc dynamic var name : String = ""
     @objc dynamic var released : String = ""
@@ -19,7 +20,7 @@ class GameEntity: Object {
     let platforms = List<String>()
     let genre = List<String>()
     
-    override static func primaryKey() -> String? {
+    public override static func primaryKey() -> String? {
         return "id"
     }
 }

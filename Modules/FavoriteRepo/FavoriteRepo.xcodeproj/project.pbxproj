@@ -12,6 +12,8 @@
 		17A5CB2B26EAFF7B0017CB6C /* FavoriteLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A5CB2A26EAFF7B0017CB6C /* FavoriteLocalDataSource.swift */; };
 		17A5CB2E26EAFFC50017CB6C /* GameEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A5CB2D26EAFFC50017CB6C /* GameEntity.swift */; };
 		17A5CB3126EAFFE60017CB6C /* FavoriteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A5CB3026EAFFE60017CB6C /* FavoriteRepository.swift */; };
+		17C5238826EB951B0024A485 /* FavoritesTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5238726EB951B0024A485 /* FavoritesTransformer.swift */; };
+		17C5238A26EB9AE50024A485 /* FavoriteTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5238926EB9AE50024A485 /* FavoriteTransformer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		17A5CB2A26EAFF7B0017CB6C /* FavoriteLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteLocalDataSource.swift; sourceTree = "<group>"; };
 		17A5CB2D26EAFFC50017CB6C /* GameEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEntity.swift; sourceTree = "<group>"; };
 		17A5CB3026EAFFE60017CB6C /* FavoriteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRepository.swift; sourceTree = "<group>"; };
+		17C5238726EB951B0024A485 /* FavoritesTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTransformer.swift; sourceTree = "<group>"; };
+		17C5238926EB9AE50024A485 /* FavoriteTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTransformer.swift; sourceTree = "<group>"; };
 		451325B7A72FED2167DBFC6A /* Pods-FavoriteRepo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FavoriteRepo.release.xcconfig"; path = "Target Support Files/Pods-FavoriteRepo/Pods-FavoriteRepo.release.xcconfig"; sourceTree = "<group>"; };
 		9D7B406D63129A474630F37F /* Pods_FavoriteRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FavoriteRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF5556CA76E9C919F2736436 /* Pods-FavoriteRepo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FavoriteRepo.debug.xcconfig"; path = "Target Support Files/Pods-FavoriteRepo/Pods-FavoriteRepo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -59,8 +63,8 @@
 		175EA68D26EA5FBD00CACC99 /* FavoriteRepo */ = {
 			isa = PBXGroup;
 			children = (
-				17A5CB2F26EAFFD70017CB6C /* Repository */,
-				17A5CB2626EAFF580017CB6C /* Source */,
+				17C5238626EB667D0024A485 /* Mapper */,
+				17C5238526EB66790024A485 /* Data */,
 				175EA68E26EA5FBD00CACC99 /* FavoriteRepo.h */,
 				175EA68F26EA5FBD00CACC99 /* Info.plist */,
 			);
@@ -98,6 +102,24 @@
 				17A5CB3026EAFFE60017CB6C /* FavoriteRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		17C5238526EB66790024A485 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				17A5CB2F26EAFFD70017CB6C /* Repository */,
+				17A5CB2626EAFF580017CB6C /* Source */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		17C5238626EB667D0024A485 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				17C5238726EB951B0024A485 /* FavoritesTransformer.swift */,
+				17C5238926EB9AE50024A485 /* FavoriteTransformer.swift */,
+			);
+			path = Mapper;
 			sourceTree = "<group>";
 		};
 		82EA6057786B76B3F4BA393A /* Frameworks */ = {
@@ -226,6 +248,8 @@
 				17A5CB2E26EAFFC50017CB6C /* GameEntity.swift in Sources */,
 				17A5CB2B26EAFF7B0017CB6C /* FavoriteLocalDataSource.swift in Sources */,
 				17A5CB3126EAFFE60017CB6C /* FavoriteRepository.swift in Sources */,
+				17C5238826EB951B0024A485 /* FavoritesTransformer.swift in Sources */,
+				17C5238A26EB9AE50024A485 /* FavoriteTransformer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

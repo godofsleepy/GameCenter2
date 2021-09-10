@@ -12,10 +12,10 @@ import GameDomain
 public struct GameTransform : Mapper {
     
     public typealias Response = [GameResponse]
-    public typealias Entity = String
+    public typealias Entity = Any
     public typealias Domain = [GameModel]
     
-    public func transformResponseToEntity(response: [GameResponse]) -> String {
+    public func transformResponseToEntity(response: [GameResponse]) -> Any {
         fatalError()
     }
     
@@ -32,7 +32,7 @@ public struct GameTransform : Mapper {
         }
     }
     
-    public func transformEntityToDomain(entity: String) -> [GameModel] {
+    public func transformEntityToDomain(entity: Any) -> [GameModel] {
         fatalError()
     }
     

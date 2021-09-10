@@ -15,10 +15,8 @@ protocol SearchUseCase {
 class SearchInteractor: SearchUseCase {
     private let repository : GameRepositoryProtocol
     
-    
     required init(repository : GameRepositoryProtocol) {
         self.repository = repository
-        
     }
     
     func getSearch(query: String) -> AnyPublisher<[GameModel], Error> {
