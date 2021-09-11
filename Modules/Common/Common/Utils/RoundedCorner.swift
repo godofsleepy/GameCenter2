@@ -1,21 +1,21 @@
 //
-//  CustomCorner.swift
-//  GameCenter2
+//  RoundedCorner.swift
+//  Common
 //
-//  Created by rifat khadafy on 24/08/20.
-//  Copyright © 2020 rifat khadafy. All rights reserved.
+//  Created by Rumah Coding on 11/09/21.
 //
 
+import Foundation
 import SwiftUI
 
-struct RoundedCorners: View {
+public struct RoundedCorners: View {
     var color: Color
     var tl: CGFloat = 0.0
     var tr: CGFloat = 0.0
     var bl: CGFloat = 0.0
     var br: CGFloat = 0.0
 
-    var body: some View {
+    public var body: some View {
         GeometryReader { geometry in
             Path { path in
 
@@ -42,4 +42,3 @@ struct RoundedCorners: View {
         }
     }
 }
-

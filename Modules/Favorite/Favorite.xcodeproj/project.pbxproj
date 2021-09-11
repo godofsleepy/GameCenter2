@@ -53,10 +53,26 @@
 		175EA6E126EA602300CACC99 /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
+				178915D526EC8AB700D223D1 /* DetailFavorite */,
+				178915D426EC8AA700D223D1 /* Favorite */,
 				175EA6E226EA602300CACC99 /* Favorite.h */,
 				175EA6E326EA602300CACC99 /* Info.plist */,
 			);
 			path = Favorite;
+			sourceTree = "<group>";
+		};
+		178915D426EC8AA700D223D1 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		178915D526EC8AB700D223D1 /* DetailFavorite */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailFavorite;
 			sourceTree = "<group>";
 		};
 		5741C91733F70475B058BB21 /* Pods */ = {

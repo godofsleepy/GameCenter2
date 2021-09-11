@@ -9,7 +9,8 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-        
+    var destination: [Destination]
+    
     init() {
         UITableView.appearance().tableFooterView = UIView()
         //        Mengganti warna background list
@@ -32,6 +33,14 @@ struct ContentView: View {
     }
     
     var body: some View {
+        List(destination) {
+            NavigationLink(destination: destination(for: $0))
+        }
+    }
+}
+
+struct TabHome: View {
+    var body :some View {
         TabView{
             HomeView()
                 .tabItem {
@@ -53,8 +62,5 @@ struct ContentView: View {
         }
         .preferredColorScheme(.light)
         .accentColor(Color(red: 241 / 255, green: 79 / 255, blue: 114 / 255))
-        
     }
-    
-    
 }

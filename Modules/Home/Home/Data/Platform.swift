@@ -1,9 +1,8 @@
 //
-//  Platforms.swift
-//  GameCenter2
+//  Platform.swift
+//  Home
 //
-//  Created by rifat khadafy on 17/11/20.
-//  Copyright © 2020 rifat khadafy. All rights reserved.
+//  Created by Rumah Coding on 11/09/21.
 //
 
 import Foundation

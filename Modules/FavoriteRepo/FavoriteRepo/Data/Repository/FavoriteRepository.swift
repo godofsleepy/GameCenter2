@@ -79,8 +79,8 @@ where
     Transformer.Domain == DetailModel,
     Transformer.Entity == GameEntity {
     
-    public typealias Request = Int
-    public typealias Response = DetailModel
+    public typealias Request = DetailModel
+    public typealias Response = Bool
     
     private let _localeDataSource: LocalDataSource
     private let _mapper: Transformer
@@ -94,8 +94,8 @@ where
     }
     
     public func execute(request: Request?) -> AnyPublisher<Response, Error> {
-        return _localeDataSource.get(id: request!)
-            .map { _mapper.transformEntityToDomain(entity: $0) }
+        let data = _mapper.transformDomainToEntiry(domain: request!)
+        return _localeDataSource.add(entities: [data])
             .eraseToAnyPublisher()
     }
 }

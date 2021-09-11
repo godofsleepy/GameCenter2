@@ -1,26 +1,26 @@
+////
+////  HomeInteractor.swift
+////  GameCenter2
+////
+////  Created by rifat khadafy on 05/12/20.
+////
 //
-//  HomeInteractor.swift
-//  GameCenter2
+//import Foundation
+//import Combine
 //
-//  Created by rifat khadafy on 05/12/20.
+//protocol HomeUseCase {
+//    func getGames(platformId : String) -> AnyPublisher<[GameModel], Error>
+//}
 //
-
-import Foundation
-import Combine
-
-protocol HomeUseCase {
-    func getGames(platformId : String) -> AnyPublisher<[GameModel], Error>
-}
-
-class HomeInteractor: HomeUseCase {
-    private let repository : GameRepositoryProtocol
-    
-    required init(repository : GameRepositoryProtocol) {
-        self.repository = repository
-    }
-    
-    func getGames(platformId: String) -> AnyPublisher<[GameModel], Error> {
-        return repository.getGames(platformId: platformId)
-    }
-    
-}
+//class HomeInteractor: HomeUseCase {
+//    private let repository : GameRepositoryProtocol
+//    
+//    required init(repository : GameRepositoryProtocol) {
+//        self.repository = repository
+//    }
+//    
+//    func getGames(platformId: String) -> AnyPublisher<[GameModel], Error> {
+//        return repository.getGames(platformId: platformId)
+//    }
+//    
+//}

@@ -1,20 +1,18 @@
 //
 //  GameItemView.swift
-//  GameCenter2
+//  Common
 //
-//  Created by rifat khadafy on 17/11/20.
-//  Copyright © 2020 rifat khadafy. All rights reserved.
+//  Created by Rumah Coding on 11/09/21.
 //
 
-import Foundation
+import GameDomain
 import SwiftUI
 import SDWebImage
 import SDWebImageSwiftUI
 
-
-struct GameItemView : View{
+public struct GameItemView : View{
     var game : GameModel
-    var body : some View {
+    public var body : some View {
         HStack {
             WebImage(url: URL(string: game.background_image ?? ""))
                 .renderingMode(.original)

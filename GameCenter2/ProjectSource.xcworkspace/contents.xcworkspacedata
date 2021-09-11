@@ -26,6 +26,9 @@
       location = "group:../Modules/Home/Home.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:../Modules/Profile/Profile.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:../Modules/Search/Search.xcodeproj">
    </FileRef>
    <FileRef

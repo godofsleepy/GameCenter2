@@ -35,7 +35,7 @@ public struct FavoriteLocalDataSource : LocaleDataSource {
         return Future<Bool, Error> { completion in
             do {
                 try _realm.write {
-                    _realm.add(entities, update: .all)
+                    _realm.add(entities[0], update: .all)
                     completion(.success(true))
                 }
             } catch {

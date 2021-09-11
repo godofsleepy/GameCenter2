@@ -1,12 +1,10 @@
 //
 //  CarouselView.swift
-//  GameCenter2
+//  Home
 //
-//  Created by rifat khadafy on 17/11/20.
-//  Copyright © 2020 rifat khadafy. All rights reserved.
+//  Created by Rumah Coding on 11/09/21.
 //
 
-import Foundation
 import SwiftUI
 
 struct CarouselView<Content>: View where Content: View {
@@ -73,4 +71,3 @@ struct PageControl: View {
         .padding(15)
     }
 }
-

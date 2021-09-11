@@ -16,7 +16,7 @@ enum HomeStatus {
     case error
 }
 
-class HomePresenter: ObservableObject {
+class HomePresent: ObservableObject {
     private let router = HomeRouter()
     private var cancellables: Set<AnyCancellable> = []
     private let homeUseCase : HomeUseCase

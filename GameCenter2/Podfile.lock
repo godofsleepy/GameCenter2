@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (5.4.3)
-  - Core (1.5.5):
+  - Core (1.5.6):
     - RealmSwift
   - Realm (10.14.0):
     - Realm/Headers (= 10.14.0)
@@ -33,17 +33,17 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Core:
-    :commit: 49d76f5ce8bf03d4c6a2bb59e400186c7ce7bbe9
+    :commit: fc914445a73ea80280eada05d7b1b0959ed42f6b
     :git: https://github.com/godofsleepy/Gamecenter2Core.git
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
-  Core: 35ce9ccae296954055f34c6b5cb544e62d7d225c
+  Core: 83330cf4c1411c51c1788b8f10bbe0623ca82c54
   Realm: 95a120db10fa66d0f1d10bee4ce828177ae00090
   RealmSwift: 4937e1b6f9b87bc25dc23883198807bf69e8cb76
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SDWebImageSwiftUI: 43687ffe232ddd33fe0659498b7ca9884fdd6b35
 
-PODFILE CHECKSUM: d9f6c0c1e16332b6aa2c147d0bf9d9369bbf8c6b
+PODFILE CHECKSUM: 39d2c41f39b606973a7396cf23c3389c0bf9c778
 
 COCOAPODS: 1.11.0

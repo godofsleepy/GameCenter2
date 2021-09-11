@@ -53,11 +53,16 @@ end
 
 target 'Common' do
   project '../Modules/Common/Common'
+	pod 'SDWebImageSwiftUI', '~> 1.5.0'
 	pod 'Core', :git => 'https://github.com/godofsleepy/Gamecenter2Core.git'
 end
 
 target 'GameDomain' do
   project '../Modules/GameDomain/GameDomain'
+end
+
+target 'Profile' do
+  project '../Modules/Profile/Profile'
 end
 
 post_install do |pi|
