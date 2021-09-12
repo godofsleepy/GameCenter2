@@ -7,12 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1751217226EE6206007FB80A /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1751217126EE6206007FB80A /* SearchView.swift */; };
+		1751217426EE6210007FB80A /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1751217326EE6210007FB80A /* SearchPresenter.swift */; };
+		1751217626EE6276007FB80A /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1751217526EE6276007FB80A /* Core.framework */; };
+		1751217A26EE627D007FB80A /* GameDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1751217926EE627D007FB80A /* GameDomain.framework */; };
+		1751217D26EE6440007FB80A /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1751217C26EE6440007FB80A /* Common.framework */; };
+		1751218126EE6446007FB80A /* GameRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1751218026EE6446007FB80A /* GameRepo.framework */; };
 		175EA6BA26EA5FFB00CACC99 /* Search.h in Headers */ = {isa = PBXBuildFile; fileRef = 175EA6B826EA5FFB00CACC99 /* Search.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		737C3F29E727EF428E8D4362 /* Pods_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16F2CE2FDB263891C9F53BE /* Pods_Search.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		159592DC60FA368E78889E21 /* Pods-Search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Search.release.xcconfig"; path = "Target Support Files/Pods-Search/Pods-Search.release.xcconfig"; sourceTree = "<group>"; };
+		1751217126EE6206007FB80A /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		1751217326EE6210007FB80A /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		1751217526EE6276007FB80A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1751217926EE627D007FB80A /* GameDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GameDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1751217C26EE6440007FB80A /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1751218026EE6446007FB80A /* GameRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GameRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		175EA6B526EA5FFB00CACC99 /* Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		175EA6B826EA5FFB00CACC99 /* Search.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Search.h; sourceTree = "<group>"; };
 		175EA6B926EA5FFB00CACC99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -26,6 +38,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				737C3F29E727EF428E8D4362 /* Pods_Search.framework in Frameworks */,
+				1751218126EE6446007FB80A /* GameRepo.framework in Frameworks */,
+				1751217D26EE6440007FB80A /* Common.framework in Frameworks */,
+				1751217626EE6276007FB80A /* Core.framework in Frameworks */,
+				1751217A26EE627D007FB80A /* GameDomain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +71,8 @@
 			children = (
 				175EA6B826EA5FFB00CACC99 /* Search.h */,
 				175EA6B926EA5FFB00CACC99 /* Info.plist */,
+				1751217126EE6206007FB80A /* SearchView.swift */,
+				1751217326EE6210007FB80A /* SearchPresenter.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -72,6 +90,10 @@
 		CA4D10D50A8010D9F223EECB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1751218026EE6446007FB80A /* GameRepo.framework */,
+				1751217C26EE6440007FB80A /* Common.framework */,
+				1751217926EE627D007FB80A /* GameDomain.framework */,
+				1751217526EE6276007FB80A /* Core.framework */,
 				F16F2CE2FDB263891C9F53BE /* Pods_Search.framework */,
 			);
 			name = Frameworks;
@@ -120,6 +142,7 @@
 				TargetAttributes = {
 					175EA6B426EA5FFB00CACC99 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -181,6 +204,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1751217426EE6210007FB80A /* SearchPresenter.swift in Sources */,
+				1751217226EE6206007FB80A /* SearchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +338,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1C3A8383F56A4869777943D7 /* Pods-Search.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = CU9ZP67S25;
@@ -321,6 +347,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Search/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -329,6 +356,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = godofsleepy.Search;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -338,6 +367,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 159592DC60FA368E78889E21 /* Pods-Search.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = CU9ZP67S25;
@@ -346,6 +376,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Search/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -354,6 +385,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = godofsleepy.Search;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

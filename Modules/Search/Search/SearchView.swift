@@ -1,24 +1,31 @@
 //
 //  SearchView.swift
-//  GameCenter2
+//  Search
 //
-//  Created by rifat khadafy on 17/11/20.
-//  Copyright © 2020 rifat khadafy. All rights reserved.
+//  Created by Rumah Coding on 12/09/21.
 //
 
 import SwiftUI
+import GameDomain
+import Core
+import Common
+import GameRepo
 
 struct SearchView: View {
     
-    @EnvironmentObject var presenter : SearchPresenter
+    @EnvironmentObject var presenter : SearchPresenter<
+        Interactor<
+            [String: String],
+            [GameModel],
+            SearchRepository<SearchRemote, GameTransform>>>
     @State var query: String = ""
     
     var body: some View {
         
-        NavigationView{
-            ZStack{
+        NavigationView {
+            ZStack {
                 Color("purple").edgesIgnoringSafeArea(.all)
-                ScrollView{
+                ScrollView {
                     HStack {
                         HStack {
                             Image(systemName: "magnifyingglass").foregroundColor(Color("orange"))
@@ -41,14 +48,12 @@ struct SearchView: View {
                     }.padding(.horizontal).padding(.vertical)
                     
                     VStack{
-                        if presenter.loadingState {
+                        if presenter.searchStatus == PresenterStatus.loading {
                             Spinner(isAnimating: true, style: .large).eraseToAnyView()
                         } else {
                             if !self.presenter.games.isEmpty {
                                 ForEach(self.presenter.games, id: \.id){ game in
-                                    self.presenter.linkBuilder(for: String(game.id)) {
-                                        GameItemView(game: game)
-                                    }
+                                    GameItemView(game: game)
                                 }
                                 
                             } else {
@@ -67,9 +72,3 @@ struct SearchView: View {
         
     }
 }
-
-//struct SearchView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SearchView()
-//    }
-//}
