@@ -1,47 +1,40 @@
 //
 //  FavoritePresenter.swift
-//  GameCenter2
+//  Favorite
 //
-//  Created by rifat khadafy on 12/02/21.
+//  Created by Rumah Coding on 12/09/21.
 //
 
-
-import Foundation
+import Core
 import Combine
-import SwiftUI
+import GameDomain
 
-class FavoritePresenter : ObservableObject {
-    private var router = FavoriteRouter()
+class FavoritePresenter<FavoriteUseCase: UseCase> : ObservableObject
+where
+    FavoriteUseCase.Request == Any,
+    FavoriteUseCase.Response == [DetailModel]   {
     private var cancellables: Set<AnyCancellable> = []
     private let favoriteUsecase : FavoriteUseCase
     
-    
     @Published var games: [DetailModel] = []
     @Published var errorMessage: String = ""
+    @Published var favoriteStatus: PresenterStatus = PresenterStatus.initial
     
     init(favoriteUseCase: FavoriteUseCase) {
         self.favoriteUsecase = favoriteUseCase
     }
     
     func getGames() {
-        self.favoriteUsecase.getListFav()
+        self.favoriteUsecase.execute(request: [])
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { (error) in
                 self.errorMessage = String(describing: error)
+                self.favoriteStatus = PresenterStatus.error
             }, receiveValue: { value in
-                print(value)
                 self.games = value
+                self.favoriteStatus = PresenterStatus.success
             })
             .store(in: &cancellables)
     }
     
-    func linkBuilder<Content: View>(
-        for game: DetailModel,
-        @ViewBuilder content: () -> Content
-    ) -> some View {
-        NavigationLink(
-            destination: router.makeFavoriteDetailView(for: game)) {content()}
-    }
-    
 }
-

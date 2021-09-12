@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1751218426EE660B007FB80A /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1751218326EE660B007FB80A /* FavoriteView.swift */; };
+		1751218626EE661C007FB80A /* FavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1751218526EE661C007FB80A /* FavoritePresenter.swift */; };
+		1751218826EE6634007FB80A /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1751218726EE6634007FB80A /* Common.framework */; };
+		1751218C26EE663C007FB80A /* FavoriteRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1751218B26EE663C007FB80A /* FavoriteRepo.framework */; };
+		1751218F26EE6642007FB80A /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1751218E26EE6642007FB80A /* Core.framework */; };
+		1751219226EE664D007FB80A /* GameDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1751219126EE664D007FB80A /* GameDomain.framework */; };
+		1751219526EE679B007FB80A /* FavItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1751219426EE679B007FB80A /* FavItemView.swift */; };
+		1751219726EE68D4007FB80A /* DetailFavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1751219626EE68D4007FB80A /* DetailFavoriteView.swift */; };
+		1751219926EE68DF007FB80A /* DetailFavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1751219826EE68DF007FB80A /* DetailFavoritePresenter.swift */; };
 		175EA6E426EA602300CACC99 /* Favorite.h in Headers */ = {isa = PBXBuildFile; fileRef = 175EA6E226EA602300CACC99 /* Favorite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CA4FFC722EA9752A0C00322C /* Pods_Favorite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14551C0AF15E078BD60A863E /* Pods_Favorite.framework */; };
 /* End PBXBuildFile section */
@@ -14,6 +23,15 @@
 /* Begin PBXFileReference section */
 		14551C0AF15E078BD60A863E /* Pods_Favorite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Favorite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		147BA7B8CD92916A1C790899 /* Pods-Favorite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Favorite.release.xcconfig"; path = "Target Support Files/Pods-Favorite/Pods-Favorite.release.xcconfig"; sourceTree = "<group>"; };
+		1751218326EE660B007FB80A /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		1751218526EE661C007FB80A /* FavoritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePresenter.swift; sourceTree = "<group>"; };
+		1751218726EE6634007FB80A /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1751218B26EE663C007FB80A /* FavoriteRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FavoriteRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1751218E26EE6642007FB80A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1751219126EE664D007FB80A /* GameDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GameDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1751219426EE679B007FB80A /* FavItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavItemView.swift; sourceTree = "<group>"; };
+		1751219626EE68D4007FB80A /* DetailFavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFavoriteView.swift; sourceTree = "<group>"; };
+		1751219826EE68DF007FB80A /* DetailFavoritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFavoritePresenter.swift; sourceTree = "<group>"; };
 		175EA6DF26EA602300CACC99 /* Favorite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Favorite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		175EA6E226EA602300CACC99 /* Favorite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Favorite.h; sourceTree = "<group>"; };
 		175EA6E326EA602300CACC99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -25,7 +43,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1751218C26EE663C007FB80A /* FavoriteRepo.framework in Frameworks */,
 				CA4FFC722EA9752A0C00322C /* Pods_Favorite.framework in Frameworks */,
+				1751218826EE6634007FB80A /* Common.framework in Frameworks */,
+				1751218F26EE6642007FB80A /* Core.framework in Frameworks */,
+				1751219226EE664D007FB80A /* GameDomain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +86,9 @@
 		178915D426EC8AA700D223D1 /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
+				1751218326EE660B007FB80A /* FavoriteView.swift */,
+				1751218526EE661C007FB80A /* FavoritePresenter.swift */,
+				1751219426EE679B007FB80A /* FavItemView.swift */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -71,6 +96,8 @@
 		178915D526EC8AB700D223D1 /* DetailFavorite */ = {
 			isa = PBXGroup;
 			children = (
+				1751219626EE68D4007FB80A /* DetailFavoriteView.swift */,
+				1751219826EE68DF007FB80A /* DetailFavoritePresenter.swift */,
 			);
 			path = DetailFavorite;
 			sourceTree = "<group>";
@@ -88,6 +115,10 @@
 		D125E12A246B7C23B84A1837 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1751219126EE664D007FB80A /* GameDomain.framework */,
+				1751218E26EE6642007FB80A /* Core.framework */,
+				1751218B26EE663C007FB80A /* FavoriteRepo.framework */,
+				1751218726EE6634007FB80A /* Common.framework */,
 				14551C0AF15E078BD60A863E /* Pods_Favorite.framework */,
 			);
 			name = Frameworks;
@@ -136,6 +167,7 @@
 				TargetAttributes = {
 					175EA6DE26EA602300CACC99 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -197,6 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1751218626EE661C007FB80A /* FavoritePresenter.swift in Sources */,
+				1751219726EE68D4007FB80A /* DetailFavoriteView.swift in Sources */,
+				1751218426EE660B007FB80A /* FavoriteView.swift in Sources */,
+				1751219926EE68DF007FB80A /* DetailFavoritePresenter.swift in Sources */,
+				1751219526EE679B007FB80A /* FavItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +366,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3CBB8C21783C38C6A99D6E31 /* Pods-Favorite.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = CU9ZP67S25;
@@ -337,6 +375,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Favorite/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -345,6 +384,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = godofsleepy.Favorite;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -354,6 +395,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 147BA7B8CD92916A1C790899 /* Pods-Favorite.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = CU9ZP67S25;
@@ -362,6 +404,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Favorite/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -370,6 +413,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = godofsleepy.Favorite;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -1,35 +1,37 @@
 //
-//  FavoriteVIew.swift
-//  GameCenter2
+//  FavoriteView.swift
+//  Favorite
 //
-//  Created by rifat khadafy on 06/12/20.
+//  Created by Rumah Coding on 12/09/21.
 //
 
 import SwiftUI
+import GameDomain
+import Core
+import FavoriteRepo
 
 struct FavoriteView: View {
     
-    @EnvironmentObject var presenter : FavoritePresenter
+    @EnvironmentObject var presenter : FavoritePresenter<Interactor<Any, [DetailModel],GetFavsRepository<FavoriteLocalDataSource, FavoritesTransformer> >>
     
     var body: some View {
         NavigationView{
             ZStack{
                 Color("purple").edgesIgnoringSafeArea(.all)
-
+                
                 ScrollView{
-                    VStack { 
+                    VStack {
                         if !self.presenter.games.isEmpty {
                             ForEach(self.presenter.games, id:\.self){ game in
-                                self.presenter.linkBuilder(for: game) {
-                                    FavGameItemView(game: game)
-                                }
+                                FavItemView(game: game)
+                                
                             }
                         }else {
                             Image("empty").frame(alignment: .center).padding(.top, 50)
-
+                            
                         }
                     }.padding(24)
-
+                    
                 }
             }
             .navigationBarTitle("Favorite")
@@ -39,4 +41,5 @@ struct FavoriteView: View {
         }
     }
 }
+
 

@@ -1,16 +1,16 @@
 //
-//  FavGameItemView.swift
-//  GameCenter2
+//  FavItemView.swift
+//  Favorite
 //
-//  Created by rifat khadafy on 17/11/20.
-//  Copyright © 2020 rifat khadafy. All rights reserved.
+//  Created by Rumah Coding on 12/09/21.
 //
 
 import SwiftUI
 import SDWebImage
 import SDWebImageSwiftUI
+import GameDomain
 
-struct FavGameItemView: View {
+struct FavItemView: View {
     var game : DetailModel
     var body: some View {
         HStack {

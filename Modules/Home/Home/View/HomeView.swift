@@ -27,7 +27,7 @@ struct HomeView: View {
                         ZStack {
                             RoundedRectangle(cornerRadius: 20)
                                 .stroke(Color("pink"), lineWidth: 5)
-
+                            
                             HStack {
                                 Button(action: {
                                     print("Left")
@@ -40,7 +40,7 @@ struct HomeView: View {
                                     Image("chevron.left")
                                         .foregroundColor(Color(red: 247 / 255, green: 164 / 255, blue: 10 / 255))
                                 }
-
+                                
                                 CarouselView(index: self.$index.animation(), maxIndex: 3) {
                                     ForEach(dataPlatforms, id: \.self) { platform in
                                         Image(platform.image)
@@ -48,7 +48,7 @@ struct HomeView: View {
                                             .scaledToFit()
                                     }
                                 }
-
+                                
                                 Button(action: {
                                     print("Right")
                                     self.index += 1
@@ -56,14 +56,14 @@ struct HomeView: View {
                                         self.index = 0
                                     }
                                     self.presenter.getGames(platformId: dataPlatforms[self.index].id)
-
+                                    
                                 }) {
                                     Image("chevron.right")
                                         .foregroundColor(Color("orange"))
                                 }
                             }
                             .padding(10)
-
+                            
                             VStack(alignment: .leading) {
                                 Text("platform")
                                     .foregroundColor(Color.white).font(.system(size: 16))
@@ -72,16 +72,16 @@ struct HomeView: View {
                             }
                             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 80, alignment: .topLeading)
                             .padding(30)
-
+                            
                         }
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 250, maxHeight: 250)
                         .padding(.bottom)
-
+                        
                         Text("Featured")
                             .foregroundColor(Color("pink"))
                             .font(.system(size: 24))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-
+                        
                         VStack{
                             if presenter.homeStatus == PresenterStatus.loading {
                                 Spinner(isAnimating: true, style: .large).eraseToAnyView()
@@ -93,14 +93,14 @@ struct HomeView: View {
                                 }
                             } else if presenter.homeStatus == HomeStatus.error {
                                 Text(presenter.errorMessage).foregroundColor(Color.white)
-
+                                
                             }
                         }
                     }.padding()
-
+                    
                 }
-
-
+                
+                
             }
             .navigationBarTitle("Home", displayMode: .automatic)
             .navigationBarItems(trailing: NavigationLink(destination: destination(), tag: 1, selection: $selection){

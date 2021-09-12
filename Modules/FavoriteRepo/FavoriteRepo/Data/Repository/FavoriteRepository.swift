@@ -10,7 +10,7 @@ import Core
 import Combine
 import GameDomain
 
-public struct getFavsRepository<
+public struct GetFavsRepository<
     LocalDataSource: LocaleDataSource,
     Transformer: Mapper>: Repository
 where

@@ -94,11 +94,11 @@ where
             .sink(receiveCompletion: { (error) in
                 self.errorMessage = String(describing: error)
             }, receiveValue: { value in
-//                if(value != nil){
-//                    self.isFav = true
-//                }else {
-//                    self.isFav = false
-//                }
+                //                if(value != nil){
+                //                    self.isFav = true
+                //                }else {
+                //                    self.isFav = false
+                //                }
             }).store(in: &cancellables)
     }
     

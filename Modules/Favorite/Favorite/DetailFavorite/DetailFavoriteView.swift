@@ -1,17 +1,23 @@
 //
 //  DetailFavoriteView.swift
-//  GameCenter2
+//  Favorite
 //
-//  Created by rifat khadafy on 12/02/21.
+//  Created by Rumah Coding on 12/09/21.
 //
 
 import SwiftUI
 import SDWebImageSwiftUI
-import AVKit
-
+import Core
+import FavoriteRepo
+import GameDomain
+import Common
 
 struct DetailFavoriteView: View {
-    @ObservedObject var presenter : DetailFavoritePresenter
+    @ObservedObject var presenter : DetailFavoritePresenter<
+        Interactor<DetailModel, Bool, AddFavRepository<FavoriteLocalDataSource, FavoriteTransformer>> ,
+        Interactor<Int, Bool, DeleteFavRepository<FavoriteLocalDataSource>>,
+        Interactor<Int, DetailModel, GetFavRepository<FavoriteLocalDataSource, FavoriteTransformer>>
+    >
     
     var body: some View {
         ScrollView {
@@ -103,7 +109,7 @@ struct DetailFavoriteView: View {
                     
                     ScrollView(.horizontal){
                         HStack{
-                          
+                            
                             if presenter.game.background_image_additional != nil
                             {
                                 WebImage(url: URL(string: presenter.game.background_image_additional ?? ""))
@@ -164,8 +170,9 @@ struct DetailFavoriteView: View {
         )
         .onAppear{
             
-                self.presenter.checkIsFavorite()
+            self.presenter.checkIsFavorite()
             
         }
     }
 }
+
