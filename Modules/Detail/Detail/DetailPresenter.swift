@@ -35,11 +35,15 @@ where
     @Published var isFav : Bool = false
     @Published var detailStatus: PresenterStatus = PresenterStatus.initial
     
-    
-    init(detailUseCase : DetailUseCase, gameId : String) {
-        self.detailUseCase = detailUseCase
-        self.getDetail(gameId: gameId)
+    public init(id: String, _getDetailUseCase: GetDetailUseCase, _addFavoriteUseCase: AddFavoriteUseCase, _deleteFavoriteUseCase: DeleteFavoriteUseCase, _getFavoriteUseCase: GetFavoriteUseCase) {
+        self._getDetailUseCase = _getDetailUseCase
+        self._addFavoriteUseCase = _addFavoriteUseCase
+        self._deleteFavoriteUseCase = _deleteFavoriteUseCase
+        self._getFavoriteUseCase = _getFavoriteUseCase
+        self.getDetail(gameId: id)
     }
+    
+    
     
     func getDetail(gameId : String)   {
         detailStatus = PresenterStatus.loading
@@ -74,7 +78,7 @@ where
     }
     
     func deleteFavorite() {
-        _deleteFavoriteUseCase.execute(request: detail?.id!)
+        _deleteFavoriteUseCase.execute(request: detail?.id)
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { (error) in
                 self.errorMessage = String(describing: error)
@@ -90,11 +94,11 @@ where
             .sink(receiveCompletion: { (error) in
                 self.errorMessage = String(describing: error)
             }, receiveValue: { value in
-                if(value != nil){
-                    self.isFav = true
-                }else {
-                    self.isFav = false
-                }
+//                if(value != nil){
+//                    self.isFav = true
+//                }else {
+//                    self.isFav = false
+//                }
             }).store(in: &cancellables)
     }
     

@@ -7,13 +7,23 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+import Common
+import Core
+import GameDomain
+import GameRepo
+import FavoriteRepo
 
 struct DetailView : View {
-    @ObservedObject var presenter : DetailPresenter
+    @ObservedObject var presenter : DetailPresenter<
+        Interactor<[String: String], DetailModel, GetDetailRepository<GetDetailRemote,DetailTransform>>,
+        Interactor<DetailModel, Bool, AddFavRepository<FavoriteLocalDataSource, FavoriteTransformer>> ,
+        Interactor<Int, Bool, DeleteFavRepository<FavoriteLocalDataSource>>,
+        Interactor<Int, DetailModel, GetFavRepository<FavoriteLocalDataSource, FavoriteTransformer>>
+    >
     
     var body: some View {
         ScrollView {
-            if presenter.loadingState {
+            if presenter.detailStatus == PresenterStatus.loading {
                 HStack{
                     Spacer()
                     Spinner(isAnimating: true, style: .large).eraseToAnyView()
@@ -142,10 +152,10 @@ struct DetailView : View {
                                             .cornerRadius(100)
                                         
                                     }
-                                }                        }
+                                }
+                                
+                            }
                         }
-                        
-                        
                         
                     }
                     .padding()
@@ -161,7 +171,7 @@ struct DetailView : View {
         .navigationBarItems(trailing:
                                 Button(action: {
                                     print("tap")
-                                    if !self.presenter.loadingState {
+                                    if self.presenter.detailStatus == PresenterStatus.loading {
                                         self.presenter.isFav ? self.presenter.deleteFavorite(): self.presenter.addToFavorite()
                                     }
                                     
@@ -174,7 +184,7 @@ struct DetailView : View {
                                 }
         )
         .onAppear{
-            if !self.presenter.loadingState {
+            if self.presenter.detailStatus == PresenterStatus.loading {
                 self.presenter.checkIsFavorite(game: self.presenter.detail!)
             }
         }

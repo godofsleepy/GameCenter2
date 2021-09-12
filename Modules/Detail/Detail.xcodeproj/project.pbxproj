@@ -14,8 +14,24 @@
 		17939A0526ED357F00171D11 /* GameDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17939A0426ED357F00171D11 /* GameDomain.framework */; };
 		17939A0826ED35D400171D11 /* GameRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17939A0726ED35D400171D11 /* GameRepo.framework */; };
 		17939A0C26ED35DD00171D11 /* FavoriteRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17939A0B26ED35DD00171D11 /* FavoriteRepo.framework */; };
+		17B5127126EDE74B003EC97A /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B5127026EDE74B003EC97A /* Common.framework */; };
+		17B5127226EDE74B003EC97A /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17B5127026EDE74B003EC97A /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42A161AE88B08915213F4EEC /* Pods_Detail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D7BCE5DECA6677D9C9F4C1 /* Pods_Detail.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		17B5127326EDE74B003EC97A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				17B5127226EDE74B003EC97A /* Common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		07D7BCE5DECA6677D9C9F4C1 /* Pods_Detail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Detail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,6 +45,7 @@
 		17939A0426ED357F00171D11 /* GameDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GameDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17939A0726ED35D400171D11 /* GameRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GameRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17939A0B26ED35DD00171D11 /* FavoriteRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FavoriteRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17B5127026EDE74B003EC97A /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31FF94E7E0C5EAAFDA681DBA /* Pods-Detail.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Detail.debug.xcconfig"; path = "Target Support Files/Pods-Detail/Pods-Detail.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -40,6 +57,7 @@
 				42A161AE88B08915213F4EEC /* Pods_Detail.framework in Frameworks */,
 				17939A0126ED357700171D11 /* Core.framework in Frameworks */,
 				17939A0C26ED35DD00171D11 /* FavoriteRepo.framework in Frameworks */,
+				17B5127126EDE74B003EC97A /* Common.framework in Frameworks */,
 				17939A0826ED35D400171D11 /* GameRepo.framework in Frameworks */,
 				17939A0526ED357F00171D11 /* GameDomain.framework in Frameworks */,
 			);
@@ -80,6 +98,7 @@
 		6EDD7ED6D6BB34E304A3594C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17B5127026EDE74B003EC97A /* Common.framework */,
 				17939A0B26ED35DD00171D11 /* FavoriteRepo.framework */,
 				17939A0726ED35D400171D11 /* GameRepo.framework */,
 				17939A0426ED357F00171D11 /* GameDomain.framework */,
@@ -122,6 +141,7 @@
 				175EA6C626EA600700CACC99 /* Sources */,
 				175EA6C726EA600700CACC99 /* Frameworks */,
 				175EA6C826EA600700CACC99 /* Resources */,
+				17B5127326EDE74B003EC97A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

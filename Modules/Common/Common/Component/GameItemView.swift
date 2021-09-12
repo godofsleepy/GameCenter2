@@ -11,6 +11,10 @@ import SDWebImage
 import SDWebImageSwiftUI
 
 public struct GameItemView : View{
+    internal init(game: GameModel) {
+        self.game = game
+    }
+    
     var game : GameModel
     public var body : some View {
         HStack {

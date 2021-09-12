@@ -104,7 +104,7 @@ public struct DeleteFavRepository<
     LocalDataSource: LocaleDataSource>: Repository
 where
     LocalDataSource.Request == Any,
-    LocalDataSource.Response == Bool {
+    LocalDataSource.Response == GameEntity {
     
     public typealias Request = Int
     public typealias Response = Bool

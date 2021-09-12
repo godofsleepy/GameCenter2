@@ -9,6 +9,14 @@ import Foundation
 import SwiftUI
 
 public struct RoundedCorners: View {
+    public init(color: Color, tl: CGFloat = 0.0, tr: CGFloat = 0.0, bl: CGFloat = 0.0, br: CGFloat = 0.0) {
+        self.color = color
+        self.tl = tl
+        self.tr = tr
+        self.bl = bl
+        self.br = br
+    }
+    
     var color: Color
     var tl: CGFloat = 0.0
     var tr: CGFloat = 0.0
