@@ -11,6 +11,7 @@ workspace 'ProjectSource'
 target 'GameCenter2' do
   # Comment the next line if you don't want to use dynamic frameworks
         	pod 'Core', :git => 'https://github.com/godofsleepy/Gamecenter2Core.git'
+	pod 'RealmSwift'
   # Pods for GameCenter2
 
 end

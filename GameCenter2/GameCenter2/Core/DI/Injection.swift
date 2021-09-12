@@ -5,10 +5,25 @@
 //  Created by rifat khadafy on 06/12/20.
 //
 
-import Foundation
+import Core
 import RealmSwift
+import GameDomain
+import GameRepo
 
 final class Injection: NSObject {
+    
+    func provideHome<U: UseCase>() -> U where U.Request == Any, U.Response == [GameModel] {
+        
+        let remote = GetGamesRemote(endpoint: Endpoints.Gets.gamesPlatforms.url)
+        let mapper = GameTransform()
+        
+        let repository = GetGameRepository(
+            remoteDataSource: remote,
+            mapper: mapper)
+        
+        return Interactor(repository: repository) as! U
+    }
+
     
     private func provideRepository() -> GameRepositoryProtocol {
         let realm = try? Realm()

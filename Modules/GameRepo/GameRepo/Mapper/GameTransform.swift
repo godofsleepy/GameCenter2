@@ -10,6 +10,8 @@ import Core
 import GameDomain
 
 public struct GameTransform : Mapper {
+    public init() {
+    }
     
     public typealias Response = [GameResponse]
     public typealias Entity = Any
