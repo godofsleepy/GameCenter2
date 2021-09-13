@@ -1,0 +1,77 @@
+source 'https://github.com/godofsleepy/GameCenter2Podspec.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+# Uncomment the next line to define a global platform for your project
+platform :ios, '14.1'
+
+use_frameworks!
+
+workspace 'ProjectSource'
+
+target 'GameCenter2' do
+  # Comment the next line if you don't want to use dynamic frameworks
+        	pod 'Core', :git => 'https://github.com/godofsleepy/Gamecenter2Core.git'
+	pod 'RealmSwift'
+	pod 'SDWebImageSwiftUI'
+	pod 'Alamofire', '~> 5.2'
+  # Pods for GameCenter2
+
+end
+
+target 'Home' do
+  project '../Modules/Home/Home'
+	pod 'SDWebImageSwiftUI'
+	pod 'Core', :git => 'https://github.com/godofsleepy/Gamecenter2Core.git'
+end
+
+target 'Detail' do
+  project '../Modules/Detail/Detail'
+	pod 'SDWebImageSwiftUI'
+	pod 'Core', :git => 'https://github.com/godofsleepy/Gamecenter2Core.git'
+end
+
+target 'Search' do
+  project '../Modules/Search/Search'
+	pod 'SDWebImageSwiftUI'
+	pod 'Core', :git => 'https://github.com/godofsleepy/Gamecenter2Core.git'
+end
+
+target 'Favorite' do
+  project '../Modules/Favorite/Favorite'
+	pod 'SDWebImageSwiftUI'
+	pod 'Core', :git => 'https://github.com/godofsleepy/Gamecenter2Core.git'
+end
+
+target 'GameRepo' do
+  project '../Modules/GameRepo/GameRepo'
+	pod 'Alamofire', '~> 5.2'
+	pod 'Core', :git => 'https://github.com/godofsleepy/Gamecenter2Core.git'
+end
+
+target 'FavoriteRepo' do
+  project '../Modules/FavoriteRepo/FavoriteRepo'
+	pod 'RealmSwift'
+	pod 'Core', :git => 'https://github.com/godofsleepy/Gamecenter2Core.git'
+end
+
+target 'Common' do
+  project '../Modules/Common/Common'
+	pod 'SDWebImageSwiftUI'
+	pod 'Core', :git => 'https://github.com/godofsleepy/Gamecenter2Core.git'
+end
+
+target 'GameDomain' do
+  project '../Modules/GameDomain/GameDomain'
+end
+
+target 'Profile' do
+  project '../Modules/Profile/Profile'
+end
+
+post_install do |pi|
+    pi.pods_project.targets.each do |t|
+      t.build_configurations.each do |config|
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '14.1'
+      end
+    end
+end
