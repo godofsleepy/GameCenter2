@@ -38,33 +38,39 @@ struct ContentView: View {
     }
     
     var body: some View {
-       TabHome()
+        TabHome()
     }
 }
 
 struct TabHome: View {
     
-    let homeRouter = HomeRouter()
+    let router = Router()
     
     var body :some View {
         TabView{
             HomeView<ProfileView, DetailView>(
-                profileRoute: { homeRouter.routeToProfile() },
+                profileRoute: { router.routeToProfile() },
                 detailRoute: { id in
-                    homeRouter.routeToDetail(for: String(id))
+                    router.routeToDetail(for: String(id))
                 })
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("Home")
                 }
             
-            SearchView()
+            SearchView<DetailView>(
+                detailRoute: { id in
+                    router.routeToDetail(for: String(id))
+                })
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Search")
                 }
             
-            FavoriteView()
+            FavoriteView<DetailFavoriteView>(
+                detailRoute: { game in
+                    router.routeToDetailFav(for: game)
+                })
                 .tabItem {
                     Image(systemName: "heart.fill")
                     Text("Favorite")

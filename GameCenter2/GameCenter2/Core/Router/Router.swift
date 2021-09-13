@@ -12,8 +12,9 @@ import Core
 import GameDomain
 import GameRepo
 import FavoriteRepo
+import Favorite
 
-class HomeRouter {
+class Router {
     
     let injection = Injection()
     
@@ -31,6 +32,20 @@ class HomeRouter {
             _getFavoriteUseCase: getFavUseCase)
         return DetailView(presenter: presenter)
     }
+    
+    func routeToDetailFav(for game: DetailModel) -> DetailFavoriteView {
+        let addFavoriteUseCase: Interactor<DetailModel, Bool, AddFavRepository<FavoriteLocalDataSource, FavoriteTransformer>> = injection.provideAddFavorite()
+        let deleteFavoriteUseCase: Interactor<Int, Bool, DeleteFavRepository<FavoriteLocalDataSource>> = injection.provideDeleteFavorite()
+        let getFavUseCase: Interactor<Int, DetailModel, GetFavRepository<FavoriteLocalDataSource, FavoriteTransformer>> = injection.provideGetFavorite()
+        
+        let presenter = DetailFavoritePresenter(
+            game: game,
+            addFavoriteUseCase: addFavoriteUseCase,
+            deleteFavoriteUseCase: deleteFavoriteUseCase,
+            getFavoriteUseCase: getFavUseCase)
+        return DetailFavoriteView(presenter: presenter)
+    }
+
     
     func routeToProfile() -> ProfileView {
         return ProfileView()

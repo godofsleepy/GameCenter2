@@ -11,9 +11,13 @@ import Core
 import Common
 import GameRepo
 
-public struct SearchView: View {
+public struct SearchView<DetailRoute: View>: View {
     
-    public init() {}
+    let detailRoute: ((_ id: Int) -> DetailRoute)
+    
+    public init(detailRoute: @escaping ((Int) -> DetailRoute)) {
+        self.detailRoute = detailRoute
+    }
     
     @EnvironmentObject var presenter : SearchPresenter<
         Interactor<
@@ -55,7 +59,9 @@ public struct SearchView: View {
                         } else {
                             if !self.presenter.games.isEmpty {
                                 ForEach(self.presenter.games, id: \.id){ game in
-                                    GameItemView(game: game)
+                                    NavigationLink(destination: self.detailRoute(game.id)) {
+                                        GameItemView(game: game)
+                                    }
                                 }
                                 
                             } else {

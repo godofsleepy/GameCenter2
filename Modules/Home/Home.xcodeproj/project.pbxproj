@@ -17,7 +17,6 @@
 		17C5165526EF00C3002ACD99 /* SDWebImageSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C5165426EF00C3002ACD99 /* SDWebImageSwiftUI.framework */; };
 		17C5238D26EBBFBE0024A485 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5238C26EBBFBE0024A485 /* HomePresenter.swift */; };
 		17C5238F26EBBFC80024A485 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5238E26EBBFC80024A485 /* HomeView.swift */; };
-		17C5239126EBBFD40024A485 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5239026EBBFD40024A485 /* HomeRouter.swift */; };
 		433EDB02ADA57055EF9A297B /* Pods_Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B476F18C60B36397434C3DE5 /* Pods_Home.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +34,6 @@
 		17C5165426EF00C3002ACD99 /* SDWebImageSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImageSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17C5238C26EBBFBE0024A485 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		17C5238E26EBBFC80024A485 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		17C5239026EBBFD40024A485 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		AB16BB74B98771FF40FE1D06 /* Pods-Home.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Home.debug.xcconfig"; path = "Target Support Files/Pods-Home/Pods-Home.debug.xcconfig"; sourceTree = "<group>"; };
 		B476F18C60B36397434C3DE5 /* Pods_Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE320652BB96D10682B848F6 /* Pods-Home.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Home.release.xcconfig"; path = "Target Support Files/Pods-Home/Pods-Home.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 				175EA6A326EA5FE100CACC99 /* Home.h */,
 				175EA6A426EA5FE100CACC99 /* Info.plist */,
 				17C5238C26EBBFBE0024A485 /* HomePresenter.swift */,
-				17C5239026EBBFD40024A485 /* HomeRouter.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -237,7 +234,6 @@
 			files = (
 				178915DF26EC8CF400D223D1 /* Platform.swift in Sources */,
 				17C5238D26EBBFBE0024A485 /* HomePresenter.swift in Sources */,
-				17C5239126EBBFD40024A485 /* HomeRouter.swift in Sources */,
 				178915DC26EC8BC500D223D1 /* CarouselView.swift in Sources */,
 				17C5238F26EBBFC80024A485 /* HomeView.swift in Sources */,
 			);

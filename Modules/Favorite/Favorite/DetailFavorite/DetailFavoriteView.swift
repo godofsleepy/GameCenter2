@@ -12,14 +12,17 @@ import FavoriteRepo
 import GameDomain
 import Common
 
-struct DetailFavoriteView: View {
+public struct DetailFavoriteView: View {
     @ObservedObject var presenter : DetailFavoritePresenter<
         Interactor<DetailModel, Bool, AddFavRepository<FavoriteLocalDataSource, FavoriteTransformer>> ,
         Interactor<Int, Bool, DeleteFavRepository<FavoriteLocalDataSource>>,
-        Interactor<Int, DetailModel, GetFavRepository<FavoriteLocalDataSource, FavoriteTransformer>>
-    >
+        Interactor<Int, DetailModel, GetFavRepository<FavoriteLocalDataSource, FavoriteTransformer>>>
     
-    var body: some View {
+    public init (presenter: Any){
+        self.presenter = presenter as! DetailFavoritePresenter<Interactor<DetailModel, Bool, AddFavRepository<FavoriteLocalDataSource, FavoriteTransformer>>, Interactor<Int, Bool, DeleteFavRepository<FavoriteLocalDataSource>>, Interactor<Int, DetailModel, GetFavRepository<FavoriteLocalDataSource, FavoriteTransformer>>>
+    }
+    
+    public var body: some View {
         ScrollView {
             ZStack(alignment: .top){
                 GeometryReader { geometry in
@@ -158,7 +161,6 @@ struct DetailFavoriteView: View {
         
         .navigationBarItems(trailing:
                                 Button(action: {
-                                    print("tap")
                                     self.presenter.isFav ? self.presenter.deleteFavorite(): self.presenter.addToFavorite()
                                 }) {
                                     HStack {
@@ -169,9 +171,7 @@ struct DetailFavoriteView: View {
                                 }
         )
         .onAppear{
-            
             self.presenter.checkIsFavorite()
-            
         }
     }
 }

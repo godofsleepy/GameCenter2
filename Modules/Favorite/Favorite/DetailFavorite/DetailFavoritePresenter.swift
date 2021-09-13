@@ -9,7 +9,7 @@ import Core
 import Combine
 import GameDomain
 
-class DetailFavoritePresenter<AddFavoriteUseCase: UseCase,
+public class DetailFavoritePresenter<AddFavoriteUseCase: UseCase,
                               DeleteFavoriteUseCase: UseCase,
                               GetFavoriteUseCase: UseCase> : ObservableObject
 where AddFavoriteUseCase.Request == DetailModel,
@@ -29,7 +29,7 @@ where AddFavoriteUseCase.Request == DetailModel,
     @Published var errorMessage : String = ""
     @Published var detailFavStatus: PresenterStatus = PresenterStatus.initial
     
-    init(game: DetailModel, addFavoriteUseCase: AddFavoriteUseCase, deleteFavoriteUseCase: DeleteFavoriteUseCase, getFavoriteUseCase: GetFavoriteUseCase) {
+    public init(game: DetailModel, addFavoriteUseCase: AddFavoriteUseCase, deleteFavoriteUseCase: DeleteFavoriteUseCase, getFavoriteUseCase: GetFavoriteUseCase) {
         self.addFavoriteUseCase = addFavoriteUseCase
         self.deleteFavoriteUseCase = deleteFavoriteUseCase
         self.getFavoriteUseCase = getFavoriteUseCase
@@ -45,7 +45,6 @@ where AddFavoriteUseCase.Request == DetailModel,
             }, receiveValue: { value in
                 self.isFav = value
             }).store(in: &cancellables)
-        
     }
     
     func deleteFavorite() {
@@ -64,9 +63,10 @@ where AddFavoriteUseCase.Request == DetailModel,
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { (error) in
                 self.errorMessage = String(describing: error)
+                self.isFav = false
             }, receiveValue: { value in
                 //                if(value != nil){
-                //                    self.isFav = true
+                self.isFav = true
                 //                }else {
                 //                    self.isFav = false
                 //                }
