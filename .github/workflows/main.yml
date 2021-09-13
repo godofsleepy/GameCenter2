@@ -39,4 +39,4 @@ jobs:
      # Runs a set of commands using the runners shell
      - name: Run a multi-line script
        run: |
-          xcodebuild test -workspace GameCenter2.xcworkspace -scheme GameCenter2 -destination "platform=iOS Simulator,name=iPhone 11 Pro,OS=14.2"
+          xcodebuild test -workspace GameCenter2.xcworkspace -scheme GameCenter2 -destination "platform=iOS Simulator,name=iPhone 11 Pro,OS=14.1"
