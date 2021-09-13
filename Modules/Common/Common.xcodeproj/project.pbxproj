@@ -13,6 +13,7 @@
 		178915D326EC8A8400D223D1 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178915D226EC8A8400D223D1 /* Spinner.swift */; };
 		178915E226EC8D5800D223D1 /* ViewErase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178915E126EC8D5800D223D1 /* ViewErase.swift */; };
 		178915E426EC8D8000D223D1 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178915E326EC8D8000D223D1 /* RoundedCorner.swift */; };
+		17B3737A26EF073F003745C7 /* SDWebImageSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B3737926EF073F003745C7 /* SDWebImageSwiftUI.framework */; };
 		CB5F2820230EBBF1E14C82FF /* Pods_Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6FDF84AA3279A8895DCB7D /* Pods_Common.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		178915D226EC8A8400D223D1 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		178915E126EC8D5800D223D1 /* ViewErase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewErase.swift; sourceTree = "<group>"; };
 		178915E326EC8D8000D223D1 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		17B3737926EF073F003745C7 /* SDWebImageSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImageSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E662968EC2A9E610D2BD0B /* Pods-Common.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common.debug.xcconfig"; path = "Target Support Files/Pods-Common/Pods-Common.debug.xcconfig"; sourceTree = "<group>"; };
 		44C761E24E9DD8670DDD6C71 /* Pods-Common.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common.release.xcconfig"; path = "Target Support Files/Pods-Common/Pods-Common.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -37,6 +39,7 @@
 			files = (
 				CB5F2820230EBBF1E14C82FF /* Pods_Common.framework in Frameworks */,
 				171D22ED26EB3C820010421E /* Core.framework in Frameworks */,
+				17B3737A26EF073F003745C7 /* SDWebImageSwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +106,7 @@
 		612601C0889DB3E1ED531336 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17B3737926EF073F003745C7 /* SDWebImageSwiftUI.framework */,
 				171D22EC26EB3C820010421E /* Core.framework */,
 				0A6FDF84AA3279A8895DCB7D /* Pods_Common.framework */,
 			);
@@ -357,7 +361,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Common/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -384,7 +388,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Common/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

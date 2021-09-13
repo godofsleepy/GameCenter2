@@ -6,19 +6,33 @@
 //
 
 import SwiftUI
+import Core
+import Favorite
+import GameDomain
+import GameRepo
+import FavoriteRepo
+import Home
+import Search
 
 @main
 struct GameCenter2App: App {
+//    @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     
     var body: some Scene {
-//        let homeUseCase = Injection.init().provideHome()
-//        let searchUseCase = Injection.init().provideSearch()
-//        let favoriteUseCase = Injection.init().provideFavorite()
-//        let homePresenter = HomePresenter(homeUseCase: homeUseCase)
+//        let injection = Injection()
+//        let homeUseCase: Interactor<[String: String], [GameModel],GetGameRepository<GetGamesRemote,GameTransform>> = injection.provideHome()
+//        let searchUseCase: Interactor<
+//            [String: String],
+//            [GameModel],
+//            SearchRepository<SearchRemote, GameTransform>> = injection.provideSearch()
+//        let favoriteUseCase: Interactor<Any, [DetailModel],GetFavsRepository<FavoriteLocalDataSource, FavoritesTransformer>> = injection.provideFavorite()
+//
+//        let homePresenter = HomePresenter(_homeUseCase: homeUseCase)
 //        let searchPresenter = SearchPresenter(searchUseCase: searchUseCase)
-//        let favoritePresenter = FavoritePresenter(favoriteUseCase : favoriteUseCase)
+//        let favoritePresenter = FavoritesPresenter(favoriteUseCase : favoriteUseCase)
+        
         WindowGroup {
-            ContentView()
+//            ContentView()
 //                .environmentObject(homePresenter)
 //                .environmentObject(searchPresenter)
 //                .environmentObject(favoritePresenter)

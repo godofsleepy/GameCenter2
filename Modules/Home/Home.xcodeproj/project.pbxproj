@@ -11,31 +11,15 @@
 		1762E92326EC3C0200996B32 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1762E92226EC3C0200996B32 /* Core.framework */; };
 		1762E92726EC3C0D00996B32 /* GameDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1762E92626EC3C0D00996B32 /* GameDomain.framework */; };
 		178915D726EC8B2300D223D1 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178915D626EC8B2300D223D1 /* Common.framework */; };
-		178915D826EC8B2300D223D1 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 178915D626EC8B2300D223D1 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		178915DC26EC8BC500D223D1 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178915DB26EC8BC500D223D1 /* CarouselView.swift */; };
 		178915DF26EC8CF400D223D1 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178915DE26EC8CF400D223D1 /* Platform.swift */; };
 		178915E626ECBEC600D223D1 /* GameRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178915E526ECBEC600D223D1 /* GameRepo.framework */; };
-		178915E726ECBEC600D223D1 /* GameRepo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 178915E526ECBEC600D223D1 /* GameRepo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		17C5165526EF00C3002ACD99 /* SDWebImageSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C5165426EF00C3002ACD99 /* SDWebImageSwiftUI.framework */; };
 		17C5238D26EBBFBE0024A485 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5238C26EBBFBE0024A485 /* HomePresenter.swift */; };
 		17C5238F26EBBFC80024A485 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5238E26EBBFC80024A485 /* HomeView.swift */; };
 		17C5239126EBBFD40024A485 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C5239026EBBFD40024A485 /* HomeRouter.swift */; };
 		433EDB02ADA57055EF9A297B /* Pods_Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B476F18C60B36397434C3DE5 /* Pods_Home.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		178915D926EC8B2300D223D1 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				178915E726ECBEC600D223D1 /* GameRepo.framework in Embed Frameworks */,
-				178915D826EC8B2300D223D1 /* Common.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		175EA6A026EA5FE100CACC99 /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +31,8 @@
 		178915DB26EC8BC500D223D1 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		178915DE26EC8CF400D223D1 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		178915E526ECBEC600D223D1 /* GameRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GameRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17C5164226EF0022002ACD99 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17C5165426EF00C3002ACD99 /* SDWebImageSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImageSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17C5238C26EBBFBE0024A485 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		17C5238E26EBBFC80024A485 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		17C5239026EBBFD40024A485 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -62,6 +48,7 @@
 			files = (
 				433EDB02ADA57055EF9A297B /* Pods_Home.framework in Frameworks */,
 				178915E626ECBEC600D223D1 /* GameRepo.framework in Frameworks */,
+				17C5165526EF00C3002ACD99 /* SDWebImageSwiftUI.framework in Frameworks */,
 				178915D726EC8B2300D223D1 /* Common.framework in Frameworks */,
 				1762E92326EC3C0200996B32 /* Core.framework in Frameworks */,
 				1762E92726EC3C0D00996B32 /* GameDomain.framework in Frameworks */,
@@ -74,6 +61,8 @@
 		0ACAA82FE0950119DA1ABB70 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17C5165426EF00C3002ACD99 /* SDWebImageSwiftUI.framework */,
+				17C5164226EF0022002ACD99 /* SDWebImage.framework */,
 				178915E526ECBEC600D223D1 /* GameRepo.framework */,
 				178915D626EC8B2300D223D1 /* Common.framework */,
 				1762E92626EC3C0D00996B32 /* GameDomain.framework */,
@@ -164,7 +153,6 @@
 				175EA69C26EA5FE100CACC99 /* Sources */,
 				175EA69D26EA5FE100CACC99 /* Frameworks */,
 				175EA69E26EA5FE100CACC99 /* Resources */,
-				178915D926EC8B2300D223D1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -393,7 +381,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Home/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -422,7 +410,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Home/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

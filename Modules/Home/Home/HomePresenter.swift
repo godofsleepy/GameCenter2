@@ -22,7 +22,7 @@ where
     @Published public var errorMessage: String = ""
     @Published public var homeStatus: PresenterStatus = PresenterStatus.initial
 
-    internal init(_homeUseCase: HomeUseCase) {
+    public init(_homeUseCase: HomeUseCase) {
         self._homeUseCase = _homeUseCase
     }
     

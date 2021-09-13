@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct ProfileView: View {
+public struct ProfileView: View {
     @Environment(\.openURL) var openURL
     
     var data = Profile()
-    var body: some View {
+    public var body: some View {
         ZStack{
             Color(red: 37 / 255, green: 19 / 255, blue: 51 / 255).edgesIgnoringSafeArea(.all)
             VStack(alignment: .leading) {

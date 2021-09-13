@@ -14,6 +14,7 @@
 		1751217D26EE6440007FB80A /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1751217C26EE6440007FB80A /* Common.framework */; };
 		1751218126EE6446007FB80A /* GameRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1751218026EE6446007FB80A /* GameRepo.framework */; };
 		175EA6BA26EA5FFB00CACC99 /* Search.h in Headers */ = {isa = PBXBuildFile; fileRef = 175EA6B826EA5FFB00CACC99 /* Search.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17C5165926EF00D1002ACD99 /* SDWebImageSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C5165826EF00D1002ACD99 /* SDWebImageSwiftUI.framework */; };
 		737C3F29E727EF428E8D4362 /* Pods_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16F2CE2FDB263891C9F53BE /* Pods_Search.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,8 @@
 		175EA6B526EA5FFB00CACC99 /* Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		175EA6B826EA5FFB00CACC99 /* Search.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Search.h; sourceTree = "<group>"; };
 		175EA6B926EA5FFB00CACC99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17C5164926EF0049002ACD99 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17C5165826EF00D1002ACD99 /* SDWebImageSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImageSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C3A8383F56A4869777943D7 /* Pods-Search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Search.debug.xcconfig"; path = "Target Support Files/Pods-Search/Pods-Search.debug.xcconfig"; sourceTree = "<group>"; };
 		F16F2CE2FDB263891C9F53BE /* Pods_Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -39,6 +42,7 @@
 			files = (
 				737C3F29E727EF428E8D4362 /* Pods_Search.framework in Frameworks */,
 				1751218126EE6446007FB80A /* GameRepo.framework in Frameworks */,
+				17C5165926EF00D1002ACD99 /* SDWebImageSwiftUI.framework in Frameworks */,
 				1751217D26EE6440007FB80A /* Common.framework in Frameworks */,
 				1751217626EE6276007FB80A /* Core.framework in Frameworks */,
 				1751217A26EE627D007FB80A /* GameDomain.framework in Frameworks */,
@@ -90,6 +94,8 @@
 		CA4D10D50A8010D9F223EECB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17C5165826EF00D1002ACD99 /* SDWebImageSwiftUI.framework */,
+				17C5164926EF0049002ACD99 /* SDWebImage.framework */,
 				1751218026EE6446007FB80A /* GameRepo.framework */,
 				1751217C26EE6440007FB80A /* Common.framework */,
 				1751217926EE627D007FB80A /* GameDomain.framework */,
@@ -347,7 +353,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Search/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,7 +382,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Search/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

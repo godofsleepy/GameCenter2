@@ -2,7 +2,7 @@ source 'https://github.com/godofsleepy/GameCenter2Podspec.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 # Uncomment the next line to define a global platform for your project
-platform :ios, '14.1'
+platform :ios, '14.5'
 
 use_frameworks!
 
@@ -18,25 +18,25 @@ end
 
 target 'Home' do
   project '../Modules/Home/Home'
-	pod 'SDWebImageSwiftUI', '~> 1.5.0'
+	pod 'SDWebImageSwiftUI'
 	pod 'Core', :git => 'https://github.com/godofsleepy/Gamecenter2Core.git'
 end
 
 target 'Detail' do
   project '../Modules/Detail/Detail'
-	pod 'SDWebImageSwiftUI', '~> 1.5.0'
+	pod 'SDWebImageSwiftUI'
 	pod 'Core', :git => 'https://github.com/godofsleepy/Gamecenter2Core.git'
 end
 
 target 'Search' do
   project '../Modules/Search/Search'
-	pod 'SDWebImageSwiftUI', '~> 1.5.0'
+	pod 'SDWebImageSwiftUI'
 	pod 'Core', :git => 'https://github.com/godofsleepy/Gamecenter2Core.git'
 end
 
 target 'Favorite' do
   project '../Modules/Favorite/Favorite'
-	pod 'SDWebImageSwiftUI', '~> 1.5.0'
+	pod 'SDWebImageSwiftUI'
 	pod 'Core', :git => 'https://github.com/godofsleepy/Gamecenter2Core.git'
 end
 
@@ -54,7 +54,7 @@ end
 
 target 'Common' do
   project '../Modules/Common/Common'
-	pod 'SDWebImageSwiftUI', '~> 1.5.0'
+	pod 'SDWebImageSwiftUI'
 	pod 'Core', :git => 'https://github.com/godofsleepy/Gamecenter2Core.git'
 end
 
@@ -69,7 +69,7 @@ end
 post_install do |pi|
     pi.pods_project.targets.each do |t|
       t.build_configurations.each do |config|
-        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '14.5'
       end
     end
 end

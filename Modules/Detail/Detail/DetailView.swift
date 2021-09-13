@@ -13,7 +13,7 @@ import GameDomain
 import GameRepo
 import FavoriteRepo
 
-struct DetailView : View {
+public struct DetailView : View {
     @ObservedObject var presenter : DetailPresenter<
         Interactor<[String: String], DetailModel, GetDetailRepository<GetDetailRemote,DetailTransform>>,
         Interactor<DetailModel, Bool, AddFavRepository<FavoriteLocalDataSource, FavoriteTransformer>> ,
@@ -21,7 +21,7 @@ struct DetailView : View {
         Interactor<Int, DetailModel, GetFavRepository<FavoriteLocalDataSource, FavoriteTransformer>>
     >
     
-    var body: some View {
+    public var body: some View {
         ScrollView {
             if presenter.detailStatus == PresenterStatus.loading {
                 HStack{

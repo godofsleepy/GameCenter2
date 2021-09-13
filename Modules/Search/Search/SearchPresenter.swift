@@ -21,7 +21,7 @@ where
     @Published public var errorMessage: String = ""
     @Published public var searchStatus: PresenterStatus = PresenterStatus.initial
     
-    init(searchUseCase: SearchUseCase) {
+    public init(searchUseCase: SearchUseCase) {
         self.searchUseCase = searchUseCase
     }
     

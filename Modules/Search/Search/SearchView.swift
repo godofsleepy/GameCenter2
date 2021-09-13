@@ -11,7 +11,9 @@ import Core
 import Common
 import GameRepo
 
-struct SearchView: View {
+public struct SearchView: View {
+    
+    public init() {}
     
     @EnvironmentObject var presenter : SearchPresenter<
         Interactor<
@@ -20,7 +22,7 @@ struct SearchView: View {
             SearchRepository<SearchRemote, GameTransform>>>
     @State var query: String = ""
     
-    var body: some View {
+    public var body: some View {
         
         NavigationView {
             ZStack {

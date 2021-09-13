@@ -9,7 +9,7 @@ import Core
 import Combine
 import GameDomain
 
-class FavoritePresenter<FavoriteUseCase: UseCase> : ObservableObject
+public class FavoritesPresenter<FavoriteUseCase: UseCase> : ObservableObject
 where
     FavoriteUseCase.Request == Any,
     FavoriteUseCase.Response == [DetailModel]   {
@@ -20,7 +20,7 @@ where
     @Published var errorMessage: String = ""
     @Published var favoriteStatus: PresenterStatus = PresenterStatus.initial
     
-    init(favoriteUseCase: FavoriteUseCase) {
+    public init(favoriteUseCase: FavoriteUseCase) {
         self.favoriteUsecase = favoriteUseCase
     }
     

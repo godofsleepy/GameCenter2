@@ -7,8 +7,8 @@
 
 import GameDomain
 import SwiftUI
-import SDWebImage
-import SDWebImageSwiftUI
+//import SDWebImage
+//import SDWebImageSwiftUI
 
 public struct GameItemView : View{
     public init(game: GameModel) {
@@ -18,14 +18,14 @@ public struct GameItemView : View{
     var game : GameModel
     public var body : some View {
         HStack {
-            WebImage(url: URL(string: game.background_image ?? ""))
-                .renderingMode(.original)
-                .resizable()
-                .indicator(.activity) // Activity Indicator
-                .transition(.fade(duration: 0.5))
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 120, alignment: .trailing)
-                .cornerRadius(5)
+//            WebImage(url: URL(string: game.background_image ?? ""))
+//                .renderingMode(.original)
+//                .resizable()
+//                .indicator(.activity) // Activity Indicator
+//                .transition(.fade(duration: 0.5))
+//                .aspectRatio(contentMode: .fit)
+//                .frame(width: 120, alignment: .trailing)
+//                .cornerRadius(5)
             
             VStack(alignment: .leading){
                 Text(game.name)

@@ -10,11 +10,13 @@ import GameDomain
 import Core
 import FavoriteRepo
 
-struct FavoriteView: View {
+public struct FavoriteView: View {
     
-    @EnvironmentObject var presenter : FavoritePresenter<Interactor<Any, [DetailModel],GetFavsRepository<FavoriteLocalDataSource, FavoritesTransformer> >>
+    public init() {}
     
-    var body: some View {
+    @EnvironmentObject var presenter : FavoritesPresenter<Interactor<Any, [DetailModel],GetFavsRepository<FavoriteLocalDataSource, FavoritesTransformer>>>
+    
+   public var body: some View {
         NavigationView{
             ZStack{
                 Color("purple").edgesIgnoringSafeArea(.all)

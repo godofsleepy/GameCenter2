@@ -16,6 +16,7 @@
 		17939A0C26ED35DD00171D11 /* FavoriteRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17939A0B26ED35DD00171D11 /* FavoriteRepo.framework */; };
 		17B5127126EDE74B003EC97A /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B5127026EDE74B003EC97A /* Common.framework */; };
 		17B5127226EDE74B003EC97A /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17B5127026EDE74B003EC97A /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		17C5164E26EF00A6002ACD99 /* SDWebImageSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C5164D26EF00A6002ACD99 /* SDWebImageSwiftUI.framework */; };
 		42A161AE88B08915213F4EEC /* Pods_Detail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D7BCE5DECA6677D9C9F4C1 /* Pods_Detail.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		17939A0726ED35D400171D11 /* GameRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GameRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17939A0B26ED35DD00171D11 /* FavoriteRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FavoriteRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B5127026EDE74B003EC97A /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17C5164D26EF00A6002ACD99 /* SDWebImageSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImageSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31FF94E7E0C5EAAFDA681DBA /* Pods-Detail.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Detail.debug.xcconfig"; path = "Target Support Files/Pods-Detail/Pods-Detail.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +60,7 @@
 				17939A0126ED357700171D11 /* Core.framework in Frameworks */,
 				17939A0C26ED35DD00171D11 /* FavoriteRepo.framework in Frameworks */,
 				17B5127126EDE74B003EC97A /* Common.framework in Frameworks */,
+				17C5164E26EF00A6002ACD99 /* SDWebImageSwiftUI.framework in Frameworks */,
 				17939A0826ED35D400171D11 /* GameRepo.framework in Frameworks */,
 				17939A0526ED357F00171D11 /* GameDomain.framework in Frameworks */,
 			);
@@ -98,6 +101,7 @@
 		6EDD7ED6D6BB34E304A3594C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17C5164D26EF00A6002ACD99 /* SDWebImageSwiftUI.framework */,
 				17B5127026EDE74B003EC97A /* Common.framework */,
 				17939A0B26ED35DD00171D11 /* FavoriteRepo.framework */,
 				17939A0726ED35D400171D11 /* GameRepo.framework */,
@@ -367,7 +371,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Detail/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -396,7 +400,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Detail/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

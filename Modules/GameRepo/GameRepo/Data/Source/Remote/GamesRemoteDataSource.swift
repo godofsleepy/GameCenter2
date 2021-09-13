@@ -15,17 +15,19 @@ public struct GetGamesRemote : DataSource {
     public typealias Request = [String: String]
     public typealias Response = [GameResponse]
     private let _endpoint: String
+    private let _key: String
     
-    public init(endpoint: String) {
+    public init(endpoint: String, key: String) {
         _endpoint = endpoint
+        _key = key
     }
     
     public func execute(request: Request?) -> AnyPublisher<Response, Error> {
         return Future<[GameResponse], Error> { completion in
             if let url = URL(string: _endpoint + (request?["platformId"])!) {
-                if request?["key"]! != nil {
+                if !_key.isEmpty{
                     let parameters: Parameters = [
-                        "key": (request?["key"])! as String
+                        "key": _key
                     ]
                     AF.request(url, parameters: parameters)
                         .validate()
@@ -51,17 +53,19 @@ public struct GetDetailRemote : DataSource {
     public typealias Request = [String : String]
     public typealias Response = DetailResponse
     private let _endpoint: String
+    private let _key: String
     
-    public init(endpoint: String) {
+    public init(endpoint: String, key: String) {
         _endpoint = endpoint
+        _key = key
     }
     
     public func execute(request: Request?) -> AnyPublisher<Response, Error> {
         return Future<Response, Error> { completion in
-            if request?["key"]! != nil {
+            if !_key.isEmpty {
                 if let url = URL(string:  _endpoint + (request?["id"])!){
                     let parameters: Parameters = [
-                        "key": (request?["key"])! as String
+                        "key": _key
                     ]
                     AF.request(url, parameters: parameters)
                         .validate()
@@ -88,17 +92,19 @@ public struct SearchRemote : DataSource {
     public typealias Request = [String : String]
     public typealias Response = [GameResponse]
     private let _endpoint: String
+    private let _key: String
     
-    public init(endpoint: String) {
+    public init(endpoint: String, key: String) {
         _endpoint = endpoint
+        _key = key
     }
     
     public func execute(request: Request?) -> AnyPublisher<Response, Error> {
         return Future<Response, Error> { completion in
-            if request?["key"]! != nil {
+            if !_key.isEmpty {
                 if let url = URL(string: "\(_endpoint)\((request?["query"])!.replacingOccurrences(of: " ", with: "&20", options: .literal, range: nil))&platforms=7,18,4,1"){
                     let parameters: Parameters = [
-                        "key": (request?["key"])! as String
+                        "key": _key
                     ]
                     AF.request(url, parameters: parameters)
                         .validate()

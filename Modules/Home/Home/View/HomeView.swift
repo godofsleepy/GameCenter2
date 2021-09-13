@@ -12,13 +12,15 @@ import Core
 import GameRepo
 import GameDomain
 
-struct HomeView: View {
+public struct HomeView: View {
+    
+    public init() {}
     
     @EnvironmentObject var presenter : HomePresenter<Interactor<[String: String], [GameModel],GetGameRepository<GetGamesRemote,GameTransform>>>
     @State var index = 0
     @State var selection: Int? = nil
     
-    var body: some View {
+    public var body: some View {
         NavigationView{
             ZStack {
                 Color("purple").edgesIgnoringSafeArea(.all)
@@ -87,11 +89,8 @@ struct HomeView: View {
                                 Spinner(isAnimating: true, style: .large).eraseToAnyView()
                             } else if presenter.homeStatus == PresenterStatus.success {
                                 ForEach(self.presenter.games, id: \.id){ game in
-                                    destination() {
-                                        GameItemView(game: game)
-                                    }
-                                }
-                            } else if presenter.homeStatus == HomeStatus.error {
+                                    GameItemView(game: game)                                }
+                            } else if presenter.homeStatus == PresenterStatus.error {
                                 Text(presenter.errorMessage).foregroundColor(Color.white)
                                 
                             }
@@ -103,13 +102,13 @@ struct HomeView: View {
                 
             }
             .navigationBarTitle("Home", displayMode: .automatic)
-            .navigationBarItems(trailing: NavigationLink(destination: destination(), tag: 1, selection: $selection){
-                Button(action: {
-                    self.selection = 1
-                }) {
-                    Image(systemName: "info.circle").foregroundColor(Color("pink")).font(.system(size: 26))
-                }
-            })
+//            .navigationBarItems(trailing: NavigationLink(destination: destination(), tag: 1, selection: $selection){
+//                Button(action: {
+//                    self.selection = 1
+//                }) {
+//                    Image(systemName: "info.circle").foregroundColor(Color("pink")).font(.system(size: 26))
+//                }
+//            })
         }
         .onAppear {
             self.presenter.getGames(platformId: "18")

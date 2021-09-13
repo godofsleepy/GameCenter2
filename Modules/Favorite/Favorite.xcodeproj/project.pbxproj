@@ -17,6 +17,7 @@
 		1751219726EE68D4007FB80A /* DetailFavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1751219626EE68D4007FB80A /* DetailFavoriteView.swift */; };
 		1751219926EE68DF007FB80A /* DetailFavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1751219826EE68DF007FB80A /* DetailFavoritePresenter.swift */; };
 		175EA6E426EA602300CACC99 /* Favorite.h in Headers */ = {isa = PBXBuildFile; fileRef = 175EA6E226EA602300CACC99 /* Favorite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17B3737E26EF0F5E003745C7 /* SDWebImageSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B3737D26EF0F5E003745C7 /* SDWebImageSwiftUI.framework */; };
 		CA4FFC722EA9752A0C00322C /* Pods_Favorite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14551C0AF15E078BD60A863E /* Pods_Favorite.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,9 @@
 		175EA6DF26EA602300CACC99 /* Favorite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Favorite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		175EA6E226EA602300CACC99 /* Favorite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Favorite.h; sourceTree = "<group>"; };
 		175EA6E326EA602300CACC99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17B3737D26EF0F5E003745C7 /* SDWebImageSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImageSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17C5163E26EF0010002ACD99 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17C5165026EF00B3002ACD99 /* SDWebImageSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImageSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CBB8C21783C38C6A99D6E31 /* Pods-Favorite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Favorite.debug.xcconfig"; path = "Target Support Files/Pods-Favorite/Pods-Favorite.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17B3737E26EF0F5E003745C7 /* SDWebImageSwiftUI.framework in Frameworks */,
 				1751218C26EE663C007FB80A /* FavoriteRepo.framework in Frameworks */,
 				CA4FFC722EA9752A0C00322C /* Pods_Favorite.framework in Frameworks */,
 				1751218826EE6634007FB80A /* Common.framework in Frameworks */,
@@ -115,6 +120,9 @@
 		D125E12A246B7C23B84A1837 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17B3737D26EF0F5E003745C7 /* SDWebImageSwiftUI.framework */,
+				17C5165026EF00B3002ACD99 /* SDWebImageSwiftUI.framework */,
+				17C5163E26EF0010002ACD99 /* SDWebImage.framework */,
 				1751219126EE664D007FB80A /* GameDomain.framework */,
 				1751218E26EE6642007FB80A /* Core.framework */,
 				1751218B26EE663C007FB80A /* FavoriteRepo.framework */,
@@ -375,7 +383,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Favorite/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -404,7 +412,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Favorite/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
