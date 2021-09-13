@@ -9,7 +9,7 @@ import Combine
 import Core
 import GameDomain
 
-class DetailPresenter<
+public class DetailPresenter<
     GetDetailUseCase: UseCase,
     AddFavoriteUseCase: UseCase,
     DeleteFavoriteUseCase: UseCase,
@@ -43,8 +43,6 @@ where
         self.getDetail(gameId: id)
     }
     
-    
-    
     func getDetail(gameId : String)   {
         detailStatus = PresenterStatus.loading
         _getDetailUseCase.execute(request: ["id": gameId])
@@ -59,6 +57,7 @@ where
                 }
             }, receiveValue: { value in
                 self.detail = value
+                self.checkIsFavorite(game: value)
             })
             .store(in: &cancellables)
         
@@ -68,13 +67,10 @@ where
         _addFavoriteUseCase.execute(request: detail!)
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { (error) in
-                
                 self.errorMessage = String(describing: error)
-                
             }, receiveValue: { value in
                 self.isFav = value
             }).store(in: &cancellables)
-        
     }
     
     func deleteFavorite() {
@@ -93,9 +89,11 @@ where
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { (error) in
                 self.errorMessage = String(describing: error)
+                print(self.errorMessage)
             }, receiveValue: { value in
+                print(value)
                 //                if(value != nil){
-                //                    self.isFav = true
+                self.isFav = true
                 //                }else {
                 //                    self.isFav = false
                 //                }

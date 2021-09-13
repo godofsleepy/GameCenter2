@@ -12,10 +12,17 @@ import Core
 import GameRepo
 import GameDomain
 
-public struct HomeView: View {
+public struct HomeView<ProfileRoute: View, DetailRoute: View>: View {
     
-    public init() {}
+    let profileRoute: (() -> ProfileRoute)
+    let detailRoute: ((_ id: Int) -> DetailRoute)
     
+    public init(profileRoute: @escaping (() -> ProfileRoute), detailRoute: @escaping ((Int) -> DetailRoute)) {
+        self.profileRoute = profileRoute
+        self.detailRoute = detailRoute
+    }
+   
+
     @EnvironmentObject var presenter : HomePresenter<Interactor<[String: String], [GameModel],GetGameRepository<GetGamesRemote,GameTransform>>>
     @State var index = 0
     @State var selection: Int? = nil
@@ -89,7 +96,10 @@ public struct HomeView: View {
                                 Spinner(isAnimating: true, style: .large).eraseToAnyView()
                             } else if presenter.homeStatus == PresenterStatus.success {
                                 ForEach(self.presenter.games, id: \.id){ game in
-                                    GameItemView(game: game)                                }
+                                    NavigationLink(destination: self.detailRoute(game.id)) {
+                                        GameItemView(game: game)
+                                    }
+                                }
                             } else if presenter.homeStatus == PresenterStatus.error {
                                 Text(presenter.errorMessage).foregroundColor(Color.white)
                                 
@@ -102,13 +112,13 @@ public struct HomeView: View {
                 
             }
             .navigationBarTitle("Home", displayMode: .automatic)
-//            .navigationBarItems(trailing: NavigationLink(destination: destination(), tag: 1, selection: $selection){
-//                Button(action: {
-//                    self.selection = 1
-//                }) {
-//                    Image(systemName: "info.circle").foregroundColor(Color("pink")).font(.system(size: 26))
-//                }
-//            })
+            .navigationBarItems(trailing: NavigationLink(destination: self.profileRoute(), tag: 1, selection: $selection){
+                Button(action: {
+                    self.selection = 1
+                }) {
+                    Image(systemName: "info.circle").foregroundColor(Color("pink")).font(.system(size: 26))
+                }
+            })
         }
         .onAppear {
             self.presenter.getGames(platformId: "18")

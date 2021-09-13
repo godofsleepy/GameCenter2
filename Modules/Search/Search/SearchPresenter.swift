@@ -39,8 +39,6 @@ where
                     searchStatus = PresenterStatus.success
                 }
             }, receiveValue: { games in
-                print("gamenya")
-                print(games)
                 self.games = games
             })
             .store(in: &cancellables)

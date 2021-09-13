@@ -13,10 +13,10 @@
 		1731E0C826EEEF23007157CC /* Favorite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1731E0C726EEEF23007157CC /* Favorite.framework */; };
 		1731E0CB26EEFD24007157CC /* Profile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1731E0CA26EEFD24007157CC /* Profile.framework */; };
 		1751219A26EE7002007FB80A /* FavoriteRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A5CB3C26EB05440017CB6C /* FavoriteRepo.framework */; };
-		178915EA26ECCC9400D223D1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178915E926ECCC9400D223D1 /* Router.swift */; };
 		17A5CB3626EB05350017CB6C /* Detail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A5CB3526EB05350017CB6C /* Detail.framework */; };
 		17A5CB3D26EB05440017CB6C /* FavoriteRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A5CB3C26EB05440017CB6C /* FavoriteRepo.framework */; };
 		17A5CB4126EB054B0017CB6C /* GameRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A5CB4026EB054B0017CB6C /* GameRepo.framework */; };
+		17A9504F26EFAC3C00E05E1D /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A9504E26EFAC3C00E05E1D /* HomeRouter.swift */; };
 		720FB11288F0910032002B2A /* Pods_GameCenter2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D51FDEB7F98DD144016D1137 /* Pods_GameCenter2.framework */; };
 		FB2629C725DD1C900050B41E /* GameCenter2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2629C625DD1C900050B41E /* GameCenter2UITests.swift */; };
 		FB44E25D2562DD6A00758893 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44E25C2562DD6A00758893 /* ContentView.swift */; };
@@ -52,10 +52,10 @@
 		1731E0C326EEEF12007157CC /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1731E0C726EEEF23007157CC /* Favorite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Favorite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1731E0CA26EEFD24007157CC /* Profile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Profile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		178915E926ECCC9400D223D1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		17A5CB3526EB05350017CB6C /* Detail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Detail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A5CB3C26EB05440017CB6C /* FavoriteRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FavoriteRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A5CB4026EB054B0017CB6C /* GameRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GameRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17A9504E26EFAC3C00E05E1D /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		A84C7E3C5D93D72518D389FE /* Pods-GameCenter2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCenter2.release.xcconfig"; path = "Target Support Files/Pods-GameCenter2/Pods-GameCenter2.release.xcconfig"; sourceTree = "<group>"; };
 		AFEA97ECE562EBF5C414A2CD /* Pods-GameCenter2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCenter2.debug.xcconfig"; path = "Target Support Files/Pods-GameCenter2/Pods-GameCenter2.debug.xcconfig"; sourceTree = "<group>"; };
 		D51FDEB7F98DD144016D1137 /* Pods_GameCenter2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameCenter2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,10 +111,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		178915E826ECC6DE00D223D1 /* Router */ = {
+		17A9504D26EFAC1C00E05E1D /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				178915E926ECCC9400D223D1 /* Router.swift */,
+				17A9504E26EFAC3C00E05E1D /* HomeRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -232,7 +232,7 @@
 		FBB348F925734C2B00274808 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				178915E826ECC6DE00D223D1 /* Router */,
+				17A9504D26EFAC1C00E05E1D /* Router */,
 				FB4D3A68257CA9E80089FF86 /* DI */,
 				FBB349202573523500274808 /* Utils */,
 			);
@@ -465,10 +465,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				178915EA26ECCC9400D223D1 /* Router.swift in Sources */,
 				FB4D3A6A257CA9FB0089FF86 /* Injection.swift in Sources */,
 				FB4D3A6E257CB1D20089FF86 /* GamesAPI.swift in Sources */,
 				FBBFF0F525D683FD00D61A3A /* GameCenter2App.swift in Sources */,
+				17A9504F26EFAC3C00E05E1D /* HomeRouter.swift in Sources */,
 				FB44E25D2562DD6A00758893 /* ContentView.swift in Sources */,
 				FBB8EFC82573E54C006FD93B /* HostingController.swift in Sources */,
 			);

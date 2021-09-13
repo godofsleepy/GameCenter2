@@ -8,6 +8,8 @@
 import SwiftUI
 
 public struct ProfileView: View {
+    public init() {}
+    
     @Environment(\.openURL) var openURL
     
     var data = Profile()

@@ -14,13 +14,16 @@ import GameRepo
 import FavoriteRepo
 
 public struct DetailView : View {
+    
     @ObservedObject var presenter : DetailPresenter<
         Interactor<[String: String], DetailModel, GetDetailRepository<GetDetailRemote,DetailTransform>>,
-        Interactor<DetailModel, Bool, AddFavRepository<FavoriteLocalDataSource, FavoriteTransformer>> ,
+        Interactor<DetailModel, Bool, AddFavRepository<FavoriteLocalDataSource, FavoriteTransformer>>,
         Interactor<Int, Bool, DeleteFavRepository<FavoriteLocalDataSource>>,
-        Interactor<Int, DetailModel, GetFavRepository<FavoriteLocalDataSource, FavoriteTransformer>>
-    >
+        Interactor<Int, DetailModel, GetFavRepository<FavoriteLocalDataSource, FavoriteTransformer>>>
     
+    public init(presenter: Any) {
+        self.presenter = presenter as! DetailPresenter<Interactor<[String : String], DetailModel, GetDetailRepository<GetDetailRemote, DetailTransform>>, Interactor<DetailModel, Bool, AddFavRepository<FavoriteLocalDataSource, FavoriteTransformer>>, Interactor<Int, Bool, DeleteFavRepository<FavoriteLocalDataSource>>, Interactor<Int, DetailModel, GetFavRepository<FavoriteLocalDataSource, FavoriteTransformer>>>
+    }
     public var body: some View {
         ScrollView {
             if presenter.detailStatus == PresenterStatus.loading {
@@ -170,8 +173,8 @@ public struct DetailView : View {
         
         .navigationBarItems(trailing:
                                 Button(action: {
-                                    print("tap")
-                                    if self.presenter.detailStatus == PresenterStatus.loading {
+                                    
+                                    if self.presenter.detailStatus == PresenterStatus.success {
                                         self.presenter.isFav ? self.presenter.deleteFavorite(): self.presenter.addToFavorite()
                                     }
                                     
@@ -183,10 +186,5 @@ public struct DetailView : View {
                                     
                                 }
         )
-        .onAppear{
-            if self.presenter.detailStatus == PresenterStatus.loading {
-                self.presenter.checkIsFavorite(game: self.presenter.detail!)
-            }
-        }
     }
 }

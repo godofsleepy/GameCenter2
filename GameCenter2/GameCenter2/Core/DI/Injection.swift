@@ -22,7 +22,7 @@ final class Injection: NSObject {
         return Interactor(repository: repository) as! U
     }
     
-    func provideDetail<U: UseCase>() ->  U where U.Request == [String: String], U.Response == DetailModel {
+    func provideGetDetail<U: UseCase>() ->  U where U.Request == [String: String], U.Response == DetailModel {
         let remote = GetDetailRemote(endpoint: Endpoints.Gets.gameDetail.url, key: API.key)
         let mapper = DetailTransform()
         let repository = GetDetailRepository(
@@ -53,7 +53,7 @@ final class Injection: NSObject {
         return Interactor(repository: repository) as! U
     }
     
-    func provideDetailFavorite<U: UseCase>() -> U where U.Request == Int, U.Response == DetailModel {
+    func provideGetFavorite<U: UseCase>() -> U where U.Request == Int, U.Response == DetailModel {
         let realm = try? Realm()
         let local = FavoriteLocalDataSource(realm: realm!)
         let mapper = FavoriteTransformer()
@@ -63,5 +63,22 @@ final class Injection: NSObject {
         return Interactor(repository: repository) as! U
     }
     
+    func provideAddFavorite<U: UseCase>() -> U where U.Request == DetailModel, U.Response == Bool {
+        let realm = try? Realm()
+        let local = FavoriteLocalDataSource(realm: realm!)
+        let mapper = FavoriteTransformer()
+        let repository = AddFavRepository(
+            localeDataSource: local,
+            mapper: mapper)
+        return Interactor(repository: repository) as! U
+    }
     
+    func provideDeleteFavorite<U: UseCase>() -> U where U.Request == Int, U.Response == Bool {
+        let realm = try? Realm()
+        let local = FavoriteLocalDataSource(realm: realm!)
+        let repository = DeleteFavRepository(localeDataSource: local)
+        return Interactor(repository: repository) as! U
+    }
+
+
 }

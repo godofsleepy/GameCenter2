@@ -10,6 +10,8 @@ import Favorite
 import CoreData
 import Home
 import Search
+import Profile
+import Detail
 
 struct ContentView: View {
     
@@ -41,9 +43,16 @@ struct ContentView: View {
 }
 
 struct TabHome: View {
+    
+    let homeRouter = HomeRouter()
+    
     var body :some View {
         TabView{
-            HomeView()
+            HomeView<ProfileView, DetailView>(
+                profileRoute: { homeRouter.routeToProfile() },
+                detailRoute: { id in
+                    homeRouter.routeToDetail(for: String(id))
+                })
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("Home")
