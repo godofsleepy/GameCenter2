@@ -9,10 +9,11 @@ import Core
 import RealmSwift
 import GameDomain
 import GameRepo
+import FavoriteRepo
 
 final class Injection: NSObject {
     
-    func provideHome<U: UseCase>() -> U where U.Request == Any, U.Response == [GameModel] {
+    func provideHome<U: UseCase>() -> U where U.Request == [String: String], U.Response == [GameModel] {
         
         let remote = GetGamesRemote(endpoint: Endpoints.Gets.gamesPlatforms.url)
         let mapper = GameTransform()
@@ -23,41 +24,47 @@ final class Injection: NSObject {
         
         return Interactor(repository: repository) as! U
     }
-
     
-    private func provideRepository() -> GameRepositoryProtocol {
-        let realm = try? Realm()
+    func provideDetail<U: UseCase>() ->  U where U.Request == [String: String], U.Response == DetailModel {
+        let remote = GetDetailRemote(endpoint: Endpoints.Gets.gameDetail.url)
+        let mapper = DetailTransform()
+        let repository = GetDetailRepository(
+            remoteDataSource: remote,
+            mapper: mapper)
         
-        let locale: LocaleDataSource = LocaleDataSource.sharedInstance(realm)
-        let remote: RemoteDataSource = RemoteDataSource.sharedInstance
-        
-        return GameRepository.sharedInstance(remote, locale)
+        return Interactor(repository: repository) as! U
     }
     
-    func provideHome() -> HomeUseCase {
-        let repository = provideRepository()
-        return HomeInteractor(repository: repository)
-    }
-    
-    func provideDetail(gameid : String) -> DetailUseCase {
-        let repository = provideRepository()
-        return DetailInteractor(repository: repository)
-    }
-    
-    func provideSearch()  -> SearchUseCase {
-        let repository = provideRepository()
-        return SearchInteractor(repository: repository)
-    }
-    
-    func provideFavorite() -> FavoriteUseCase {
-        let repository = provideRepository()
-        return FavoriteInteractor(repository: repository)
-    }
-    
-    func provideDetailFavorite() -> DetailFavoriteUseCase {
-        let repository = provideRepository()
-        return DetailFavoriteInteractor(repository: repository)
-    }
+    func provideSearch<U: UseCase>() -> U where U.Request == [String: String], U.Response == [GameModel] {
+        let remote = SearchRemote(endpoint: Endpoints.Gets.gameDetail.url)
+        let mapper = GameTransform()
+        let repository = SearchRepository(
+            remoteDataSource: remote,
+            mapper: mapper)
 
+        return Interactor(repository: repository) as! U
+    }
+    
+    func provideFavorite<U: UseCase>() -> U where U.Request == Any, U.Response == [DetailModel] {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let local = FavoriteLocalDataSource(realm: appDelegate.realm)
+        let mapper = FavoritesTransformer()
+        let repository = GetFavsRepository(
+            localeDataSource: local,
+            mapper: mapper)
+
+        return Interactor(repository: repository) as! U
+    }
+    
+    func provideDetailFavorite<U: UseCase>() -> U where U.Request == Int, U.Response == DetailModel {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let local = FavoriteLocalDataSource(realm: appDelegate.realm)
+        let mapper = FavoriteTransformer()
+        let repository = GetFavRepository(
+            localeDataSource: local,
+            mapper: mapper)
+        return Interactor(repository: repository) as! U
+    }
+    
     
 }

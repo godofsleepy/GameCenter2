@@ -11,6 +11,8 @@ import GameDomain
 
 public struct DetailTransform : Mapper {
     
+    public init (){}
+    
     public typealias Response = DetailResponse
     public typealias Entity = Any
     public typealias Domain = DetailModel

@@ -10,6 +10,7 @@ import Core
 import GameDomain
 
 public struct GameTransform : Mapper {
+    
     public init() {
     }
     

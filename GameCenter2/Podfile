@@ -2,7 +2,7 @@ source 'https://github.com/godofsleepy/GameCenter2Podspec.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 # Uncomment the next line to define a global platform for your project
-platform :ios, '13.0'
+platform :ios, '14.1'
 
 use_frameworks!
 

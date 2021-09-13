@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		01C28CF0038D13BDC99735F5 /* Pods_GameCenter2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5100B214C058A5B99119CAF /* Pods_GameCenter2.framework */; };
+		1731E0A726EEE466007157CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1731E0A626EEE466007157CC /* AppDelegate.swift */; };
 		1751219A26EE7002007FB80A /* FavoriteRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A5CB3C26EB05440017CB6C /* FavoriteRepo.framework */; };
 		1751219B26EE7002007FB80A /* FavoriteRepo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17A5CB3C26EB05440017CB6C /* FavoriteRepo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		178915EA26ECCC9400D223D1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178915E926ECCC9400D223D1 /* Router.swift */; };
@@ -65,6 +66,7 @@
 
 /* Begin PBXFileReference section */
 		163CF36C4157966CF60C7D90 /* Pods-GameCenter2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCenter2.debug.xcconfig"; path = "Target Support Files/Pods-GameCenter2/Pods-GameCenter2.debug.xcconfig"; sourceTree = "<group>"; };
+		1731E0A626EEE466007157CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		178915E926ECCC9400D223D1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		17A5CB3526EB05350017CB6C /* Detail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Detail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A5CB3926EB05390017CB6C /* Favorite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Favorite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,6 +252,7 @@
 			children = (
 				FB44E25A2562DD6A00758893 /* GameCenter2App.swift */,
 				FB44E25C2562DD6A00758893 /* ContentView.swift */,
+				1731E0A626EEE466007157CC /* AppDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1731E0A726EEE466007157CC /* AppDelegate.swift in Sources */,
 				178915EA26ECCC9400D223D1 /* Router.swift in Sources */,
 				FB7D70D525AD5BED00393508 /* SearchInterctor.swift in Sources */,
 				FB4D3A6A257CA9FB0089FF86 /* Injection.swift in Sources */,
@@ -742,7 +746,7 @@
 				DEVELOPMENT_TEAM = CU9ZP67S25;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GameCenter2/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -766,7 +770,7 @@
 				DEVELOPMENT_TEAM = CU9ZP67S25;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GameCenter2/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

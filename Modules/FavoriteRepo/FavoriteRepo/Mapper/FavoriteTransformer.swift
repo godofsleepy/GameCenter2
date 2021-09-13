@@ -11,6 +11,8 @@ import GameDomain
 
 public struct FavoriteTransformer: Mapper {
     
+    public init() {}
+    
     public typealias Response = Any
     public typealias Entity = GameEntity
     public typealias Domain = DetailModel

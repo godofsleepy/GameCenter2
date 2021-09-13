@@ -9,9 +9,10 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    var destination: [Destination]
+    
     
     init() {
+        
         UITableView.appearance().tableFooterView = UIView()
         //        Mengganti warna background list
         UITableView.appearance().backgroundColor = UIColor(red: 37/255.0, green: 19/255.0, blue: 51/255.0, alpha: 1.0)
@@ -33,9 +34,9 @@ struct ContentView: View {
     }
     
     var body: some View {
-        List(destination) {
-            NavigationLink(destination: destination(for: $0))
-        }
+        //        List(destination) {
+        //            NavigationLink(destination: destination(for: $0))
+        //        }
     }
 }
 
