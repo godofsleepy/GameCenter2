@@ -33,11 +33,14 @@ where
                 switch completion {
                 case .failure:
                     self.errorMessage = String(describing: completion)
+                    print(self.errorMessage)
                     self.searchStatus = PresenterStatus.error
                 case .finished:
                     searchStatus = PresenterStatus.success
                 }
             }, receiveValue: { games in
+                print("gamenya")
+                print(games)
                 self.games = games
             })
             .store(in: &cancellables)

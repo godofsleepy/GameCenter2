@@ -12,13 +12,6 @@ import GameRepo
 import FavoriteRepo
 
 final class Injection: NSObject {
-    
-    var realm: Realm!
-
-    override init() {
-        self.realm = try! Realm()
-    }
-    
     func provideHome<U: UseCase>() -> U where U.Request == [String: String], U.Response == [GameModel] {
         let remote = GetGamesRemote(endpoint: Endpoints.Gets.gamesPlatforms.url, key: API.key)
         let mapper = GameTransform()
@@ -40,7 +33,7 @@ final class Injection: NSObject {
     }
     
     func provideSearch<U: UseCase>() -> U where U.Request == [String: String], U.Response == [GameModel] {
-        let remote = SearchRemote(endpoint: Endpoints.Gets.gameDetail.url, key: API.key)
+        let remote = SearchRemote(endpoint: Endpoints.Gets.search.url, key: API.key)
         let mapper = GameTransform()
         let repository = SearchRepository(
             remoteDataSource: remote,
@@ -50,8 +43,8 @@ final class Injection: NSObject {
     }
     
     func provideFavorite<U: UseCase>() -> U where U.Request == Any, U.Response == [DetailModel] {
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let local = FavoriteLocalDataSource(realm: realm)
+        let realm = try? Realm()
+        let local = FavoriteLocalDataSource(realm: realm!)
         let mapper = FavoritesTransformer()
         let repository = GetFavsRepository(
             localeDataSource: local,
@@ -61,8 +54,8 @@ final class Injection: NSObject {
     }
     
     func provideDetailFavorite<U: UseCase>() -> U where U.Request == Int, U.Response == DetailModel {
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let local = FavoriteLocalDataSource(realm: realm)
+        let realm = try? Realm()
+        let local = FavoriteLocalDataSource(realm: realm!)
         let mapper = FavoriteTransformer()
         let repository = GetFavRepository(
             localeDataSource: local,
