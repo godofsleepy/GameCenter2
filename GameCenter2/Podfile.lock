@@ -1,0 +1,49 @@
+PODS:
+  - Alamofire (5.4.3)
+  - Core (1.5.6):
+    - RealmSwift
+  - Realm (10.15.0):
+    - Realm/Headers (= 10.15.0)
+  - Realm/Headers (10.15.0)
+  - RealmSwift (10.15.0):
+    - Realm (= 10.15.0)
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
+  - SDWebImageSwiftUI (2.0.2):
+    - SDWebImage (~> 5.10)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.2)
+  - Core (from `https://github.com/godofsleepy/Gamecenter2Core.git`)
+  - RealmSwift
+  - SDWebImageSwiftUI
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs:
+    - Alamofire
+    - Realm
+    - RealmSwift
+    - SDWebImage
+    - SDWebImageSwiftUI
+
+EXTERNAL SOURCES:
+  Core:
+    :git: https://github.com/godofsleepy/Gamecenter2Core.git
+
+CHECKOUT OPTIONS:
+  Core:
+    :commit: fc914445a73ea80280eada05d7b1b0959ed42f6b
+    :git: https://github.com/godofsleepy/Gamecenter2Core.git
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  Core: 83330cf4c1411c51c1788b8f10bbe0623ca82c54
+  Realm: 13e805eb23d3eb8d8bb700d9cf9761f4b625b389
+  RealmSwift: 51b29bb4e19fe7322c8a599cf3494b8a08888ef1
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+  SDWebImageSwiftUI: 8a3923c95108312b03a599ec1498754af55a6819
+
+PODFILE CHECKSUM: f1595218a0dd09199193d1c81002e675ab509a93
+
+COCOAPODS: 1.11.0
