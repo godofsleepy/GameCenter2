@@ -15,6 +15,7 @@ target 'GameCenter2' do
 	pod 'SDWebImageSwiftUI'
 	pod 'Alamofire', '~> 5.2'
   # Pods for GameCenter2
+	#target :GameCenter2Tests
 
 end
 

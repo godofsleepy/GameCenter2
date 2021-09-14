@@ -8,7 +8,12 @@
 import Foundation
 
 public struct GamesResponse: Codable {
-    let results: [GameResponse]
+    public init(results: [GameResponse], count: Int?) {
+        self.results = results
+        self.count = count
+    }
+    
+    public let results: [GameResponse]
     let count : Int?
     
     enum CodingKeys: String, CodingKey {
@@ -19,6 +24,14 @@ public struct GamesResponse: Codable {
 
 
 public struct GameResponse : Codable {
+    public init(id: Int?, name: String?, rating: Double?, released: String?, background_image: String?) {
+        self.id = id
+        self.name = name
+        self.rating = rating
+        self.released = released
+        self.background_image = background_image
+    }
+    
     let id : Int?
     let name : String?
     let rating : Double?
