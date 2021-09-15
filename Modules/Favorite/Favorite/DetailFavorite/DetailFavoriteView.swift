@@ -15,11 +15,10 @@ import Common
 public struct DetailFavoriteView: View {
     @ObservedObject var presenter : DetailFavoritePresenter<
         Interactor<DetailModel, Bool, AddFavRepository<FavoriteLocalDataSource, FavoriteTransformer>> ,
-        Interactor<Int, Bool, DeleteFavRepository<FavoriteLocalDataSource>>,
-        Interactor<Int, DetailModel, GetFavRepository<FavoriteLocalDataSource, FavoriteTransformer>>>
+        Interactor<Int, Bool, DeleteFavRepository<FavoriteLocalDataSource>>>
     
     public init (presenter: Any){
-        self.presenter = presenter as! DetailFavoritePresenter<Interactor<DetailModel, Bool, AddFavRepository<FavoriteLocalDataSource, FavoriteTransformer>>, Interactor<Int, Bool, DeleteFavRepository<FavoriteLocalDataSource>>, Interactor<Int, DetailModel, GetFavRepository<FavoriteLocalDataSource, FavoriteTransformer>>>
+        self.presenter = presenter as! DetailFavoritePresenter<Interactor<DetailModel, Bool, AddFavRepository<FavoriteLocalDataSource, FavoriteTransformer>>, Interactor<Int, Bool, DeleteFavRepository<FavoriteLocalDataSource>>>
     }
     
     public var body: some View {
@@ -170,9 +169,6 @@ public struct DetailFavoriteView: View {
                                     
                                 }
         )
-        .onAppear{
-            self.presenter.checkIsFavorite()
-        }
     }
 }
 

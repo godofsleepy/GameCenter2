@@ -36,13 +36,11 @@ class Router {
     func routeToDetailFav(for game: DetailModel) -> DetailFavoriteView {
         let addFavoriteUseCase: Interactor<DetailModel, Bool, AddFavRepository<FavoriteLocalDataSource, FavoriteTransformer>> = injection.provideAddFavorite()
         let deleteFavoriteUseCase: Interactor<Int, Bool, DeleteFavRepository<FavoriteLocalDataSource>> = injection.provideDeleteFavorite()
-        let getFavUseCase: Interactor<Int, DetailModel, GetFavRepository<FavoriteLocalDataSource, FavoriteTransformer>> = injection.provideGetFavorite()
-        
+            
         let presenter = DetailFavoritePresenter(
             game: game,
             addFavoriteUseCase: addFavoriteUseCase,
-            deleteFavoriteUseCase: deleteFavoriteUseCase,
-            getFavoriteUseCase: getFavUseCase)
+            deleteFavoriteUseCase: deleteFavoriteUseCase)
         return DetailFavoriteView(presenter: presenter)
     }
 

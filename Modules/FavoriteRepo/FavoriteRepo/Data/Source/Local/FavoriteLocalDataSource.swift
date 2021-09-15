@@ -46,6 +46,7 @@ public struct FavoriteLocalDataSource : LocaleDataSource {
     
     public func get(id: Int) -> AnyPublisher<GameEntity, Error> {
         return Future<GameEntity, Error> { completion in
+            print(id)
             do {
                 if let entity = _realm.object(ofType: GameEntity.self, forPrimaryKey: id){
                     completion(.success(entity))
