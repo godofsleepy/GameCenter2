@@ -6,7 +6,7 @@
   <h3 align="center">GAMECENTER2</h3>
 
   <p align="center">
-    Submission Dicoding IOS DEVELOPER EXPERT
+    Submission Dicoding IOS Developer Expert
     <br />
   </p>
 </p>
