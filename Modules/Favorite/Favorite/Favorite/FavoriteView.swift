@@ -32,6 +32,9 @@ public struct FavoriteView<DetailFavoriteRoute: View>: View {
                             ForEach(self.presenter.games, id:\.self){ game in
                                 NavigationLink(destination: self.detailRoute(game)){
                                     FavItemView(game: game)
+                                        .onAppear {
+                                            self.presenter.getGames()
+                                        }
                                 }
                             }
                         } else {
@@ -44,7 +47,7 @@ public struct FavoriteView<DetailFavoriteRoute: View>: View {
             }
             .navigationBarTitle("Favorite")
         }
-        .onAppear{
+        .onAppear {
             self.presenter.getGames()
         }
     }
